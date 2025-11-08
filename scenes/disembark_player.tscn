@@ -1,0 +1,65 @@
+[gd_scene load_steps=12 format=3 uid="uid://da82tphw0tws7"]
+
+[ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark_player.gd" id="1_151jb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_todaf"]
+size = Vector2(14, 14)
+
+[sub_resource type="Gradient" id="Gradient_efpyd"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_178ay"]
+gradient = SubResource("Gradient_efpyd")
+width = 2
+height = 2
+
+[sub_resource type="Gradient" id="Gradient_178ay"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q5sqc"]
+gradient = SubResource("Gradient_178ay")
+
+[sub_resource type="Curve" id="Curve_q5sqc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.49438208), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_034ht"]
+curve = SubResource("Curve_q5sqc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_efpyd"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(5, 5, 0)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_curve = SubResource("CurveTexture_034ht")
+color_ramp = SubResource("GradientTexture1D_q5sqc")
+
+[sub_resource type="Gradient" id="Gradient_151jb"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_efpyd"]
+gradient = SubResource("Gradient_151jb")
+width = 16
+height = 16
+
+[node name="DisembarkPlayer" type="CharacterBody2D"]
+script = ExtResource("1_151jb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_todaf")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 0.2)
+position = Vector2(8, 8)
+amount = 16
+texture = SubResource("GradientTexture2D_178ay")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_efpyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.999999, 8)
+scale = Vector2(0.75000006, 0.75)
+texture = SubResource("GradientTexture2D_efpyd")
