@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://gvgpvaqcuuwx"]
+
+[ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver_player.gd" id="1_xetyd"]
+
+[sub_resource type="Gradient" id="Gradient_xetyd"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w3xnj"]
+gradient = SubResource("Gradient_xetyd")
+width = 4
+height = 4
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_w3xnj"]
+offsets = PackedFloat32Array(0, 0.8818182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kb4mm"]
+gradient = SubResource("Gradient_w3xnj")
+
+[sub_resource type="Curve" id="Curve_xetyd"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_w3xnj"]
+curve = SubResource("Curve_xetyd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w3xnj"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(0, 4, 0)
+direction = Vector3(-1, 0, 0)
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_w3xnj")
+color_ramp = SubResource("GradientTexture1D_kb4mm")
+hue_variation_min = -0.050000023
+hue_variation_max = 0.049999975
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xetyd"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_w3xnj"]
+radius = 8.0
+height = 32.0
+
+[node name="ManeuverPlayer" type="CharacterBody2D"]
+script = ExtResource("1_xetyd")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+modulate = Color(1, 0.51666665, 0.42000002, 1)
+position = Vector2(-14, 0)
+emitting = false
+amount = 32
+texture = SubResource("GradientTexture2D_w3xnj")
+lifetime = 0.2
+speed_scale = 4.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_w3xnj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_xetyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
+rotation = 1.5707964
+mesh = SubResource("CapsuleMesh_w3xnj")
