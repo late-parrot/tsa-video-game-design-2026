@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark_player.gd" id="1_151jb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_todaf"]
-size = Vector2(14, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_151jb"]
+radius = 7.0000005
 
 [sub_resource type="Gradient" id="Gradient_efpyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -47,19 +47,18 @@ height = 16
 script = ExtResource("1_151jb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8)
-shape = SubResource("RectangleShape2D_todaf")
+position = Vector2(-4.7683716e-07, 0)
+shape = SubResource("CircleShape2D_151jb")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-visible = false
-modulate = Color(0, 0, 0, 0.2)
-position = Vector2(8, 8)
+modulate = Color(0, 0, 0, 0.38431373)
+position = Vector2(-4.7683716e-07, 0)
 amount = 16
 texture = SubResource("GradientTexture2D_178ay")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_efpyd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7.999999, 8)
+position = Vector2(-1.4305115e-06, 4.7683716e-07)
 scale = Vector2(0.75000006, 0.75)
 texture = SubResource("GradientTexture2D_efpyd")
