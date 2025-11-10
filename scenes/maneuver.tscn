@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=16 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver_overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver_player.tscn" id="1_le8cj"]
+[ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver_planet.gd" id="1_n7xhb"]
+[ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver.gd" id="1_ytq0j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
 radius = 512.0
@@ -49,6 +51,7 @@ scale_curve = SubResource("CurveTexture_0wfyh")
 color_ramp = SubResource("GradientTexture1D_sugp2")
 
 [node name="Maneuver" type="Node2D"]
+script = ExtResource("1_ytq0j")
 
 [node name="Planets" type="Node2D" parent="."]
 
@@ -65,6 +68,7 @@ mesh = SubResource("SphereMesh_n7xhb")
 
 [node name="Earth" type="Area2D" parent="Planets"]
 position = Vector2(1208, 848)
+script = ExtResource("1_n7xhb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Earth"]
 shape = SubResource("CircleShape2D_n7xhb")
@@ -92,7 +96,8 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Stars" type="GPUParticles2D" parent="ManeuverPlayer"]
-z_index = -1
+z_index = -4096
+position = Vector2(3, 1)
 amount = 256
 texture = SubResource("GradientTexture2D_40ujs")
 lifetime = 10.0
