@@ -10,6 +10,8 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")
 	if direction:
 		rotation = rotate_toward(rotation, direction.angle(), ROTATION_SPEED*delta)
+		if is_equal_approx(rotation, -PI):
+			rotation = PI
 	if direction and is_equal_approx(rotation, direction.angle()):
 		velocity = velocity.move_toward(direction*SPEED, ACCELERATION*delta)
 	else:

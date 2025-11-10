@@ -50,7 +50,7 @@ script = ExtResource("1_151jb")
 position = Vector2(-4.7683716e-07, 0)
 shape = SubResource("CircleShape2D_151jb")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="Treads" type="GPUParticles2D" parent="."]
 modulate = Color(0, 0, 0, 0.38431373)
 position = Vector2(-4.7683716e-07, 0)
 amount = 16
