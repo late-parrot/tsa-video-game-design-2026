@@ -13,7 +13,7 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="Gradient" id="Gradient_w3xnj"]
 offsets = PackedFloat32Array(0, 0.8818182, 1)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_kb4mm"]
 gradient = SubResource("Gradient_w3xnj")
@@ -47,9 +47,10 @@ radius = 8.0
 height = 32.0
 
 [node name="ManeuverPlayer" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_xetyd")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="Fire" type="GPUParticles2D" parent="."]
 modulate = Color(1, 0.51666665, 0.42000002, 1)
 position = Vector2(-14, 0)
 emitting = false

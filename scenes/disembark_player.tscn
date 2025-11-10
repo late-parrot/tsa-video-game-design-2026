@@ -50,7 +50,7 @@ script = ExtResource("1_151jb")
 position = Vector2(8, 8)
 shape = SubResource("RectangleShape2D_todaf")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="Treads" type="GPUParticles2D" parent="."]
 visible = false
 modulate = Color(0, 0, 0, 0.2)
 position = Vector2(8, 8)

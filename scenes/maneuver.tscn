@@ -1,6 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=14 format=3 uid="uid://dwsidhkts8v1c"]
 
+[ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver_overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver_player.tscn" id="1_le8cj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
+radius = 512.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_n7xhb"]
+radius = 512.0
+height = 1024.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n7xhb"]
+radius = 128.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ytq0j"]
+radius = 128.0
+height = 265.0
 
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -35,15 +50,40 @@ color_ramp = SubResource("GradientTexture1D_sugp2")
 
 [node name="Maneuver" type="Node2D"]
 
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="Sun" type="Area2D" parent="Planets"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Sun"]
+shape = SubResource("CircleShape2D_40ujs")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Sun"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Sun/Sprite2D"]
+modulate = Color(1, 0.97406006, 0.3359375, 1)
+mesh = SubResource("SphereMesh_n7xhb")
+
+[node name="Earth" type="Area2D" parent="Planets"]
+position = Vector2(1208, 848)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Earth"]
+shape = SubResource("CircleShape2D_n7xhb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Earth"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Earth/Sprite2D"]
+modulate = Color(0.2421875, 0.7158203, 1, 1)
+mesh = SubResource("SphereMesh_ytq0j")
+
 [node name="ManeuverPlayer" parent="." instance=ExtResource("1_le8cj")]
 
-[node name="Camera2D" type="Camera2D" parent="ManeuverPlayer"]
+[node name="Camera" type="Camera2D" parent="ManeuverPlayer"]
 position_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="ManeuverPlayer"]
+[node name="Background" type="CanvasLayer" parent="ManeuverPlayer"]
 layer = -1
 
-[node name="ColorRect" type="ColorRect" parent="ManeuverPlayer/CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="ManeuverPlayer/Background"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -51,10 +91,14 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="ManeuverPlayer"]
+[node name="Stars" type="GPUParticles2D" parent="ManeuverPlayer"]
 z_index = -1
 amount = 256
 texture = SubResource("GradientTexture2D_40ujs")
 lifetime = 10.0
 preprocess = 10.0
 process_material = SubResource("ParticleProcessMaterial_5jglc")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ManeuverOverlay" parent="UI" instance=ExtResource("1_40ujs")]

@@ -11,9 +11,9 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		rotation = rotate_toward(rotation, direction.angle(), ROTATION_SPEED*delta)
 		velocity = velocity.move_toward(direction*SPEED, ACCELERATION*delta)
-		$GPUParticles2D.emitting = true
+		$Fire.emitting = true
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION*delta)
-		$GPUParticles2D.emitting = false
+		$Fire.emitting = false
 
 	move_and_slide()
