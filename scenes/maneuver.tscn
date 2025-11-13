@@ -50,8 +50,9 @@ scale_max = 2.0
 scale_curve = SubResource("CurveTexture_0wfyh")
 color_ramp = SubResource("GradientTexture1D_sugp2")
 
-[node name="Maneuver" type="Node2D"]
+[node name="Maneuver" type="Node2D" node_paths=PackedStringArray("spaceport")]
 script = ExtResource("1_ytq0j")
+spaceport = NodePath("Planets/Earth")
 
 [node name="Planets" type="Node2D" parent="."]
 

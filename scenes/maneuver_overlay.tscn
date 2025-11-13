@@ -43,16 +43,16 @@ text = "Maneuver"
 label_settings = SubResource("LabelSettings_7gthf")
 uppercase = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
+[node name="XY" type="HBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Container/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="X" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "X:100"
 label_settings = SubResource("LabelSettings_rn1gq")
 
-[node name="Label2" type="Label" parent="Container/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Y" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
 layout_mode = 2
 text = "Y:100"
 
@@ -66,7 +66,9 @@ script = ExtResource("2_rn1gq")
 
 [node name="BackToSpaceport" type="Button" parent="Container/MarginContainer/VBoxContainer"]
 layout_mode = 2
+toggle_mode = true
 text = "Back to
 Spaceport"
 
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Land" to="." method="_on_land_pressed"]
+[connection signal="toggled" from="Container/MarginContainer/VBoxContainer/BackToSpaceport" to="." method="_on_back_to_spaceport_toggled"]
