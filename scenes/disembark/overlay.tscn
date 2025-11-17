@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwr2scwm7o16e"]
+
+[ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
+[ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="2_p7tpy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ecthq"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2hsg"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_a61oy"]
+action = &"land"
+
+[sub_resource type="Shortcut" id="Shortcut_j4mfo"]
+events = [SubResource("InputEventAction_a61oy")]
+
+[node name="DisembarkOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sw8x2")
+
+[node name="Container" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_right = 248.0
+offset_bottom = 184.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Disembark"
+label_settings = SubResource("LabelSettings_ecthq")
+uppercase = true
+
+[node name="XY" type="HBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="X" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "X:100"
+label_settings = SubResource("LabelSettings_h2hsg")
+
+[node name="Y" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
+layout_mode = 2
+text = "Y:100"
+
+[node name="Collect" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+shortcut = SubResource("Shortcut_j4mfo")
+text = "Collect
+(Space)"
+script = ExtResource("2_p7tpy")
+
+[node name="Fire" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fire
+"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c5h2bmcfooygk"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_7gthf"]
-[ext_resource type="Script" uid="uid://6bcbl4gtihul" path="res://scripts/maneuver_overlay.gd" id="2_a61oy"]
+[ext_resource type="Script" uid="uid://6bcbl4gtihul" path="res://scripts/maneuver/overlay.gd" id="2_a61oy"]
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="2_rn1gq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7gthf"]

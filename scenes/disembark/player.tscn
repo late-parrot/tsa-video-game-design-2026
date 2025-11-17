@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://da82tphw0tws7"]
 
-[ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark_player.gd" id="1_151jb"]
+[ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark/player.gd" id="1_jtk2v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_151jb"]
-radius = 7.0000005
+radius = 7.0
 
 [sub_resource type="Gradient" id="Gradient_efpyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -40,25 +40,24 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_efpyd"]
 gradient = SubResource("Gradient_151jb")
-width = 16
-height = 16
+width = 12
+height = 12
 
 [node name="DisembarkPlayer" type="CharacterBody2D"]
-script = ExtResource("1_151jb")
+script = ExtResource("1_jtk2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4.7683716e-07, 0)
+position = Vector2(7.9999995, 8)
 shape = SubResource("CircleShape2D_151jb")
 
 [node name="Treads" type="GPUParticles2D" parent="."]
 modulate = Color(0, 0, 0, 0.38431373)
-position = Vector2(-4.7683716e-07, 0)
+position = Vector2(7.9999995, 8)
 amount = 16
 texture = SubResource("GradientTexture2D_178ay")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_efpyd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.4305115e-06, 4.7683716e-07)
-scale = Vector2(0.75000006, 0.75)
+position = Vector2(7.9999986, 8)
 texture = SubResource("GradientTexture2D_efpyd")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhin4gmpyeehr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v2bl1"]
+radius = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_h7xbw"]
+radius = 2.0
+height = 4.0
+
+[node name="DisembarkLaser" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v2bl1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
+mesh = SubResource("SphereMesh_h7xbw")

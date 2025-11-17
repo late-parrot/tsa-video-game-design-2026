@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://dwsidhkts8v1c"]
 
-[ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver_overlay.tscn" id="1_40ujs"]
-[ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver_player.tscn" id="1_le8cj"]
-[ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver_planet.gd" id="1_n7xhb"]
-[ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver.gd" id="1_ytq0j"]
+[ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
+[ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
+[ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
+[ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
 radius = 512.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://gvgpvaqcuuwx"]
 
-[ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver_player.gd" id="1_xetyd"]
+[ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver/player.gd" id="1_xetyd"]
 
 [sub_resource type="Gradient" id="Gradient_xetyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
