@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=9 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
+[ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="2_p7tpy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ecthq"]
 font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_3crnf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2hsg"]
 
@@ -22,6 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_sw8x2")
+script = ExtResource("2_3crnf")
 
 [node name="Container" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -40,6 +44,13 @@ size_flags_horizontal = 3
 text = "Disembark"
 label_settings = SubResource("LabelSettings_ecthq")
 uppercase = true
+
+[node name="Energy" type="Label" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Energy:	100%"
+label_settings = SubResource("LabelSettings_3crnf")
+horizontal_alignment = 1
 
 [node name="XY" type="HBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -66,3 +77,11 @@ script = ExtResource("2_p7tpy")
 layout_mode = 2
 text = "Fire
 "
+
+[node name="Launch" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Launch
+"
+
+[connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Launch" to="." method="_on_launch_pressed"]

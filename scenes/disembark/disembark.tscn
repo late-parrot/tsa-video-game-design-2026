@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=4 uid="uid://cxc0xvkwttx7e"]
+[gd_scene load_steps=8 format=4 uid="uid://cxc0xvkwttx7e"]
 
 [ext_resource type="Script" uid="uid://gulysnox8go7" path="res://scripts/disembark/disembark.gd" id="1_5rhh4"]
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
 [ext_resource type="PackedScene" uid="uid://da82tphw0tws7" path="res://scenes/disembark/player.tscn" id="2_o8x53"]
 [ext_resource type="PackedScene" uid="uid://cwr2scwm7o16e" path="res://scenes/disembark/overlay.tscn" id="3_o8x53"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
+radius = 24.0
+height = 64.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py471"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_omjsi"]
+radius = 8.0
+height = 32.0
 
 [node name="Disembark" type="Node2D"]
 script = ExtResource("1_5rhh4")
@@ -18,6 +30,32 @@ tile_set = ExtResource("1_ouoik")
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
+[node name="Ship" type="Area2D" parent="."]
+z_index = 1
+position = Vector2(16, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship"]
+position = Vector2(16, 8)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_5rhh4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ship"]
+position = Vector2(16, 8)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/StaticBody2D"]
+shape = SubResource("CapsuleShape2D_py471")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ship"]
+position = Vector2(16, 8)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Ship/Sprite2D"]
+rotation = 1.5707964
+mesh = SubResource("CapsuleMesh_omjsi")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="DisembarkOverlay" parent="UI" instance=ExtResource("3_o8x53")]
+
+[connection signal="body_entered" from="Ship" to="." method="_on_ship_body_entered"]
+[connection signal="body_exited" from="Ship" to="." method="_on_ship_body_exited"]

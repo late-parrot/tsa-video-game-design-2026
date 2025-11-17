@@ -14,7 +14,10 @@ func disable_land() -> void:
 	overlay.disable_land()
 	
 func land() -> void:
-	get_tree().quit()
+	var main = get_parent()
+	var disembark = load("res://scenes/disembark/disembark.tscn").instantiate()
+	main.add_child(disembark)
+	main.remove_child(self)
 
 func _process(_delta: float) -> void:
 	overlay.set_xy(player.position.x/64, -player.position.y/64)
