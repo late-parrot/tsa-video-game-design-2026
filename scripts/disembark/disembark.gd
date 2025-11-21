@@ -26,4 +26,5 @@ func reset() -> void:
 func launch() -> void:
 	var main = get_parent()
 	main.add_child(main.maneuver)
+	main.maneuver.overlay.reset()
 	queue_free()

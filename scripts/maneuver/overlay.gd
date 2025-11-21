@@ -13,6 +13,11 @@ func enable_land() -> void:
 func disable_land() -> void:
 	$Container/MarginContainer/VBoxContainer/Land.disabled = true
 
+func reset() -> void:
+	var vbox = $Container/MarginContainer/VBoxContainer
+	vbox.get_node("Land").grab_focus()
+	vbox.get_node("BackToSpaceport").button_pressed = false
+
 func _on_land_pressed() -> void:
 	maneuver.land()
 

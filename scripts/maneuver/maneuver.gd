@@ -14,6 +14,7 @@ func disable_land() -> void:
 	overlay.disable_land()
 	
 func land() -> void:
+	player.velocity = Vector2.ZERO
 	var main = get_parent()
 	var disembark = load("res://scenes/disembark/disembark.tscn").instantiate()
 	main.add_child(disembark)
