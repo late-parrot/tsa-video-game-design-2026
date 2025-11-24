@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var disembark := $"../.."
 
 func set_xy(x: int, y: int) -> void:
@@ -15,6 +14,7 @@ func set_energy(percentage: int) -> void:
 		Color(1.0, 0.861, 0.445, 1.0) if percentage > 25 else \
 		Color(1.0, 0.293, 0.293, 1.0) if percentage > 10 else \
 		Color(0.828, 0.129, 0.129, 1.0)
+	$LowEnergyBanner.visible = percentage <= 25
 
 func enable_launch() -> void:
 	$Container/MarginContainer/VBoxContainer/Launch.disabled = false

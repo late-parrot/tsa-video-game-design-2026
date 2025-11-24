@@ -1,5 +1,4 @@
-extends Node2D
-
+class_name Disembark extends Node2D
 
 @onready var player = $DisembarkPlayer
 @onready var overlay = $UI/DisembarkOverlay

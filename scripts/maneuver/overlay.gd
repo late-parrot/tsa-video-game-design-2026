@@ -1,6 +1,5 @@
 extends Control
 
-
 @onready var maneuver := $"../.."
 
 func set_xy(x: int, y: int) -> void:
@@ -19,7 +18,7 @@ func reset() -> void:
 	vbox.get_node("BackToSpaceport").button_pressed = false
 
 func _on_land_pressed() -> void:
-	maneuver.land()
+	maneuver.land(maneuver.current_planet)
 
 func _on_back_to_spaceport_toggled(toggled_on: bool) -> void:
 	maneuver.back_to_spaceport = toggled_on

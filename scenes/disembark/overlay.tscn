@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=10 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
 [ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
@@ -17,6 +17,9 @@ action = &"land"
 [sub_resource type="Shortcut" id="Shortcut_j4mfo"]
 events = [SubResource("InputEventAction_a61oy")]
 
+[sub_resource type="LabelSettings" id="LabelSettings_3mvk4"]
+font_color = Color(1, 0.29411766, 0.29411766, 1)
+
 [node name="DisembarkOverlay" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -29,8 +32,10 @@ script = ExtResource("2_3crnf")
 
 [node name="Container" type="PanelContainer" parent="."]
 layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
 offset_right = 248.0
-offset_bottom = 184.0
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Container"]
 layout_mode = 2
@@ -83,5 +88,79 @@ layout_mode = 2
 disabled = true
 text = "Launch
 "
+
+[node name="HSeparator" type="HSeparator" parent="Container/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="Container/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cargo"
+label_settings = SubResource("LabelSettings_ecthq")
+uppercase = true
+
+[node name="Cargo" type="RichTextLabel" parent="Container/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = 4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+bbcode_enabled = true
+text = "Terrain Vehicle
+[ul]50 Iron[/ul]
+[ul]100 Titanium[/ul]
+[ul]8 Tungsten[/ul]
+[ul]52 Cobalt[/ul]
+
+Ship
+[ul]500 Iron[/ul]
+[ul]100 Titanium[/ul]
+[ul]20 Tungsten[/ul]
+[ul]5 Uranium[/ul]
+[ul]2 Plutonium[/ul]
+[ul]200 Cobalt[/ul]
+[ul]3 Mercury[/ul]
+
+Planet Surface
+[ul]5 Iron[/ul]
+[ul]3 Titanium[/ul]
+[ul]1 Plutonium[/ul]
+
+
+
+
+
+Scroll!"
+tab_size = 1
+
+[node name="LowEnergyBanner" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.0
+offset_top = 16.0
+offset_right = 232.0
+offset_bottom = 83.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="LowEnergyBanner"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LowEnergyBanner/MarginContainer"]
+layout_mode = 2
+text = "WARNING: Cargo will be lost
+if energy is depleted!"
+label_settings = SubResource("LabelSettings_3mvk4")
 
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Launch" to="." method="_on_launch_pressed"]

@@ -1,7 +1,7 @@
-extends CharacterBody2D
-
+class_name DisembarkPlayer extends CharacterBody2D
 
 @onready var disembark = $".."
+@onready var main = $"../.."
 
 #@export var SPEED = 100.0
 #@export var ACCELERATION = 1000.0
@@ -32,7 +32,7 @@ func _ready() -> void:
 	moving = false
 
 func _physics_process(_delta: float) -> void:
-	if not moving and disembark.energy >= 0:
+	if not moving and (disembark is Spaceport or disembark.energy >= 0):
 		var d := Input.get_vector("left", "right", "up", "down")
 		# Set the vector to whichever direction is strongest
 		d = Vector2(sign(d.x), 0) if abs(d.x) > abs(d.y) \
@@ -46,9 +46,10 @@ func _physics_process(_delta: float) -> void:
 			tween.set_ease(Tween.EASE_IN_OUT)
 			tween.tween_property(self, "position", position+d*TILE_SIZE, 0.1)
 			tween.tween_callback(move_false)
-			disembark.energy -= 1
-			if disembark.energy < 0:
-				disembark.reset()
+			if disembark is not Spaceport:
+				disembark.energy -= 1
+				if disembark.energy < 0:
+					disembark.reset()
 
 func move_false() -> void:
 	await get_tree().create_timer(0.1).timeout

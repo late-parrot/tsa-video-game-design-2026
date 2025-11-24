@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=21 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
 [ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
 [ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
+[ext_resource type="PackedScene" uid="uid://dmgtbrm4ptty1" path="res://scenes/spaceport/spaceport.tscn" id="3_foey6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
 radius = 512.0
@@ -12,12 +13,26 @@ radius = 512.0
 radius = 512.0
 height = 1024.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_foey6"]
+radius = 128.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_plvpl"]
+radius = 128.0
+height = 265.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_n7xhb"]
 radius = 128.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_ytq0j"]
 radius = 128.0
 height = 265.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vm5k5"]
+radius = 96.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_foey6"]
+radius = 96.0
+height = 192.0
 
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -67,9 +82,23 @@ shape = SubResource("CircleShape2D_40ujs")
 modulate = Color(1, 0.97406006, 0.3359375, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
+[node name="Venus" type="Area2D" parent="Planets"]
+position = Vector2(672, -736)
+script = ExtResource("1_n7xhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Venus"]
+shape = SubResource("CircleShape2D_foey6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Venus"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Venus/Sprite2D"]
+modulate = Color(0.83984375, 0.81831455, 0.6430054, 1)
+mesh = SubResource("SphereMesh_plvpl")
+
 [node name="Earth" type="Area2D" parent="Planets"]
 position = Vector2(1208, 848)
 script = ExtResource("1_n7xhb")
+disembark_scene = ExtResource("3_foey6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Earth"]
 shape = SubResource("CircleShape2D_n7xhb")
@@ -79,6 +108,19 @@ shape = SubResource("CircleShape2D_n7xhb")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Earth/Sprite2D"]
 modulate = Color(0.2421875, 0.7158203, 1, 1)
 mesh = SubResource("SphereMesh_ytq0j")
+
+[node name="Mars" type="Area2D" parent="Planets"]
+position = Vector2(-1792, -248)
+script = ExtResource("1_n7xhb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Mars"]
+shape = SubResource("CircleShape2D_vm5k5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Mars"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Mars/Sprite2D"]
+modulate = Color(0.74609375, 0.28274512, 0.20692444, 1)
+mesh = SubResource("SphereMesh_foey6")
 
 [node name="ManeuverPlayer" parent="." instance=ExtResource("1_le8cj")]
 
