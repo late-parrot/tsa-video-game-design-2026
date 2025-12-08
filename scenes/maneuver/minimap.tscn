@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://b740sjrvfkoy3"]
+
+[ext_resource type="Script" uid="uid://dk8utl51bjsjh" path="res://scripts/maneuver/minimap.gd" id="1_ukxgo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukxgo"]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovdrv"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ukxgo"]
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ovdrv"]
+radius = 1.0
+height = 2.0
+
+[node name="Minimap" type="Node2D"]
+script = ExtResource("1_ukxgo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
+custom_minimum_size = Vector2(384, 216)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ukxgo")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
+visible = false
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ovdrv")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Planets" type="Node2D" parent="."]
+
+[node name="Orbit" type="Node2D" parent="Planets"]
+visible = false
+top_level = true
+z_index = -1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Orbit"]
+modulate = Color(0.21, 0.21, 0.21, 1)
+mesh = SubResource("SphereMesh_ukxgo")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Planets/Orbit"]
+modulate = Color(0, 0, 0, 1)
+mesh = SubResource("SphereMesh_ovdrv")
+
+[node name="Camera2D" type="Camera2D" parent="."]

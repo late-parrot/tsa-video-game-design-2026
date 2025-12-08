@@ -18,9 +18,14 @@ func set_energy(percentage: int) -> void:
 
 func enable_launch() -> void:
 	$Container/MarginContainer/VBoxContainer/Launch.disabled = false
+	$Container/MarginContainer/VBoxContainer/Recharge.disabled = false
 
 func disable_launch() -> void:
 	$Container/MarginContainer/VBoxContainer/Launch.disabled = true
+	$Container/MarginContainer/VBoxContainer/Recharge.disabled = true
 
 func _on_launch_pressed() -> void:
 	disembark.launch()
+
+func _on_recharge_pressed() -> void:
+	disembark.recharge()

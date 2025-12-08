@@ -44,6 +44,7 @@ width = 12
 height = 12
 
 [node name="DisembarkPlayer" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_jtk2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -61,3 +62,5 @@ process_material = SubResource("ParticleProcessMaterial_efpyd")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7.9999986, 8)
 texture = SubResource("GradientTexture2D_efpyd")
+
+[node name="Lasers" type="Node2D" parent="."]

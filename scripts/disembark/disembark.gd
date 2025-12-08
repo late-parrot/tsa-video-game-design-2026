@@ -1,9 +1,15 @@
 class_name Disembark extends Node2D
 
+@export var MAX_ENERGY = 100
+
 @onready var player = $DisembarkPlayer
 @onready var overlay = $UI/DisembarkOverlay
 
-var energy = 100
+var energy = MAX_ENERGY:
+	set(value):
+		energy = value
+		if energy < 0:
+			reset()
 
 func _process(_delta: float) -> void:
 	overlay.set_xy(player.position.x/16, -player.position.y/16)
@@ -20,7 +26,10 @@ func _on_ship_body_exited(body: Node2D) -> void:
 func reset() -> void:
 	var main = get_parent()
 	launch()
-	main.maneuver.land() # Seems a bit janky but works
+	main.maneuver.land(main.maneuver.current_planet) # Seems a bit janky but works
+
+func recharge() -> void:
+	energy = MAX_ENERGY
 
 func launch() -> void:
 	var main = get_parent()

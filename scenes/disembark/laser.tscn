@@ -1,18 +1,62 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhin4gmpyeehr"]
+[gd_scene load_steps=12 format=3 uid="uid://dhin4gmpyeehr"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_v2bl1"]
-radius = 2.0
+[ext_resource type="Script" uid="uid://ckm2xii5x2if6" path="res://scripts/disembark/laser.gd" id="1_wkqww"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_h7xbw"]
-radius = 2.0
-height = 4.0
+[sub_resource type="Gradient" id="Gradient_n4mt0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3ul67"]
+gradient = SubResource("Gradient_n4mt0")
+width = 2
+height = 2
+
+[sub_resource type="Gradient" id="Gradient_3ul67"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wu22a"]
+gradient = SubResource("Gradient_3ul67")
+
+[sub_resource type="Curve" id="Curve_wkqww"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_n4mt0"]
+curve = SubResource("Curve_wkqww")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wu22a"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_n4mt0")
+color = Color(0.3515625, 0.65045166, 1, 1)
+color_ramp = SubResource("GradientTexture1D_wu22a")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkqww"]
+size = Vector2(8, 2)
+
+[sub_resource type="Gradient" id="Gradient_wkqww"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n4mt0"]
+gradient = SubResource("Gradient_wkqww")
+width = 8
+height = 2
 
 [node name="DisembarkLaser" type="Area2D"]
+top_level = true
+collision_layer = 0
+script = ExtResource("1_wkqww")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -1
+amount = 32
+texture = SubResource("GradientTexture2D_3ul67")
+lifetime = 0.2
+process_material = SubResource("ParticleProcessMaterial_wu22a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_v2bl1")
+shape = SubResource("RectangleShape2D_wkqww")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_n4mt0")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
-mesh = SubResource("SphereMesh_h7xbw")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

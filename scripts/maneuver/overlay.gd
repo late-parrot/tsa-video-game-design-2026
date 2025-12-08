@@ -12,6 +12,13 @@ func enable_land() -> void:
 func disable_land() -> void:
 	$Container/MarginContainer/VBoxContainer/Land.disabled = true
 
+func show_name(planet_name: String) -> void:
+	$NameBanner/MarginContainer/Label.text = planet_name
+	$NameBanner.visible = true
+
+func hide_name() -> void:
+	$NameBanner.visible = false
+
 func reset() -> void:
 	var vbox = $Container/MarginContainer/VBoxContainer
 	vbox.get_node("Land").grab_focus()
@@ -24,4 +31,4 @@ func _on_back_to_spaceport_toggled(toggled_on: bool) -> void:
 	maneuver.back_to_spaceport = toggled_on
 	if toggled_on and maneuver.player in \
 			maneuver.spaceport.get_overlapping_bodies():
-		maneuver.land()
+		maneuver.land(maneuver.spaceport)

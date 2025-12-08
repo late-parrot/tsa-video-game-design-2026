@@ -27,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme = ExtResource("1_sw8x2")
 script = ExtResource("2_3crnf")
 
@@ -82,6 +83,11 @@ script = ExtResource("2_p7tpy")
 layout_mode = 2
 text = "Fire
 "
+
+[node name="Recharge" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Recharge"
 
 [node name="Launch" type="Button" parent="Container/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -144,6 +150,7 @@ Scroll!"
 tab_size = 1
 
 [node name="LowEnergyBanner" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -163,4 +170,5 @@ text = "WARNING: Cargo will be lost
 if energy is depleted!"
 label_settings = SubResource("LabelSettings_3mvk4")
 
+[connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Recharge" to="." method="_on_recharge_pressed"]
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Launch" to="." method="_on_launch_pressed"]

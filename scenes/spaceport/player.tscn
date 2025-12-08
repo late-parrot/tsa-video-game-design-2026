@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://qgcn0byjt4oh"]
+
+[ext_resource type="Script" uid="uid://lc82ixjtit8g" path="res://scripts/spaceport/player.gd" id="1_lpgg7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hp6sw"]
+radius = 8.0
+
+[sub_resource type="Gradient" id="Gradient_x2fn1"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ly271"]
+gradient = SubResource("Gradient_x2fn1")
+width = 14
+height = 14
+
+[node name="SpaceportPlayer" type="CharacterBody2D"]
+script = ExtResource("1_lpgg7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hp6sw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_ly271")

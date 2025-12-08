@@ -1,10 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=20 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
 [ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
 [ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
-[ext_resource type="PackedScene" uid="uid://dmgtbrm4ptty1" path="res://scenes/spaceport/spaceport.tscn" id="3_foey6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
 radius = 512.0
@@ -67,58 +66,60 @@ color_ramp = SubResource("GradientTexture1D_sugp2")
 
 [node name="Maneuver" type="Node2D" node_paths=PackedStringArray("spaceport")]
 script = ExtResource("1_ytq0j")
-spaceport = NodePath("Planets/Earth")
+spaceport = NodePath("Planets/TRAPPIST-1c")
 
 [node name="Planets" type="Node2D" parent="."]
 
-[node name="Sun" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-1" type="Area2D" parent="Planets"]
+script = ExtResource("1_n7xhb")
+landable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Sun"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1"]
 shape = SubResource("CircleShape2D_40ujs")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/Sun"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1"]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Sun/Sprite2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1/Sprite2D"]
 modulate = Color(1, 0.97406006, 0.3359375, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
-[node name="Venus" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-1b" type="Area2D" parent="Planets"]
 position = Vector2(672, -736)
 script = ExtResource("1_n7xhb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Venus"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1b"]
 shape = SubResource("CircleShape2D_foey6")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/Venus"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1b"]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Venus/Sprite2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1b/Sprite2D"]
 modulate = Color(0.83984375, 0.81831455, 0.6430054, 1)
 mesh = SubResource("SphereMesh_plvpl")
 
-[node name="Earth" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-1c" type="Area2D" parent="Planets"]
 position = Vector2(1208, 848)
 script = ExtResource("1_n7xhb")
-disembark_scene = ExtResource("3_foey6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Earth"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1c"]
 shape = SubResource("CircleShape2D_n7xhb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/Earth"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1c"]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Earth/Sprite2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1c/Sprite2D"]
 modulate = Color(0.2421875, 0.7158203, 1, 1)
 mesh = SubResource("SphereMesh_ytq0j")
 
-[node name="Mars" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-1d (Locked)" type="Area2D" parent="Planets"]
 position = Vector2(-1792, -248)
 script = ExtResource("1_n7xhb")
+landable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Mars"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1d (Locked)"]
 shape = SubResource("CircleShape2D_vm5k5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/Mars"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1d (Locked)"]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Mars/Sprite2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1d (Locked)/Sprite2D"]
 modulate = Color(0.74609375, 0.28274512, 0.20692444, 1)
 mesh = SubResource("SphereMesh_foey6")
 

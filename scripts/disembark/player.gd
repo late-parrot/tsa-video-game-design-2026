@@ -1,5 +1,7 @@
 class_name DisembarkPlayer extends CharacterBody2D
 
+var laser_scene = preload("res://scenes/disembark/laser.tscn")
+
 @onready var disembark = $".."
 @onready var main = $"../.."
 
@@ -26,6 +28,7 @@ class_name DisembarkPlayer extends CharacterBody2D
 
 const TILE_SIZE = 16
 var moving = true
+var shoot_allowed = true
 
 func _ready() -> void:
 	await get_tree().create_timer(0.5).timeout
@@ -47,11 +50,35 @@ func _physics_process(_delta: float) -> void:
 			tween.tween_property(self, "position", position+d*TILE_SIZE, 0.1)
 			tween.tween_callback(move_false)
 			if disembark is not Spaceport:
-				disembark.energy -= 1
-				if disembark.energy < 0:
-					disembark.reset()
+				disembark.energy -= 0.5
 
 func move_false() -> void:
 	await get_tree().create_timer(0.1).timeout
 	moving = false
 	position = Vector2(16*round(position.x/16), 16*round(position.y/16))
+
+func shoot(direction: Vector2) -> void:
+	direction = direction.normalized()
+	if shoot_allowed:
+		disembark.energy -= 1
+		var laser = laser_scene.instantiate()
+		laser.position = position+Vector2(8,8)
+		laser.rotation = direction.angle()
+		$Lasers.add_child(laser)
+		shoot_allowed = false
+		get_tree().create_timer(0.5).connect("timeout", reset_shot)
+
+func reset_shot() -> void:
+	shoot_allowed = true
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		var camera = get_viewport().get_camera_2d()
+		var pos = camera.get_global_mouse_position()
+		shoot(pos-(position+Vector2(8,8)))
+
+func _process(_delta: float) -> void:
+	var dir = Input.get_vector(
+		"shoot_left", "shoot_right", "shoot_up", "shoot_down"
+	)
+	if dir: shoot(dir)
