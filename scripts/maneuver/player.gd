@@ -5,7 +5,7 @@ class_name ManeuverPlayer extends CharacterBody2D
 @export var SPEED = 500.0
 @export var ACCELERATION = 1200.0
 @export var FRICTION = 800.0
-@export var ROTATION_SPEED = 8.0
+@export var ROTATION_SPEED = 4.0
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")

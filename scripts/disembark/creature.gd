@@ -30,7 +30,6 @@ func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity
 
 func _on_start_running_body_entered(body: Node2D) -> void:
-	print(body)
 	if body == disembark.player:
 		avoiding = true
 		avoid_pos = disembark.player.position+Vector2(8,8)

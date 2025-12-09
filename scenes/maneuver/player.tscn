@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://gvgpvaqcuuwx"]
+[gd_scene load_steps=12 format=3 uid="uid://gvgpvaqcuuwx"]
 
 [ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver/player.gd" id="1_xetyd"]
+[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceshipv2.png" id="2_ufdv0"]
 
 [sub_resource type="Gradient" id="Gradient_xetyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -31,6 +32,7 @@ particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(0, 4, 0)
 direction = Vector3(-1, 0, 0)
+spread = 12.5
 initial_velocity_max = 100.0
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_w3xnj")
@@ -39,8 +41,8 @@ hue_variation_min = -0.050000023
 hue_variation_max = 0.049999975
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xetyd"]
-radius = 8.0
-height = 32.0
+radius = 11.0
+height = 72.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_w3xnj"]
 radius = 8.0
@@ -48,15 +50,16 @@ height = 32.0
 
 [node name="ManeuverPlayer" type="CharacterBody2D"]
 z_index = 1
+scale = Vector2(2, 2)
 script = ExtResource("1_xetyd")
 
 [node name="Fire" type="GPUParticles2D" parent="."]
 modulate = Color(1, 0.51666665, 0.42000002, 1)
-position = Vector2(-14, 0)
+position = Vector2(-21.5, 0)
 emitting = false
-amount = 32
+amount = 64
 texture = SubResource("GradientTexture2D_w3xnj")
-lifetime = 0.2
+lifetime = 0.09999999999999999
 speed_scale = 4.0
 randomness = 1.0
 process_material = SubResource("ParticleProcessMaterial_w3xnj")
@@ -66,7 +69,9 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xetyd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ufdv0")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]
+visible = false
 rotation = 1.5707964
 mesh = SubResource("CapsuleMesh_w3xnj")
