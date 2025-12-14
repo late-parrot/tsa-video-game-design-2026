@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://oubjhg1n54ru"]
+[gd_scene load_steps=5 format=3 uid="uid://bg0knfvwm3ul2"]
 
-[ext_resource type="Script" uid="uid://w6p18ne7l5a2" path="res://scripts/disembark/creature.gd" id="1_4aysl"]
+[ext_resource type="Script" path="res://scripts/disembark/creature.gd" id="1_4aysl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ac5"]
 size = Vector2(14, 14)
@@ -33,6 +33,7 @@ debug_path_custom_color = Color(1, 0, 0, 1)
 
 [node name="StartRunning" type="Area2D" parent="."]
 collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartRunning"]
 shape = SubResource("CircleShape2D_4aysl")

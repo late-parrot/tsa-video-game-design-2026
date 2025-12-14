@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
 [ext_resource type="PackedScene" uid="uid://da82tphw0tws7" path="res://scenes/disembark/player.tscn" id="2_o8x53"]
 [ext_resource type="PackedScene" uid="uid://cwr2scwm7o16e" path="res://scenes/disembark/overlay.tscn" id="3_o8x53"]
-[ext_resource type="PackedScene" uid="uid://oubjhg1n54ru" path="res://scenes/disembark/creature.tscn" id="4_py471"]
+[ext_resource type="PackedScene" path="res://scenes/disembark/creature.tscn" id="4_py471"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
 radius = 24.0
@@ -27,8 +27,6 @@ tile_map_data = PackedByteArray("AAABAAEAAAADAAAAAAABAAIAAAADAAAAAAABAAMAAAADAAA
 tile_set = ExtResource("1_ouoik")
 
 [node name="DisembarkPlayer" parent="." instance=ExtResource("2_o8x53")]
-collision_layer = 1
-collision_mask = 2
 
 [node name="Camera2D" type="Camera2D" parent="DisembarkPlayer"]
 zoom = Vector2(3, 3)
