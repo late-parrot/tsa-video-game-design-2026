@@ -4,19 +4,16 @@
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
 [ext_resource type="PackedScene" uid="uid://da82tphw0tws7" path="res://scenes/disembark/player.tscn" id="2_o8x53"]
 [ext_resource type="PackedScene" uid="uid://cwr2scwm7o16e" path="res://scenes/disembark/overlay.tscn" id="3_o8x53"]
-[ext_resource type="PackedScene" path="res://scenes/disembark/creature.tscn" id="4_py471"]
+[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceshipv2.png" id="4_omjsi"]
+[ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="4_py471"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
-radius = 24.0
-height = 64.0
+radius = 31.0
+height = 94.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py471"]
-radius = 8.0
-height = 32.0
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_omjsi"]
-radius = 8.0
-height = 32.0
+radius = 13.000001
+height = 64.0
 
 [node name="Disembark" type="Node2D"]
 script = ExtResource("1_5rhh4")
@@ -34,7 +31,8 @@ position_smoothing_enabled = true
 
 [node name="Ship" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(16, 0)
+position = Vector2(48, 8)
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ship"]
 position = Vector2(16, 8)
@@ -50,10 +48,7 @@ shape = SubResource("CapsuleShape2D_py471")
 
 [node name="Sprite2D" type="Sprite2D" parent="Ship"]
 position = Vector2(16, 8)
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Ship/Sprite2D"]
-rotation = 1.5707964
-mesh = SubResource("CapsuleMesh_omjsi")
+texture = ExtResource("4_omjsi")
 
 [node name="Creatures" type="Node2D" parent="."]
 
