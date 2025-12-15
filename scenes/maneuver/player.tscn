@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://gvgpvaqcuuwx"]
 
 [ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver/player.gd" id="1_xetyd"]
-[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceshipv2.png" id="2_ufdv0"]
+[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="2_ufdv0"]
 
 [sub_resource type="Gradient" id="Gradient_xetyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
