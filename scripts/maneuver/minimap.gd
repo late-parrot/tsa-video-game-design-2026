@@ -1,7 +1,7 @@
 extends Node2D
 
 const SCALE = 1.0/4.0
-@onready var overlay = $"../../../../../../.."
+@onready var overlay = $"../../../.."
 var maneuver
 
 func _ready() -> void:
