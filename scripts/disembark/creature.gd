@@ -1,20 +1,31 @@
 class_name Creature extends CharacterBody2D
 
-@export var SPEED = 100.0
-@export var DISTANCE = 300.0
+## The speed the creature will travel when running away from the player.
+## Should be quite a bit faster than the player so that they need to run and catch up.
+@export_range(0, 300, 50, "suffix:px/s") var RUN_SPEED: int = 100
+## The distance from the player that the creature will run to before it deems itself safe.
+@export_range(0, 500, 50, "suffix:px", "description:The") var DISTANCE: int = 300
+## The chance this creature will be captured by any given shot. Works a bit like Pokemon,
+## should be lower for tougher enemies.
+@export_range(0, 1, 0.05) var CAPTURE_CHANCE: float = 0.2
+## The time the creature will stay captured before it will escape. The player has this
+## long to collect it.
+@export_range(0, 10, 1, "suffix:s") var CAPTURE_TIME: float = 3.0
+
 var avoiding = false
 var avoid_pos: Vector2
+var captured = false
 
 @onready var agent: NavigationAgent2D = $NavigationAgent2D
 @onready var disembark: Disembark = $"../.."
 
 func _physics_process(_delta: float) -> void:
-	if not avoiding: return
+	if captured or not avoiding: return
 	agent.target_position = (position-avoid_pos).normalized()*DISTANCE+avoid_pos
 	
 	var current_agent_pos = global_position
 	var next_path_pos = agent.get_next_path_position()
-	var new_vel = current_agent_pos.direction_to(next_path_pos)*SPEED
+	var new_vel = current_agent_pos.direction_to(next_path_pos)*RUN_SPEED
 	
 	if agent.is_navigation_finished():
 		avoiding = false
@@ -33,3 +44,15 @@ func _on_start_running_body_entered(body: Node2D) -> void:
 	if body == disembark.player:
 		avoiding = true
 		avoid_pos = disembark.player.position+Vector2(8,8)
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area is Laser:
+		if randf() <= CAPTURE_CHANCE:
+			capture()
+
+func capture():
+	captured = true
+	scale = 0.8*Vector2.ONE
+	await get_tree().create_timer(CAPTURE_TIME).timeout
+	captured = false
+	scale = Vector2.ONE

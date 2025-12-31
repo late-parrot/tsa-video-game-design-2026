@@ -42,7 +42,6 @@ func _physics_process(_delta: float) -> void:
 			else Vector2(0, sign(d.y))
 		if d:
 			var collision = move_and_collide(d*TILE_SIZE, true)
-			print(collision)
 			if collision:
 				return
 			moving = true

@@ -1,6 +1,8 @@
 class_name Disembark extends Node2D
 
-@export var MAX_ENERGY = 100
+## The maximum engergy that the terrain vehicle can hold. This is what it's reset to when
+## recharged or landing.
+@export_range(0, 500, 10) var MAX_ENERGY: int = 100
 
 @onready var player = $DisembarkPlayer
 @onready var overlay = $UI/DisembarkOverlay

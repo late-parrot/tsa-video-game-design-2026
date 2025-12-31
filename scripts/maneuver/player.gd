@@ -2,10 +2,14 @@ class_name ManeuverPlayer extends CharacterBody2D
 
 @onready var maneuver = $".."
 
-@export var SPEED = 500.0
-@export var ACCELERATION = 1200.0
-@export var FRICTION = 800.0
-@export var ROTATION_SPEED = 4.0
+## The max speed of the player.
+@export_range(0, 1000, 50, "suffix:px/s") var SPEED: int = 500
+## The acceleration the player will feel until it reaches `SPEED`.
+@export_range(0, 2000, 100, "suffix:px/s^2") var ACCELERATION: int = 1200
+## The decceleration the player will feel until it stops moving.
+@export_range(0, 2000, 100, "suffix:px/s^2") var FRICTION: int = 800
+## How fast the player will rotate when making tight turns.
+@export_range(0, 10, 1, "suffix:rad/s") var ROTATION_SPEED: float = 4.0
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")

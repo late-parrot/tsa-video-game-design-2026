@@ -1,6 +1,8 @@
 class_name Maneuver extends Node2D
 
+## The planet that the "Back to Spaceport" button will navigate to. Deprecated.
 @export var spaceport: Planet
+
 var back_to_spaceport = false
 var current_planet = null
 

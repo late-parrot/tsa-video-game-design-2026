@@ -1,6 +1,11 @@
 class_name Planet extends Area2D
 
-@export var landable = true
+## Is this planet landable? The sun is a `Planet` object, but clearly not landable, or you
+## can functionally lock planets this way.
+@export var landable: bool = true
+## The scene that will be used when disembarking on this `Planet`. Should inherit `Disembark`
+## and contain the necessary UI, player, and other logic. Duplicate an existing planet scene
+## if you would like to create a new planet.
 @export var disembark_scene: PackedScene = \
 	preload("res://scenes/disembark/disembark.tscn")
 

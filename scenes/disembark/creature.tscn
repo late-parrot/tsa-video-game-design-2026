@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg0knfvwm3ul2"]
+[gd_scene load_steps=6 format=3 uid="uid://bg0knfvwm3ul2"]
 
-[ext_resource type="Script" path="res://scripts/disembark/creature.gd" id="1_4aysl"]
+[ext_resource type="Script" uid="uid://w6p18ne7l5a2" path="res://scripts/disembark/creature.gd" id="1_4aysl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ac5"]
 size = Vector2(14, 14)
@@ -11,8 +11,10 @@ size = Vector2(14, 14)
 [sub_resource type="CircleShape2D" id="CircleShape2D_4aysl"]
 radius = 50.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aysl"]
+size = Vector2(14, 14)
+
 [node name="Creature" type="CharacterBody2D"]
-collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_4aysl")
 
@@ -38,5 +40,11 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartRunning"]
 shape = SubResource("CircleShape2D_4aysl")
 
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_4aysl")
+
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
 [connection signal="body_entered" from="StartRunning" to="." method="_on_start_running_body_entered"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
