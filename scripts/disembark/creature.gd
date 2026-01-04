@@ -52,7 +52,7 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 
 func capture():
 	captured = true
-	scale = 0.8*Vector2.ONE
+	scale = 0.8*Vector2.ONE # TODO: remove
 	await get_tree().create_timer(CAPTURE_TIME).timeout
 	captured = false
-	scale = Vector2.ONE
+	scale = Vector2.ONE # TODO: remove

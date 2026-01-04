@@ -3,6 +3,7 @@ class_name InputController extends Node
 @export_category("Overrides")
 @export var MOVE = false
 @export var SHOOT = false
+@export var BUMPERS = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	var press = false
@@ -16,5 +17,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			if event.is_action_pressed(x+y):
 				ui_event.action = "ui_"+y
 				press = true
+	if BUMPERS:
+		if event.is_action_pressed("left_bumper"):
+			ui_event.action = "ui_focus_prev"
+			press = true
+		elif event.is_action_pressed("right_bumper"):
+			ui_event.action = "ui_focus_next"
+			press = true
 	if press:
 		Input.parse_input_event(ui_event)

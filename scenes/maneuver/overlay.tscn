@@ -113,11 +113,15 @@ size_flags_vertical = 3
 text = "* hi"
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_left = 944.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -208.0
 offset_top = 16.0
-offset_right = 2104.0
-offset_bottom = 672.0
+offset_right = 992.0
+offset_bottom = 712.0
+grow_horizontal = 0
 scale = Vector2(0.16, 0.16)
 theme_override_styles/panel = SubResource("StyleBoxFlat_qg02t")
 

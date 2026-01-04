@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=11 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
 [ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
@@ -17,6 +17,9 @@ action = &"land"
 [sub_resource type="Shortcut" id="Shortcut_j4mfo"]
 events = [SubResource("InputEventAction_a61oy")]
 
+[sub_resource type="LabelSettings" id="LabelSettings_uhruh"]
+font_size = 24
+
 [sub_resource type="LabelSettings" id="LabelSettings_3mvk4"]
 font_color = Color(1, 0.29411766, 0.29411766, 1)
 
@@ -33,10 +36,8 @@ script = ExtResource("2_3crnf")
 
 [node name="Container" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
 offset_right = 248.0
-grow_vertical = 2
+offset_bottom = 248.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Container"]
 layout_mode = 2
@@ -79,11 +80,6 @@ text = "Collect
 (Space)"
 script = ExtResource("2_p7tpy")
 
-[node name="Fire" type="Button" parent="Container/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Fire
-"
-
 [node name="Recharge" type="Button" parent="Container/MarginContainer/VBoxContainer"]
 layout_mode = 2
 disabled = true
@@ -95,23 +91,35 @@ disabled = true
 text = "Launch
 "
 
-[node name="HSeparator" type="HSeparator" parent="Container/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 33)
+[node name="Container2" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -224.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Container2"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Container/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container2/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Container2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="Container/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Cargo"
 label_settings = SubResource("LabelSettings_ecthq")
 uppercase = true
 
-[node name="Cargo" type="RichTextLabel" parent="Container/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Cargo" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -148,6 +156,27 @@ Planet Surface
 
 Scroll!"
 tab_size = 1
+
+[node name="HSeparator" type="HSeparator" parent="Container2/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 33)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Missions"
+label_settings = SubResource("LabelSettings_uhruh")
+uppercase = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "* hi"
 
 [node name="LowEnergyBanner" type="PanelContainer" parent="."]
 visible = false
