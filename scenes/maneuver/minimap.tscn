@@ -42,13 +42,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
+[node name="Window" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(384, 216)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_ukxgo")
 
-[node name="Panel2" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
+[node name="Center" type="Panel" parent="CanvasLayer/Control/CenterContainer"]
 visible = false
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
@@ -67,8 +68,10 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Planets" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="Orbit" type="Node2D" parent="Planets"]
+unique_name_in_owner = true
 visible = false
 top_level = true
 z_index = -1
@@ -82,3 +85,4 @@ modulate = Color(0, 0, 0, 1)
 mesh = SubResource("SphereMesh_ovdrv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true

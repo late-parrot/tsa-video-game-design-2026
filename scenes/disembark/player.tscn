@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://da82tphw0tws7"]
+[gd_scene load_steps=13 format=3 uid="uid://da82tphw0tws7"]
 
 [ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark/player.gd" id="1_jtk2v"]
 
@@ -43,8 +43,11 @@ gradient = SubResource("Gradient_151jb")
 width = 12
 height = 12
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtk2v"]
+radius = 20.024984
+
 [node name="DisembarkPlayer" type="CharacterBody2D"]
-collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_jtk2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -64,3 +67,16 @@ position = Vector2(7.9999986, 8)
 texture = SubResource("GradientTexture2D_efpyd")
 
 [node name="Lasers" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollectCreatures" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectCreatures"]
+position = Vector2(8, 8)
+shape = SubResource("CircleShape2D_jtk2v")
+
+[connection signal="body_entered" from="CollectCreatures" to="." method="_on_collect_creatures_body_entered"]
+[connection signal="body_exited" from="CollectCreatures" to="." method="_on_collect_creatures_body_exited"]

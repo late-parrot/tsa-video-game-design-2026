@@ -4,8 +4,8 @@ class_name Disembark extends Node2D
 ## recharged or landing.
 @export_range(0, 500, 10) var MAX_ENERGY: int = 100
 
-@onready var player = $DisembarkPlayer
-@onready var overlay = $UI/DisembarkOverlay
+@onready var player = %DisembarkPlayer
+@onready var overlay = %DisembarkOverlay
 
 var energy = MAX_ENERGY:
 	set(value):
@@ -31,9 +31,11 @@ func reset() -> void:
 	main.maneuver.land(main.maneuver.current_planet) # Seems a bit janky but works
 
 func recharge() -> void:
+	Game.move_cargo()
 	energy = MAX_ENERGY
 
 func launch() -> void:
+	Game.move_cargo()
 	var main = get_parent()
 	main.add_child(main.maneuver)
 	main.maneuver.overlay.reset()

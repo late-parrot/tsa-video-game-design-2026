@@ -53,6 +53,7 @@ label_settings = SubResource("LabelSettings_ecthq")
 uppercase = true
 
 [node name="Energy" type="Label" parent="Container/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Energy:	100%"
@@ -63,16 +64,19 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="X" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "X:100"
 label_settings = SubResource("LabelSettings_h2hsg")
 
 [node name="Y" type="Label" parent="Container/MarginContainer/VBoxContainer/XY"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Y:100"
 
 [node name="Collect" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 shortcut = SubResource("Shortcut_j4mfo")
@@ -81,11 +85,13 @@ text = "Collect
 script = ExtResource("2_p7tpy")
 
 [node name="Recharge" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Recharge"
 
 [node name="Launch" type="Button" parent="Container/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 disabled = true
 text = "Launch
@@ -120,6 +126,7 @@ label_settings = SubResource("LabelSettings_ecthq")
 uppercase = true
 
 [node name="Cargo" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -173,21 +180,23 @@ text = "Missions"
 label_settings = SubResource("LabelSettings_uhruh")
 uppercase = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Missions" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "* hi"
 
 [node name="LowEnergyBanner" type="PanelContainer" parent="."]
+unique_name_in_owner = true
 visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -232.0
-offset_top = 16.0
+offset_top = 8.0
 offset_right = 232.0
-offset_bottom = 83.0
+offset_bottom = 75.0
 grow_horizontal = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="LowEnergyBanner"]
@@ -199,5 +208,26 @@ text = "WARNING: Cargo will be lost
 if energy is depleted!"
 label_settings = SubResource("LabelSettings_3mvk4")
 
+[node name="CargoMovedBanner" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 56.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CargoMovedBanner"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CargoMovedBanner/MarginContainer"]
+layout_mode = 2
+text = "Cargo Moved"
+
+[connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Collect" to="." method="_on_collect_pressed"]
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Recharge" to="." method="_on_recharge_pressed"]
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Launch" to="." method="_on_launch_pressed"]

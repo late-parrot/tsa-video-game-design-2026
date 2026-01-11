@@ -6,8 +6,8 @@ class_name Maneuver extends Node2D
 var back_to_spaceport = false
 var current_planet = null
 
-@onready var player = $ManeuverPlayer
-@onready var overlay = $UI/ManeuverOverlay
+@onready var player = %ManeuverPlayer
+@onready var overlay = %ManeuverOverlay
 
 func enable_land() -> void:
 	overlay.enable_land()

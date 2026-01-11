@@ -2,30 +2,81 @@ extends Control
 
 @onready var disembark := $"../.."
 
+var collectibles = []
+
+func _process(_delta: float) -> void:
+	%Cargo.clear()
+	%Cargo.append_text("Terrain Vehicle\n")
+	if len(Game.vehicle_cargo)==0:
+		%Cargo.append_text("  Empty")
+	for item in Game.vehicle_cargo:
+		var count = Game.vehicle_cargo[item]
+		%Cargo.append_text("[ul]"+str(count)+" "+item+("s" if count!=1 else "")+"[/ul]")
+	%Cargo.append_text("\n\nShip\n")
+	if len(Game.ship_cargo)==0:
+		%Cargo.append_text("  Empty")
+	for item in Game.ship_cargo:
+		var count = Game.ship_cargo[item]
+		%Cargo.append_text("[ul]"+str(count)+" "+item+("s" if count!=1 else "")+"[/ul]")
+	
+	# Godot doesn't seem to like the disabled value changing more than once per frame
+	var d = true
+	for c in collectibles:
+		if c["node"] is not Creature or c["node"].captured:
+			d = false
+	%Collect.disabled = d
+
 func set_xy(x: int, y: int) -> void:
-	$Container/MarginContainer/VBoxContainer/XY/X.text = "X:"+str(x)
-	$Container/MarginContainer/VBoxContainer/XY/Y.text = "Y:"+str(y)
+	%X.text = "X:"+str(x)
+	%Y.text = "Y:"+str(y)
 	
 func set_energy(percentage: int) -> void:
-	var e = $Container/MarginContainer/VBoxContainer/Energy
-	e.text = "Energy:"+str(percentage)+"%"
-	e.label_settings.font_color = \
+	%Energy.text = "Energy:"+str(percentage)+"%"
+	%Energy.label_settings.font_color = \
 		Color(1.0, 1.0, 1.0, 1.0) if percentage > 50 else \
 		Color(1.0, 0.861, 0.445, 1.0) if percentage > 25 else \
 		Color(1.0, 0.293, 0.293, 1.0) if percentage > 10 else \
 		Color(0.828, 0.129, 0.129, 1.0)
-	$LowEnergyBanner.visible = percentage <= 25
+	%LowEnergyBanner.visible = percentage <= 25
 
 func enable_launch() -> void:
-	$Container/MarginContainer/VBoxContainer/Launch.disabled = false
-	$Container/MarginContainer/VBoxContainer/Recharge.disabled = false
+	%Launch.disabled = false
+	%Recharge.disabled = false
 
 func disable_launch() -> void:
-	$Container/MarginContainer/VBoxContainer/Launch.disabled = true
-	$Container/MarginContainer/VBoxContainer/Recharge.disabled = true
+	%Launch.disabled = true
+	%Recharge.disabled = true
+	
+func show_cargo_moved() -> void:
+	%CargoMovedBanner.visible = true
+	await get_tree().create_timer(2).timeout
+	%CargoMovedBanner.visible = false
 
 func _on_launch_pressed() -> void:
 	disembark.launch()
 
 func _on_recharge_pressed() -> void:
 	disembark.recharge()
+	show_cargo_moved()
+
+func add_collectible(collectible, id: String) -> void:
+	collectibles.append({"id":id, "node":collectible})
+
+func remove_collectible(collectible) -> void:
+	for c in collectibles:
+		if c["node"] == collectible:
+			collectibles.erase(c)
+
+func _on_collect_pressed() -> void:
+	var col = null
+	for c in collectibles:
+		if c["node"] is not Creature or c["node"].captured:
+			col = c
+	if col == null: return
+	var n = Game.names[col["id"]]
+	if Game.vehicle_cargo.has(n):
+		Game.vehicle_cargo[n] += 1
+	else:
+		Game.vehicle_cargo[n] = 1
+	collectibles.erase(col)
+	col["node"].queue_free()

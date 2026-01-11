@@ -1,5 +1,8 @@
 class_name Creature extends CharacterBody2D
 
+## The ID of this creature as used by inventory, missions, and other systems.
+## Must be identical to other creatures of the same type. Case sensitive.
+@export var ID: String = "debug"
 ## The speed the creature will travel when running away from the player.
 ## Should be quite a bit faster than the player so that they need to run and catch up.
 @export_range(0, 300, 50, "suffix:px/s") var RUN_SPEED: int = 100

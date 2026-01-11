@@ -64,7 +64,7 @@ func shoot(direction: Vector2) -> void:
 		var laser = laser_scene.instantiate()
 		laser.position = position+Vector2(8,8)
 		laser.rotation = direction.angle()
-		$Lasers.add_child(laser)
+		%Lasers.add_child(laser)
 		shoot_allowed = false
 		get_tree().create_timer(0.5).connect("timeout", reset_shot)
 
@@ -82,3 +82,11 @@ func _process(_delta: float) -> void:
 		"shoot_left", "shoot_right", "shoot_up", "shoot_down"
 	)
 	if dir: shoot(dir)
+
+func _on_collect_creatures_body_entered(body: Node2D) -> void:
+	if body is Creature:
+		disembark.overlay.add_collectible(body, body.ID)
+
+func _on_collect_creatures_body_exited(body: Node2D) -> void:
+	if body is Creature:
+		disembark.overlay.remove_collectible(body)

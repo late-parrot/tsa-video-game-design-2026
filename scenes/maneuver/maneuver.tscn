@@ -125,6 +125,7 @@ modulate = Color(0.74609375, 0.28274512, 0.20692444, 1)
 mesh = SubResource("SphereMesh_foey6")
 
 [node name="ManeuverPlayer" parent="." instance=ExtResource("1_le8cj")]
+unique_name_in_owner = true
 
 [node name="Camera" type="Camera2D" parent="ManeuverPlayer"]
 position_smoothing_enabled = true
@@ -152,6 +153,7 @@ process_material = SubResource("ParticleProcessMaterial_5jglc")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="ManeuverOverlay" parent="UI" instance=ExtResource("1_40ujs")]
+unique_name_in_owner = true
 
 [node name="InputController" type="Node" parent="."]
 script = ExtResource("5_foey6")
