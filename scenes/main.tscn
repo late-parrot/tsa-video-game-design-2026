@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3gh8l0hv0i6g"]
+[gd_scene load_steps=3 format=3 uid="uid://b3gh8l0hv0i6g"]
 
 [ext_resource type="Script" uid="uid://cvrov4tcobpve" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cjv0qlm8ckfh5" path="res://scenes/global_overlay.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0wfyh")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="GlobalOverlay" parent="UI" instance=ExtResource("2_0wfyh")]
+unique_name_in_owner = true

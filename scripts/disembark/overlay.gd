@@ -25,6 +25,18 @@ func _process(_delta: float) -> void:
 		if c["node"] is not Creature or c["node"].captured:
 			d = false
 	%Collect.disabled = d
+	
+	for m in %Missions.get_children():
+		if m.visible: m.queue_free()
+	for m in Game.missions:
+		var node = %Mission.duplicate()
+		node.visible = true
+		node.get_node("Name").set_text(m.name)
+		var pb = node.get_node("HBox/ProgressBar")
+		pb.max_value = m.required
+		pb.value = m.progress
+		node.get_node("HBox/Progress").set_text(str(m.progress)+"/"+str(m.required))
+		%Missions.add_child(node)
 
 func set_xy(x: int, y: int) -> void:
 	%X.text = "X:"+str(x)
@@ -46,18 +58,14 @@ func enable_launch() -> void:
 func disable_launch() -> void:
 	%Launch.disabled = true
 	%Recharge.disabled = true
-	
-func show_cargo_moved() -> void:
-	%CargoMovedBanner.visible = true
-	await get_tree().create_timer(2).timeout
-	%CargoMovedBanner.visible = false
 
 func _on_launch_pressed() -> void:
 	disembark.launch()
+	Game.main.overlay.show_cargo_moved()
 
 func _on_recharge_pressed() -> void:
 	disembark.recharge()
-	show_cargo_moved()
+	Game.main.overlay.show_cargo_moved()
 
 func add_collectible(collectible, id: String) -> void:
 	collectibles.append({"id":id, "node":collectible})
@@ -78,5 +86,10 @@ func _on_collect_pressed() -> void:
 		Game.vehicle_cargo[n] += 1
 	else:
 		Game.vehicle_cargo[n] = 1
+	for m in Game.missions:
+		if m.type == Mission.MissionType.COLLECT and \
+			(not m.criteria.has("type") or col["node"].get_script() == m.criteria["type"]) and \
+			(not m.criteria.has("id") or col["id"] == m.criteria["id"]):
+				m.progress += 1
 	collectibles.erase(col)
 	col["node"].queue_free()

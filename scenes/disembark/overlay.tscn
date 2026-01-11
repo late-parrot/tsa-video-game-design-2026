@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=12 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
 [ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
@@ -19,6 +19,9 @@ events = [SubResource("InputEventAction_a61oy")]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uhruh"]
 font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3crnf"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3mvk4"]
 font_color = Color(1, 0.29411766, 0.29411766, 1)
@@ -180,11 +183,36 @@ text = "Missions"
 label_settings = SubResource("LabelSettings_uhruh")
 uppercase = true
 
-[node name="Missions" type="RichTextLabel" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Missions" type="VBoxContainer" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-text = "* hi"
+
+[node name="Mission" type="VBoxContainer" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission"]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+text = "Name"
+autowrap_mode = 3
+
+[node name="HBox" type="HBoxContainer" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission"]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox"]
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.0
+step = 0.0
+show_percentage = false
+
+[node name="Progress" type="Label" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox"]
+layout_mode = 2
+text = "0/1"
 
 [node name="LowEnergyBanner" type="PanelContainer" parent="."]
 unique_name_in_owner = true
@@ -198,6 +226,7 @@ offset_top = 8.0
 offset_right = 232.0
 offset_bottom = 75.0
 grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3crnf")
 
 [node name="MarginContainer" type="MarginContainer" parent="LowEnergyBanner"]
 layout_mode = 2
@@ -207,26 +236,6 @@ layout_mode = 2
 text = "WARNING: Cargo will be lost
 if energy is depleted!"
 label_settings = SubResource("LabelSettings_3mvk4")
-
-[node name="CargoMovedBanner" type="PanelContainer" parent="."]
-unique_name_in_owner = true
-visible = false
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -104.0
-offset_top = 8.0
-offset_right = 104.0
-offset_bottom = 56.0
-grow_horizontal = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CargoMovedBanner"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CargoMovedBanner/MarginContainer"]
-layout_mode = 2
-text = "Cargo Moved"
 
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Collect" to="." method="_on_collect_pressed"]
 [connection signal="pressed" from="Container/MarginContainer/VBoxContainer/Recharge" to="." method="_on_recharge_pressed"]

@@ -2,6 +2,19 @@ extends Control
 
 @onready var maneuver := $"../.."
 
+func _process(_delta: float) -> void:
+	for m in %Missions.get_children():
+		if m.visible: m.queue_free()
+	for m in Game.missions:
+		var node = %Mission.duplicate()
+		node.visible = true
+		node.get_node("Name").set_text(m.name)
+		var pb = node.get_node("HBox/ProgressBar")
+		pb.max_value = m.required
+		pb.value = m.progress
+		node.get_node("HBox/Progress").set_text(str(m.progress)+"/"+str(m.required))
+		%Missions.add_child(node)
+
 func set_xy(x: int, y: int) -> void:
 	%X.text = "X:"+str(x)
 	%Y.text = "Y:"+str(y)
