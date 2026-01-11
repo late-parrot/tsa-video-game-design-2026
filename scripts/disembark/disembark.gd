@@ -26,6 +26,7 @@ func _on_ship_body_exited(body: Node2D) -> void:
 		overlay.disable_launch()
 
 func reset() -> void:
+	Game.vehicle_cargo.clear()
 	var main = get_parent()
 	launch()
 	main.maneuver.land(main.maneuver.current_planet) # Seems a bit janky but works
