@@ -27,19 +27,19 @@ curve = SubResource("Curve_wkqww")
 particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_n4mt0")
-color = Color(0.3515625, 0.65045166, 1, 1)
+color = Color(0.31987312, 0.3198733, 0.31987315, 1)
 color_ramp = SubResource("GradientTexture1D_wu22a")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkqww"]
-size = Vector2(8, 2)
 
 [sub_resource type="Gradient" id="Gradient_wkqww"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_n4mt0"]
 gradient = SubResource("Gradient_wkqww")
-width = 8
-height = 2
+width = 4
+height = 4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkqww"]
+size = Vector2(4, 4)
 
 [node name="DisembarkLaser" type="Area2D"]
 top_level = true
@@ -54,10 +54,10 @@ texture = SubResource("GradientTexture2D_3ul67")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_wu22a")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_wkqww")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("GradientTexture2D_n4mt0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wkqww")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

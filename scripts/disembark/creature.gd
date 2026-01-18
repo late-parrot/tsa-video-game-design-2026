@@ -63,9 +63,8 @@ func capture():
 	captured = true
 	%Sprite.play("captured")
 	await get_tree().create_timer(CAPTURE_TIME).timeout
-	
 	if %Sprite.sprite_frames.has_animation("release"):
 		%Sprite.play("release")
 		await %Sprite.animation_finished
-		%Sprite.play("idle")
 	captured = false
+	%Sprite.play("idle")
