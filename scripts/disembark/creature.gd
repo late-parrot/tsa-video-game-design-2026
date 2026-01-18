@@ -23,12 +23,7 @@ var captured = false
 @onready var disembark: Disembark = $"../.."
 
 func _physics_process(_delta: float) -> void:
-	if captured:
-		%Sprite.play("captured")
-		return
-	if not avoiding:
-		%Sprite.play("idle")
-		return
+	if captured or not avoiding: return
 	agent.target_position = (position-avoid_pos).normalized()*DISTANCE+avoid_pos
 	
 	var current_agent_pos = global_position
@@ -37,6 +32,7 @@ func _physics_process(_delta: float) -> void:
 	
 	if agent.is_navigation_finished():
 		avoiding = false
+		%Sprite.play("idle")
 		return
 	
 	if agent.avoidance_enabled:
@@ -65,7 +61,11 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 
 func capture():
 	captured = true
-	scale = 0.8*Vector2.ONE # TODO: remove
+	%Sprite.play("captured")
 	await get_tree().create_timer(CAPTURE_TIME).timeout
+	
+	if %Sprite.sprite_frames.has_animation("release"):
+		%Sprite.play("release")
+		await %Sprite.animation_finished
+		%Sprite.play("idle")
 	captured = false
-	scale = Vector2.ONE # TODO: remove

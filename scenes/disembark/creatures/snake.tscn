@@ -1,7 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://4uv2rnxs0bes"]
+[gd_scene load_steps=15 format=3 uid="uid://4uv2rnxs0bes"]
 
 [ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="1_iqlnv"]
 [ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="2_btsh4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqlnv"]
+size = Vector2(14, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iqlnv"]
 atlas = ExtResource("2_btsh4")
@@ -90,11 +93,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_btsh4"]
+radius = 50.0
+
 [node name="Snake" instance=ExtResource("1_iqlnv")]
 ID = "snake"
 CAPTURE_CHANCE = 0.5
 
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_iqlnv")
+
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_mabuj")
 animation = &"idle"
-frame_progress = 0.9832774
+frame_progress = 0.40972978
+
+[node name="CollisionShape2D" parent="StartRunning" index="0"]
+shape = SubResource("CircleShape2D_btsh4")

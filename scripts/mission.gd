@@ -25,5 +25,4 @@ func _init(n: String, t: MissionType, r: int, c: Dictionary[String, Variant] = {
 
 func _complete() -> void:
 	Game.missions.erase(self)
-	Game.main.overlay.show_mission_completed()
 	emit_signal("complete")

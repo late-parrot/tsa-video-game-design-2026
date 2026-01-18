@@ -2,11 +2,12 @@ extends Node
 
 var names = {
 	"debug": "Debug",
-	"snake": "Snake"
+	"snake": "Snake",
+	"bug": "Bug"
 }
 var ship_cargo = {}
 var vehicle_cargo = {}
-var mission_sets = [
+var mission_sets := [
 	[
 		Mission.new("Land on a planet", Mission.MissionType.LAND, 1),
 		Mission.new("Capture 3 creatures", Mission.MissionType.COLLECT, 3, {
@@ -22,13 +23,13 @@ var mission_sets = [
 var current_mission_set = 0
 var missions = mission_sets[current_mission_set]
 
-@onready var main = $"/root/Main"
+signal level_completed
 
 func _process(_delta: float) -> void:
 	if missions.is_empty():
 		current_mission_set += 1
 		missions = mission_sets[current_mission_set]
-		main.overlay.show_level_completed()
+		emit_signal("level_completed")
 
 func move_cargo() -> void:
 	for id in vehicle_cargo:

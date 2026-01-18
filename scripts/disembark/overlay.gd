@@ -1,6 +1,7 @@
 extends Control
 
 @onready var disembark := $"../.."
+@onready var main := $"../../.."
 
 var collectibles = []
 
@@ -63,11 +64,11 @@ func disable_launch() -> void:
 
 func _on_launch_pressed() -> void:
 	disembark.launch()
-	Game.main.overlay.show_cargo_moved()
+	main.overlay.show_cargo_moved()
 
 func _on_recharge_pressed() -> void:
 	disembark.recharge()
-	Game.main.overlay.show_cargo_moved()
+	main.overlay.show_cargo_moved()
 
 func add_collectible(collectible, id: String) -> void:
 	collectibles.append({"id":id, "node":collectible})

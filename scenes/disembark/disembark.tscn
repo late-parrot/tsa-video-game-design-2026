@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://cxc0xvkwttx7e"]
+[gd_scene load_steps=11 format=4 uid="uid://cxc0xvkwttx7e"]
 
 [ext_resource type="Script" uid="uid://gulysnox8go7" path="res://scripts/disembark/disembark.gd" id="1_5rhh4"]
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cwr2scwm7o16e" path="res://scenes/disembark/overlay.tscn" id="3_o8x53"]
 [ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="4_omjsi"]
 [ext_resource type="PackedScene" uid="uid://4uv2rnxs0bes" path="res://scenes/disembark/creatures/snake.tscn" id="6_a48bc"]
+[ext_resource type="PackedScene" uid="uid://dk6owdsljkqko" path="res://scenes/disembark/creatures/bug.tscn" id="6_vw2og"]
 [ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_6c7xg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
@@ -65,8 +66,8 @@ position = Vector2(288, 240)
 
 [node name="Snake2" parent="Creatures" instance=ExtResource("6_a48bc")]
 
-[node name="Snake3" parent="Creatures" instance=ExtResource("6_a48bc")]
-position = Vector2(-8, 248)
+[node name="Bug" parent="Creatures" instance=ExtResource("6_vw2og")]
+position = Vector2(-24, 232)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
