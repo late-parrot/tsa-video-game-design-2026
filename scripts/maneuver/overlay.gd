@@ -3,6 +3,8 @@ extends Control
 @onready var maneuver := $"../.."
 
 func _process(_delta: float) -> void:
+	%Level.set_text("Level "+str(Game.current_mission_set+1))
+	
 	for m in %Missions.get_children():
 		if m.visible: m.queue_free()
 	for m in Game.missions:

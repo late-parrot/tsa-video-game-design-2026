@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://da82tphw0tws7" path="res://scenes/disembark/player.tscn" id="2_o8x53"]
 [ext_resource type="PackedScene" uid="uid://cwr2scwm7o16e" path="res://scenes/disembark/overlay.tscn" id="3_o8x53"]
 [ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="4_omjsi"]
-[ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="4_py471"]
+[ext_resource type="PackedScene" uid="uid://4uv2rnxs0bes" path="res://scenes/disembark/creatures/snake.tscn" id="6_a48bc"]
 [ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_6c7xg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
@@ -60,7 +60,13 @@ texture = ExtResource("4_omjsi")
 
 [node name="Creatures" type="Node2D" parent="."]
 
-[node name="Creature" parent="Creatures" instance=ExtResource("4_py471")]
+[node name="Snake" parent="Creatures" instance=ExtResource("6_a48bc")]
+position = Vector2(288, 240)
+
+[node name="Snake2" parent="Creatures" instance=ExtResource("6_a48bc")]
+
+[node name="Snake3" parent="Creatures" instance=ExtResource("6_a48bc")]
+position = Vector2(-8, 248)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

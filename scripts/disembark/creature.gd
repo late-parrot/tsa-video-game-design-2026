@@ -19,11 +19,16 @@ var avoiding = false
 var avoid_pos: Vector2
 var captured = false
 
-@onready var agent: NavigationAgent2D = $NavigationAgent2D
+@onready var agent: NavigationAgent2D = %NavigationAgent2D
 @onready var disembark: Disembark = $"../.."
 
 func _physics_process(_delta: float) -> void:
-	if captured or not avoiding: return
+	if captured:
+		%Sprite.play("captured")
+		return
+	if not avoiding:
+		%Sprite.play("idle")
+		return
 	agent.target_position = (position-avoid_pos).normalized()*DISTANCE+avoid_pos
 	
 	var current_agent_pos = global_position
@@ -39,6 +44,11 @@ func _physics_process(_delta: float) -> void:
 	else:
 		_on_navigation_agent_2d_velocity_computed(new_vel)
 	move_and_slide()
+	
+	if velocity:
+		%Sprite.flip_v = 1 if velocity.x < 0 else 0
+		%Sprite.play("run")
+	rotation = velocity.angle()
 
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
 	velocity = safe_velocity

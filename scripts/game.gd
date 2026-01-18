@@ -1,18 +1,34 @@
 extends Node
 
 var names = {
-	"debug": "Debug"
+	"debug": "Debug",
+	"snake": "Snake"
 }
 var ship_cargo = {}
 var vehicle_cargo = {}
-var missions = [
-	Mission.new("Land on a planet", Mission.MissionType.LAND, 1),
-	Mission.new("Capture 3 creatures", Mission.MissionType.COLLECT, 3, {
-		"type": preload("res://scripts/disembark/creature.gd")
-	})
+var mission_sets = [
+	[
+		Mission.new("Land on a planet", Mission.MissionType.LAND, 1),
+		Mission.new("Capture 3 creatures", Mission.MissionType.COLLECT, 3, {
+			"type": preload("res://scripts/disembark/creature.gd")
+		})
+	],
+	[
+		Mission.new("Capture 5 creatures", Mission.MissionType.COLLECT, 5, {
+			"type": preload("res://scripts/disembark/creature.gd")
+		})
+	]
 ]
+var current_mission_set = 0
+var missions = mission_sets[current_mission_set]
 
 @onready var main = $"/root/Main"
+
+func _process(_delta: float) -> void:
+	if missions.is_empty():
+		current_mission_set += 1
+		missions = mission_sets[current_mission_set]
+		main.overlay.show_level_completed()
 
 func move_cargo() -> void:
 	for id in vehicle_cargo:

@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://4uv2rnxs0bes"]
+
+[ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="1_iqlnv"]
+[ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="2_btsh4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqlnv"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(20, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btsh4"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(40, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mabuj"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(40, 60, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycg4g"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(0, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx8i5"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(20, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywpxb"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(0, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rolnb"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(20, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cecd8"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(40, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snw2k"]
+atlas = ExtResource("2_btsh4")
+region = Rect2(20, 40, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mabuj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqlnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btsh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mabuj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mabuj")
+}],
+"loop": true,
+"name": &"captured",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycg4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycg4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx8i5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywpxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rolnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cecd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snw2k")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Snake" instance=ExtResource("1_iqlnv")]
+ID = "snake"
+CAPTURE_CHANCE = 0.5
+
+[node name="Sprite" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_mabuj")
+animation = &"idle"
+frame_progress = 0.9832774

@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjv0qlm8ckfh5"]
+[gd_scene load_steps=6 format=3 uid="uid://cjv0qlm8ckfh5"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_g8x2p"]
 [ext_resource type="Script" uid="uid://ch7otuavs2pr2" path="res://scripts/global_overlay.gd" id="1_lgtdy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8x2p"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g8x2p"]
+font_color = Color(0.5356, 0.78, 0.468, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppdvm"]
 bg_color = Color(0, 0, 0, 1)
@@ -40,6 +43,30 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MissionCompletedBanner/MarginContainer"]
 layout_mode = 2
 text = "Mission Completed"
+
+[node name="LevelCompletedBanner" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g8x2p")
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelCompletedBanner"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LevelCompletedBanner/MarginContainer"]
+layout_mode = 2
+text = "Level Completed
+New missions available"
+label_settings = SubResource("LabelSettings_g8x2p")
+horizontal_alignment = 1
 
 [node name="CargoMovedBanner" type="PanelContainer" parent="."]
 unique_name_in_owner = true

@@ -5,8 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ac5"]
 size = Vector2(14, 14)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4aysl"]
-size = Vector2(14, 14)
+[sub_resource type="SpriteFrames" id="SpriteFrames_4aysl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4aysl"]
 radius = 50.0
@@ -22,10 +21,12 @@ script = ExtResource("1_4aysl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v8ac5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_4aysl")
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_4aysl")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
 path_desired_distance = 5.0
 target_desired_distance = 5.0
 path_postprocessing = 1
@@ -35,12 +36,14 @@ debug_use_custom = true
 debug_path_custom_color = Color(1, 0, 0, 1)
 
 [node name="StartRunning" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StartRunning"]
 shape = SubResource("CircleShape2D_4aysl")
 
 [node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
 collision_layer = 4
 collision_mask = 4
 

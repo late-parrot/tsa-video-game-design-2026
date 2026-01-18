@@ -5,6 +5,8 @@ extends Control
 var collectibles = []
 
 func _process(_delta: float) -> void:
+	%Level.set_text("Level "+str(Game.current_mission_set+1))
+	
 	%Cargo.clear()
 	%Cargo.append_text("Terrain Vehicle\n")
 	if len(Game.vehicle_cargo)==0:
