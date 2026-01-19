@@ -1,0 +1,205 @@
+[gd_scene load_steps=9 format=3 uid="uid://chbma2ylsr3fh"]
+
+[ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_qj07k"]
+[ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_bmkm8"]
+[ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="3_o8y8m"]
+[ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="4_o8y8m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1r0gq"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qj07k"]
+font_size = 24
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okkcs"]
+atlas = ExtResource("2_bmkm8")
+region = Rect2(22, 22, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eejpf"]
+atlas = ExtResource("3_o8y8m")
+region = Rect2(0, 40, 18, 18)
+
+[node name="SpaceportMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qj07k")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Spaceport"
+label_settings = SubResource("LabelSettings_1r0gq")
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 2
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("4_o8y8m")
+
+[node name="TabContainer" type="TabContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Research" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research"]
+layout_mode = 2
+
+[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Snake"
+label_settings = SubResource("LabelSettings_qj07k")
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 1"
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_okkcs")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 12
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+text = "3 Required (1 in inventory)"
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Research"
+
+[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bug"
+label_settings = SubResource("LabelSettings_qj07k")
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No Research"
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_eejpf")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 12
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+text = "In Progress: 1 minute left"
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+max_value = 2.0
+value = 1.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Reward"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+text = "10"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_o8y8m")
+
+[node name="Shop" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
