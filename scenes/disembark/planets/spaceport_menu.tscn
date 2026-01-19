@@ -11,13 +11,13 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_qj07k"]
 font_size = 24
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_okkcs"]
-atlas = ExtResource("2_bmkm8")
-region = Rect2(22, 22, 18, 18)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_eejpf"]
 atlas = ExtResource("3_o8y8m")
 region = Rect2(0, 40, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okkcs"]
+atlas = ExtResource("2_bmkm8")
+region = Rect2(22, 22, 18, 18)
 
 [node name="SpaceportMenu" type="Control"]
 layout_mode = 3
@@ -63,7 +63,7 @@ theme_override_constants/separation = 2
 
 [node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "100"
+text = "23"
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
@@ -107,9 +107,9 @@ size_flags_horizontal = 3
 text = "Level 1"
 uppercase = true
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_okkcs")
+texture = SubResource("AtlasTexture_eejpf")
 expand_mode = 2
 stretch_mode = 4
 
@@ -127,6 +127,29 @@ text = "3 Required (1 in inventory)"
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "Research"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Reward"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+text = "5"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_o8y8m")
 
 [node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer"]
 layout_mode = 2
@@ -155,7 +178,7 @@ uppercase = true
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
 layout_mode = 2
-texture = SubResource("AtlasTexture_eejpf")
+texture = SubResource("AtlasTexture_okkcs")
 expand_mode = 2
 stretch_mode = 4
 
