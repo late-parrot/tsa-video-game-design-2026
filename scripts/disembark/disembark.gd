@@ -1,13 +1,9 @@
 class_name Disembark extends Node2D
 
-## The maximum engergy that the terrain vehicle can hold. This is what it's reset to when
-## recharged or landing.
-@export_range(0, 500, 10) var MAX_ENERGY: int = 100
-
 @onready var player = %DisembarkPlayer
 @onready var overlay = %DisembarkOverlay
 
-var energy = MAX_ENERGY:
+var energy = Game.max_energy:
 	set(value):
 		energy = value
 		if energy < 0:
@@ -33,7 +29,7 @@ func reset() -> void:
 
 func recharge() -> void:
 	Game.move_cargo()
-	energy = MAX_ENERGY
+	energy = Game.max_energy
 
 func launch() -> void:
 	Game.move_cargo()

@@ -39,6 +39,7 @@ func _process(_delta: float) -> void:
 		pb.max_value = m.required
 		pb.value = m.progress
 		node.get_node("HBox/Progress").set_text(str(m.progress)+"/"+str(m.required))
+		node.get_node("HBox/HBox/Reward").set_text(str(m.reward))
 		%Missions.add_child(node)
 
 func set_xy(x: int, y: int) -> void:

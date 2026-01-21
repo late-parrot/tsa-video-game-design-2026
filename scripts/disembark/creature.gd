@@ -56,7 +56,7 @@ func _on_start_running_body_entered(body: Node2D) -> void:
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area is Laser:
-		if randf() <= CAPTURE_CHANCE:
+		if randf() <= CAPTURE_CHANCE/Game.net_accuracy:
 			capture()
 
 func capture():

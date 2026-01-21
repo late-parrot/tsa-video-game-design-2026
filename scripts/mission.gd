@@ -7,6 +7,7 @@ enum MissionType {
 @export var name: String = "Mission"
 @export var type: MissionType = MissionType.LAND
 @export var required: int = 1
+@export var reward: int = 0
 @export var criteria: Dictionary[String, Variant] = {}
 
 signal complete
@@ -17,12 +18,14 @@ var progress = 0:
 		if v >= required:
 			_complete()
 
-func _init(n: String, t: MissionType, r: int, c: Dictionary[String, Variant] = {}) -> void:
+func _init(n: String, t: MissionType, r: int, rw: int, c: Dictionary[String, Variant] = {}) -> void:
 	name = n
 	type = t
 	required = r
+	reward = rw
 	criteria = c
 
 func _complete() -> void:
 	Game.missions.erase(self)
+	Game.money += floor(reward*Game.reward_amount)
 	emit_signal("complete")

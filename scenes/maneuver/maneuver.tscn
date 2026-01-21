@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=24 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
 [ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
 [ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
+[ext_resource type="PackedScene" uid="uid://chbma2ylsr3fh" path="res://scenes/disembark/planets/spaceport_menu.tscn" id="3_plvpl"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="5_foey6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
@@ -12,6 +13,13 @@ radius = 512.0
 [sub_resource type="SphereMesh" id="SphereMesh_n7xhb"]
 radius = 512.0
 height = 1024.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rdyn"]
+radius = 64.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_2x3te"]
+radius = 64.0
+height = 128.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_foey6"]
 radius = 128.0
@@ -67,7 +75,7 @@ color_ramp = SubResource("GradientTexture1D_sugp2")
 
 [node name="Maneuver" type="Node2D" node_paths=PackedStringArray("spaceport")]
 script = ExtResource("1_ytq0j")
-spaceport = NodePath("Planets/TRAPPIST-1c")
+spaceport = NodePath("Planets/Spaceport")
 
 [node name="Planets" type="Node2D" parent="."]
 
@@ -84,8 +92,22 @@ shape = SubResource("CircleShape2D_40ujs")
 modulate = Color(1, 0.97406006, 0.3359375, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
+[node name="Spaceport" type="Area2D" parent="Planets"]
+position = Vector2(-568, 864)
+script = ExtResource("1_n7xhb")
+disembark_scene = ExtResource("3_plvpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport"]
+shape = SubResource("CircleShape2D_0rdyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Spaceport"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Spaceport/Sprite2D"]
+modulate = Color(0.38738912, 0.38738894, 0.38738897, 1)
+mesh = SubResource("SphereMesh_2x3te")
+
 [node name="TRAPPIST-1b" type="Area2D" parent="Planets"]
-position = Vector2(672, -736)
+position = Vector2(1032, -960)
 script = ExtResource("1_n7xhb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1b"]
@@ -97,21 +119,22 @@ shape = SubResource("CircleShape2D_foey6")
 modulate = Color(0.83984375, 0.81831455, 0.6430054, 1)
 mesh = SubResource("SphereMesh_plvpl")
 
-[node name="TRAPPIST-1c" type="Area2D" parent="Planets"]
-position = Vector2(1208, 848)
+[node name="TRAPPIST-1c (Locked)" type="Area2D" parent="Planets"]
+position = Vector2(1472, 1432)
 script = ExtResource("1_n7xhb")
+landable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1c"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1c (Locked)"]
 shape = SubResource("CircleShape2D_n7xhb")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1c"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/TRAPPIST-1c (Locked)"]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1c/Sprite2D"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1c (Locked)/Sprite2D"]
 modulate = Color(0.2421875, 0.7158203, 1, 1)
 mesh = SubResource("SphereMesh_ytq0j")
 
 [node name="TRAPPIST-1d (Locked)" type="Area2D" parent="Planets"]
-position = Vector2(-1792, -248)
+position = Vector2(-2480, -672)
 script = ExtResource("1_n7xhb")
 landable = false
 

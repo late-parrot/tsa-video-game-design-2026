@@ -5,7 +5,7 @@ class_name InputController extends Node
 @export var SHOOT = false
 @export var BUMPERS = true
 
-func _unhandled_input(event: InputEvent) -> void:
+func _process(_delta: float) -> void:
 	var press = false
 	var ui_event = InputEventAction.new()
 	ui_event.pressed = true
@@ -14,14 +14,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if SHOOT: prefixes.append("shoot_")
 	for x in prefixes:
 		for y in ["up", "down", "left", "right"]:
-			if event.is_action_pressed(x+y):
+			if Input.is_action_just_pressed(x+y):
 				ui_event.action = "ui_"+y
 				press = true
 	if BUMPERS:
-		if event.is_action_pressed("left_bumper"):
+		if Input.is_action_just_pressed("left_bumper"):
 			ui_event.action = "ui_focus_prev"
 			press = true
-		elif event.is_action_pressed("right_bumper"):
+		elif Input.is_action_just_pressed("right_bumper"):
 			ui_event.action = "ui_focus_next"
 			press = true
 	if press:

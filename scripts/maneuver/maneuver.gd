@@ -18,7 +18,7 @@ func disable_land() -> void:
 func land(planet: Planet) -> void:
 	player.velocity = Vector2.ZERO
 	for m in Game.missions:
-		if m.type == Mission.MissionType.LAND:
+		if m.type == Mission.MissionType.LAND and planet != spaceport:
 			m.progress += 1
 	var main = get_parent()
 	var disembark = planet.create_disembark_scene()

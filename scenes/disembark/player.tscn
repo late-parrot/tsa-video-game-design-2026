@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://da82tphw0tws7"]
+[gd_scene load_steps=17 format=3 uid="uid://da82tphw0tws7"]
 
 [ext_resource type="Script" uid="uid://boupqffjpp1kj" path="res://scripts/disembark/player.gd" id="1_jtk2v"]
+[ext_resource type="Texture2D" uid="uid://cxplkmsojpbld" path="res://assets/terrain-vehicle.png" id="2_wd1ev"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_151jb"]
 radius = 7.0
@@ -35,13 +36,43 @@ scale_min = 0.5
 scale_curve = SubResource("CurveTexture_034ht")
 color_ramp = SubResource("GradientTexture1D_q5sqc")
 
-[sub_resource type="Gradient" id="Gradient_151jb"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi1qb"]
+atlas = ExtResource("2_wd1ev")
+region = Rect2(0, 0, 20, 20)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_efpyd"]
-gradient = SubResource("Gradient_151jb")
-width = 12
-height = 12
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjxaw"]
+atlas = ExtResource("2_wd1ev")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0trwv"]
+atlas = ExtResource("2_wd1ev")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_om2jt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi1qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjxaw")
+}],
+"loop": true,
+"name": &"drive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0trwv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erlyk"]
+atlas = ExtResource("2_wd1ev")
+region = Rect2(0, 20, 20, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtk2v"]
 radius = 20.024984
@@ -62,12 +93,16 @@ texture = SubResource("GradientTexture2D_178ay")
 lifetime = 0.2
 process_material = SubResource("ParticleProcessMaterial_efpyd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7.9999986, 8)
-texture = SubResource("GradientTexture2D_efpyd")
-
-[node name="Lasers" type="Node2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_om2jt")
+animation = &"idle"
+
+[node name="Turret" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(7.9999986, 8)
+texture = SubResource("AtlasTexture_erlyk")
 
 [node name="CollectCreatures" type="Area2D" parent="."]
 unique_name_in_owner = true

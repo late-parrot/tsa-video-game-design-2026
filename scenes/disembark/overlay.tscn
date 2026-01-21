@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=12 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
 [ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="2_p7tpy"]
+[ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="4_3mvk4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ecthq"]
 font_size = 24
@@ -10,12 +11,6 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_3crnf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2hsg"]
-
-[sub_resource type="InputEventAction" id="InputEventAction_a61oy"]
-action = &"land"
-
-[sub_resource type="Shortcut" id="Shortcut_j4mfo"]
-events = [SubResource("InputEventAction_a61oy")]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uhruh"]
 font_size = 18
@@ -43,7 +38,7 @@ script = ExtResource("2_3crnf")
 [node name="Container" type="PanelContainer" parent="."]
 layout_mode = 1
 offset_right = 248.0
-offset_bottom = 248.0
+offset_bottom = 224.0
 
 [node name="MarginContainer" type="MarginContainer" parent="Container"]
 layout_mode = 2
@@ -85,9 +80,7 @@ text = "Y:100"
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
-shortcut = SubResource("Shortcut_j4mfo")
-text = "Collect
-(Space)"
+text = "Collect"
 script = ExtResource("2_p7tpy")
 
 [node name="Recharge" type="Button" parent="Container/MarginContainer/VBoxContainer"]
@@ -215,10 +208,26 @@ autowrap_mode = 3
 [node name="HBox" type="HBoxContainer" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission"]
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox"]
-custom_minimum_size = Vector2(120, 16)
+[node name="HBox" type="HBoxContainer" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_vertical = 3
+theme_override_constants/separation = 2
+
+[node name="Reward" type="Label" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox/HBox"]
+layout_mode = 2
+text = "5"
+
+[node name="TextureRect" type="TextureRect" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox/HBox"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_3mvk4")
+
+[node name="ProgressBar" type="ProgressBar" parent="Container2/MarginContainer/VBoxContainer/VBoxContainer/Missions/Mission/HBox"]
+custom_minimum_size = Vector2(50, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
 max_value = 1.0
 step = 0.0
 show_percentage = false
