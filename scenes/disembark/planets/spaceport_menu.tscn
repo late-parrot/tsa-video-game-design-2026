@@ -517,12 +517,6 @@ layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("4_o8y8m")
 
-[node name="Shop" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-metadata/_tab_index = 2
-
 [node name="HBoxContainer2" type="HBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8

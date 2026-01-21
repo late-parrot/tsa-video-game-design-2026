@@ -43,13 +43,13 @@ func _process(_delta: float) -> void:
 			%TabContainer.current_tab = %TabContainer.get_tab_count()-1
 		else:
 			%TabContainer.current_tab -= 1
-		[%NetDistance, %SnakeResearch, %Shop][%TabContainer.current_tab].grab_focus()
+		[%NetDistance, %SnakeResearch][%TabContainer.current_tab].grab_focus()
 	elif Input.is_action_just_pressed("right_bumper"):
 		if %TabContainer.current_tab+1 >= %TabContainer.get_tab_count():
 			%TabContainer.current_tab = 0
 		else:
 			%TabContainer.current_tab += 1
-		[%NetDistance, %SnakeResearch, %Shop][%TabContainer.current_tab].grab_focus()
+		[%NetDistance, %SnakeResearch][%TabContainer.current_tab].grab_focus()
 		
 	for u in Game.upgrades:
 		get_node(u["node"]).disabled = u["acquired"] or Game.money < u["cost"] or \
