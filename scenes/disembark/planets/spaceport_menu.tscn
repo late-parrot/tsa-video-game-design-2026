@@ -395,7 +395,8 @@ size_flags_horizontal = 3
 text = "Snake"
 label_settings = SubResource("LabelSettings_qj07k")
 
-[node name="Label2" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="SnakeLevel" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Level 1"
@@ -407,21 +408,39 @@ texture = SubResource("AtlasTexture_eejpf")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+[node name="SnakeResearch" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/separation = 12
 
-[node name="Label3" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeResearch"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 6
 text = "3 Required (1 in inventory)"
 
-[node name="SnakeResearch" type="Button" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer2"]
-unique_name_in_owner = true
+[node name="Button" type="Button" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeResearch"]
 layout_mode = 2
 text = "Research"
+
+[node name="SnakeProgress" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeProgress"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 1
+text = "In Progress: 1:00 left"
+
+[node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeProgress"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+max_value = 60.0
+value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -436,7 +455,8 @@ size_flags_vertical = 3
 theme_override_constants/separation = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+[node name="SnakeReward" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "5"
 
@@ -465,7 +485,8 @@ size_flags_horizontal = 3
 text = "Bug"
 label_settings = SubResource("LabelSettings_qj07k")
 
-[node name="Label2" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="BugLevel" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "No Research"
@@ -477,21 +498,39 @@ texture = SubResource("AtlasTexture_okkcs")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+[node name="BugResearch" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/separation = 12
 
-[node name="Label3" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugResearch"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 6
+text = "3 Required (1 in inventory)"
+
+[node name="Button" type="Button" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugResearch"]
+layout_mode = 2
+text = "Research"
+
+[node name="BugProgress" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugProgress"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 1
 text = "In Progress: 1:00 left"
 
-[node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer2"]
+[node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugProgress"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-max_value = 2.0
+max_value = 60.0
 value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
@@ -507,7 +546,8 @@ size_flags_vertical = 3
 theme_override_constants/separation = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+[node name="BugReward" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer3/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "10"
 
@@ -542,9 +582,12 @@ SHOOT = true
 BUMPERS = false
 metadata/_custom_type_script = "uid://dh4mcwl603for"
 
+[connection signal="tab_changed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer" to="SpaceportMenu" method="_on_tab_container_tab_changed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Upgrades/HBoxContainer/NetUpgrades/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/NetDistance" to="SpaceportMenu" method="_on_net_distance_pressed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Upgrades/HBoxContainer/NetUpgrades/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/NetAccuracy" to="SpaceportMenu" method="_on_net_accuracy_pressed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Upgrades/HBoxContainer/TerrainVehicleUpgrades/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MaxEnergy" to="SpaceportMenu" method="_on_max_energy_pressed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Upgrades/HBoxContainer/TerrainVehicleUpgrades/PanelContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/MoveSpeed" to="SpaceportMenu" method="_on_move_speed_pressed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Upgrades/HBoxContainer/GeneralUpgrades/PanelContainer/VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/RewardAmount" to="SpaceportMenu" method="_on_reward_amount_pressed"]
+[connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeResearch/Button" to="SpaceportMenu" method="_on_snake_research_button_pressed"]
+[connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugResearch/Button" to="SpaceportMenu" method="_on_bug_research_button_pressed"]
 [connection signal="pressed" from="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/Close" to="SpaceportMenu" method="_on_close_pressed"]

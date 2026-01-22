@@ -24,6 +24,11 @@ var current_mission_set = 0
 var missions = mission_sets[current_mission_set]
 
 var upgrades = null
+var research_rewards = [5, 10, 15, 20, 25]
+var research_reqs = [3, 5, 8, 10, 15]
+var max_research = 5
+var research_levels = {"snake": 0, "bug": 0}
+var research_times = {"snake": 0, "bug": 0}
 var money = 0
 
 var net_distance = 70 # 20 more than the enemie's run distance
@@ -34,7 +39,7 @@ var reward_amount = 1
 
 signal level_completed
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if missions.is_empty():
 		current_mission_set += 1
 		if current_mission_set >= len(mission_sets):
@@ -42,6 +47,13 @@ func _process(_delta: float) -> void:
 			return
 		missions = mission_sets[current_mission_set]
 		emit_signal("level_completed")
+	for id in research_times:
+		if research_times[id] > 0:
+			research_times[id] -= delta
+			if research_times[id] <= 0:
+				research_times[id] = 0
+				money += research_rewards[research_levels[id]]
+				research_levels[id] += 1
 
 func move_cargo() -> void:
 	for id in vehicle_cargo:
