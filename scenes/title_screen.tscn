@@ -1,12 +1,37 @@
-[gd_scene load_steps=15 format=3 uid="uid://bngbdvxnltawy"]
+[gd_scene load_steps=18 format=3 uid="uid://bngbdvxnltawy"]
 
+[ext_resource type="FontFile" uid="uid://ds0ykayo4mldk" path="res://assets/PublicPixel.ttf" id="1_3yumr"]
 [ext_resource type="Texture2D" uid="uid://b40y1nkjvjg2x" path="res://assets/title.png" id="1_fgkus"]
-[ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sa3yf"]
 [ext_resource type="Script" uid="uid://bh0641kvrwixh" path="res://scripts/title_screen.gd" id="2_dc4i4"]
 [ext_resource type="AudioStream" uid="uid://igv2t7iyr20r" path="res://assets/audio/theme3-v2.wav" id="3_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="4_dc4i4"]
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="4_e54dn"]
 [ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_3yumr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs5ya"]
+bg_color = Color(0.76862746, 0.76862746, 0.76862746, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
+bg_color = Color(0.60784316, 0.6509804, 0.6745098, 1)
+
+[sub_resource type="Theme" id="Theme_tklts"]
+default_font = ExtResource("1_3yumr")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 0.4392157, 0.023529412, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.4392157, 0.023529412, 1)
+Button/colors/font_pressed_color = Color(1, 0.4392157, 0.023529412, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_cs5ya")
+Button/styles/normal = SubResource("StyleBoxFlat_mykxm")
 
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -46,7 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_sa3yf")
+theme = SubResource("Theme_tklts")
 script = ExtResource("2_dc4i4")
 
 [node name="Background" type="CanvasLayer" parent="."]
@@ -90,6 +115,7 @@ stretch_mode = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 8
+theme_override_constants/separation = 16
 
 [node name="Start" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
