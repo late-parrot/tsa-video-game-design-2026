@@ -13,8 +13,9 @@ func _ready() -> void:
 	ps.reverse()
 	for p in ps:
 		var area = p.duplicate()
-		var node = area.get_node("Sprite2D")
+		var node = area.get_node("MeshInstance2D")
 		area.remove_child(node)
+		node.visible = true
 		node.position = area.position*SCALE
 		node.name = area.name
 		node.scale = Vector2(SCALE, SCALE)

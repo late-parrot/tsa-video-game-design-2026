@@ -14,13 +14,13 @@ func _process(_delta: float) -> void:
 		%Cargo.append_text("  Empty")
 	for item in Game.vehicle_cargo:
 		var count = Game.vehicle_cargo[item]
-		%Cargo.append_text("[ul]"+str(count)+" "+item+("s" if count!=1 else "")+"[/ul]")
+		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
 	%Cargo.append_text("\n\nShip\n")
 	if len(Game.ship_cargo)==0:
 		%Cargo.append_text("  Empty")
 	for item in Game.ship_cargo:
 		var count = Game.ship_cargo[item]
-		%Cargo.append_text("[ul]"+str(count)+" "+item+("s" if count!=1 else "")+"[/ul]")
+		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
 	
 	# Godot doesn't seem to like the disabled value changing more than once per frame
 	var d = true
@@ -85,7 +85,7 @@ func _on_collect_pressed() -> void:
 		if c["node"] is not Creature or c["node"].captured:
 			col = c
 	if col == null: return
-	var n = Game.names[col["id"]]
+	var n = col["id"]
 	if Game.vehicle_cargo.has(n):
 		Game.vehicle_cargo[n] += 1
 	else:
