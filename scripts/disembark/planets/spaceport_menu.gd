@@ -48,15 +48,15 @@ func update_research(id: String) -> void:
 		reward.text = str(Game.research_rewards[lvl])
 		research.get_node("Label").text = str(Game.research_reqs[lvl]) \
 			+" required ("+(str(Game.ship_cargo[id]) if Game.ship_cargo.has(id) else "0")+" in inventory)"
-		research.get_node("Button").disabled = lvl>=Game.max_research or \
-			Game.ship_cargo[id]<Game.research_reqs[lvl] if Game.ship_cargo.has(id) else true
 		var time = Game.research_times[id]
+		research.get_node("Button").disabled = time!=0 or lvl>=Game.max_research or \
+			Game.ship_cargo[id]<Game.research_reqs[lvl] if Game.ship_cargo.has(id) else true
 		progress.get_node("Label").text = "In progress: %d:%02d left" % [int(time/60), int(time)%60]
 		progress.get_node("ProgressBar").value = 60-time
-		research.visible = time==0
+		research.get_node("Label").visible = time==0
 		progress.visible = time!=0
 	else:
-		research.visible = false
+		research.get_node("Label").visible = false
 		progress.visible = false
 		reward.get_parent().get_parent().visible = false
 
@@ -81,9 +81,23 @@ func _process(_delta: float) -> void:
 	
 	update_research("snake")
 	update_research("bug")
+	
+	%Cargo.clear()
+	%Cargo.append_text("Terrain Vehicle\n")
+	if len(Game.vehicle_cargo)==0:
+		%Cargo.append_text("  Empty")
+	for item in Game.vehicle_cargo:
+		var count = Game.vehicle_cargo[item]
+		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
+	%Cargo.append_text("\n\nShip\n")
+	if len(Game.ship_cargo)==0:
+		%Cargo.append_text("  Empty")
+	for item in Game.ship_cargo:
+		var count = Game.ship_cargo[item]
+		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
 
 func _on_tab_container_tab_changed(tab: int) -> void:
-	[%NetDistance, %SnakeResearch/Button][tab].grab_focus()
+	[%NetDistance, %SnakeResearch/Button, %TabContainer][tab].grab_focus()
 
 func _on_close_pressed() -> void:
 	var main = get_node("../..")

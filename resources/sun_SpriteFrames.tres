@@ -1,0 +1,1034 @@
+[gd_resource type="SpriteFrames" load_steps=257 format=3 uid="uid://dbaekfuqnb4c7"]
+
+[ext_resource type="Texture2D" uid="uid://crvx57uwxr0tc" path="res://assets/planets/sun/sun001.png" id="1_p4kjc"]
+[ext_resource type="Texture2D" uid="uid://dov0sguxsxf4s" path="res://assets/planets/sun/sun002.png" id="2_171ha"]
+[ext_resource type="Texture2D" uid="uid://b6qb6kj1bc331" path="res://assets/planets/sun/sun003.png" id="3_ohlry"]
+[ext_resource type="Texture2D" uid="uid://b016hoddgpp1v" path="res://assets/planets/sun/sun004.png" id="4_jsacl"]
+[ext_resource type="Texture2D" uid="uid://bkaeelfxekrn5" path="res://assets/planets/sun/sun005.png" id="5_hxls5"]
+[ext_resource type="Texture2D" uid="uid://dux4vifsj2vim" path="res://assets/planets/sun/sun006.png" id="6_oj8rb"]
+[ext_resource type="Texture2D" uid="uid://coi501w57p6ha" path="res://assets/planets/sun/sun007.png" id="7_dinti"]
+[ext_resource type="Texture2D" uid="uid://v13grntb7s6s" path="res://assets/planets/sun/sun008.png" id="8_o6jhw"]
+[ext_resource type="Texture2D" uid="uid://0jkj3j5jqhyt" path="res://assets/planets/sun/sun009.png" id="9_wqlbr"]
+[ext_resource type="Texture2D" uid="uid://cjo80wng0piwi" path="res://assets/planets/sun/sun010.png" id="10_4wvv4"]
+[ext_resource type="Texture2D" uid="uid://cfon1tmt33psk" path="res://assets/planets/sun/sun011.png" id="11_yp6yx"]
+[ext_resource type="Texture2D" uid="uid://mhfwjj63ghxp" path="res://assets/planets/sun/sun012.png" id="12_biqja"]
+[ext_resource type="Texture2D" uid="uid://cttix710atukh" path="res://assets/planets/sun/sun013.png" id="13_7jpe1"]
+[ext_resource type="Texture2D" uid="uid://b06xkpayegfhv" path="res://assets/planets/sun/sun014.png" id="14_ajbop"]
+[ext_resource type="Texture2D" uid="uid://coc5uvui7jwnm" path="res://assets/planets/sun/sun015.png" id="15_4gxkv"]
+[ext_resource type="Texture2D" uid="uid://cn1w2kh1s82jg" path="res://assets/planets/sun/sun016.png" id="16_uiaqu"]
+[ext_resource type="Texture2D" uid="uid://bvc4a0ht03jeb" path="res://assets/planets/sun/sun017.png" id="17_jtyj3"]
+[ext_resource type="Texture2D" uid="uid://v86futenbyey" path="res://assets/planets/sun/sun018.png" id="18_sfl1d"]
+[ext_resource type="Texture2D" uid="uid://pnoeadhnclhy" path="res://assets/planets/sun/sun019.png" id="19_7hth2"]
+[ext_resource type="Texture2D" uid="uid://ddkx8qkfd6bsg" path="res://assets/planets/sun/sun020.png" id="20_1cqke"]
+[ext_resource type="Texture2D" uid="uid://bs8nt5n851waf" path="res://assets/planets/sun/sun021.png" id="21_5lt34"]
+[ext_resource type="Texture2D" uid="uid://cofg27v5ahafj" path="res://assets/planets/sun/sun022.png" id="22_nwuds"]
+[ext_resource type="Texture2D" uid="uid://ctl4ulwjip1t1" path="res://assets/planets/sun/sun023.png" id="23_lbqwo"]
+[ext_resource type="Texture2D" uid="uid://ca72sikuuhvh6" path="res://assets/planets/sun/sun024.png" id="24_1bo1x"]
+[ext_resource type="Texture2D" uid="uid://bt0qwbbd75dai" path="res://assets/planets/sun/sun025.png" id="25_7lvkq"]
+[ext_resource type="Texture2D" uid="uid://c006sj8kwfrdb" path="res://assets/planets/sun/sun026.png" id="26_h6wxd"]
+[ext_resource type="Texture2D" uid="uid://l47twqn36x63" path="res://assets/planets/sun/sun027.png" id="27_dheer"]
+[ext_resource type="Texture2D" uid="uid://dg3fh47qlou62" path="res://assets/planets/sun/sun028.png" id="28_galk6"]
+[ext_resource type="Texture2D" uid="uid://bt7sjvmnonihr" path="res://assets/planets/sun/sun029.png" id="29_r8783"]
+[ext_resource type="Texture2D" uid="uid://bqebjs5kj7ym8" path="res://assets/planets/sun/sun030.png" id="30_5s3yl"]
+[ext_resource type="Texture2D" uid="uid://5dnn80x7n3pk" path="res://assets/planets/sun/sun031.png" id="31_6tl4d"]
+[ext_resource type="Texture2D" uid="uid://spss5dacv28w" path="res://assets/planets/sun/sun032.png" id="32_x54t6"]
+[ext_resource type="Texture2D" uid="uid://dagka6b56t1it" path="res://assets/planets/sun/sun033.png" id="33_xbhhh"]
+[ext_resource type="Texture2D" uid="uid://nuyh0xhi187o" path="res://assets/planets/sun/sun034.png" id="34_u4n3l"]
+[ext_resource type="Texture2D" uid="uid://co1btrlbcwql6" path="res://assets/planets/sun/sun035.png" id="35_ace27"]
+[ext_resource type="Texture2D" uid="uid://cialtuxycig17" path="res://assets/planets/sun/sun036.png" id="36_yta5x"]
+[ext_resource type="Texture2D" uid="uid://87vn5xpuhtvv" path="res://assets/planets/sun/sun037.png" id="37_ifm8k"]
+[ext_resource type="Texture2D" uid="uid://pu8yojarpixp" path="res://assets/planets/sun/sun038.png" id="38_ra56o"]
+[ext_resource type="Texture2D" uid="uid://b5dmx8oqyj4sw" path="res://assets/planets/sun/sun039.png" id="39_5fofk"]
+[ext_resource type="Texture2D" uid="uid://bb8etvjroo7i2" path="res://assets/planets/sun/sun040.png" id="40_tijwm"]
+[ext_resource type="Texture2D" uid="uid://y40pbm8i0eqg" path="res://assets/planets/sun/sun041.png" id="41_grnfh"]
+[ext_resource type="Texture2D" uid="uid://cvrrog1roawbt" path="res://assets/planets/sun/sun042.png" id="42_lyyti"]
+[ext_resource type="Texture2D" uid="uid://bjcbakqjeqbnv" path="res://assets/planets/sun/sun043.png" id="43_ah2ls"]
+[ext_resource type="Texture2D" uid="uid://cles4t7dwnetg" path="res://assets/planets/sun/sun044.png" id="44_f640h"]
+[ext_resource type="Texture2D" uid="uid://pvfpa21lx2a6" path="res://assets/planets/sun/sun045.png" id="45_u7f6j"]
+[ext_resource type="Texture2D" uid="uid://didhrymkrdy85" path="res://assets/planets/sun/sun046.png" id="46_pqv4k"]
+[ext_resource type="Texture2D" uid="uid://bv3bvuhkxklo1" path="res://assets/planets/sun/sun047.png" id="47_uw5el"]
+[ext_resource type="Texture2D" uid="uid://co4elqscms87i" path="res://assets/planets/sun/sun048.png" id="48_vg8sx"]
+[ext_resource type="Texture2D" uid="uid://tpwf014u3hqa" path="res://assets/planets/sun/sun049.png" id="49_givpn"]
+[ext_resource type="Texture2D" uid="uid://cah42r32tatw3" path="res://assets/planets/sun/sun050.png" id="50_wcaqi"]
+[ext_resource type="Texture2D" uid="uid://mt7cwy25w6nx" path="res://assets/planets/sun/sun051.png" id="51_ysl1n"]
+[ext_resource type="Texture2D" uid="uid://clhqrpp6xh4l" path="res://assets/planets/sun/sun052.png" id="52_uuk7y"]
+[ext_resource type="Texture2D" uid="uid://p70k5iistqdr" path="res://assets/planets/sun/sun053.png" id="53_fsy8i"]
+[ext_resource type="Texture2D" uid="uid://bm6jep5th4hhq" path="res://assets/planets/sun/sun054.png" id="54_tx4pd"]
+[ext_resource type="Texture2D" uid="uid://bi13ief03l3la" path="res://assets/planets/sun/sun055.png" id="55_jii83"]
+[ext_resource type="Texture2D" uid="uid://w13f23c1y40q" path="res://assets/planets/sun/sun056.png" id="56_n6ht0"]
+[ext_resource type="Texture2D" uid="uid://nh4oyuwxs151" path="res://assets/planets/sun/sun057.png" id="57_32d0l"]
+[ext_resource type="Texture2D" uid="uid://bef8sv51jl8s8" path="res://assets/planets/sun/sun058.png" id="58_oswgf"]
+[ext_resource type="Texture2D" uid="uid://cvatwbf3ul0f1" path="res://assets/planets/sun/sun059.png" id="59_2cot4"]
+[ext_resource type="Texture2D" uid="uid://bwdsarp7m36rf" path="res://assets/planets/sun/sun060.png" id="60_kveb2"]
+[ext_resource type="Texture2D" uid="uid://d3garwhnro3is" path="res://assets/planets/sun/sun061.png" id="61_jtw4x"]
+[ext_resource type="Texture2D" uid="uid://c3rw6j4u23gob" path="res://assets/planets/sun/sun062.png" id="62_wvknl"]
+[ext_resource type="Texture2D" uid="uid://cbhntsj0004kp" path="res://assets/planets/sun/sun063.png" id="63_kvnci"]
+[ext_resource type="Texture2D" uid="uid://dyu1caqae448e" path="res://assets/planets/sun/sun064.png" id="64_dvq56"]
+[ext_resource type="Texture2D" uid="uid://cxk8y26nnvyg6" path="res://assets/planets/sun/sun065.png" id="65_34i61"]
+[ext_resource type="Texture2D" uid="uid://rriueadis8jb" path="res://assets/planets/sun/sun066.png" id="66_i75wg"]
+[ext_resource type="Texture2D" uid="uid://bq5mddiln0nt7" path="res://assets/planets/sun/sun067.png" id="67_u6fmf"]
+[ext_resource type="Texture2D" uid="uid://othbt1f2sfqe" path="res://assets/planets/sun/sun068.png" id="68_anblh"]
+[ext_resource type="Texture2D" uid="uid://crj26wcnk7med" path="res://assets/planets/sun/sun069.png" id="69_12qgf"]
+[ext_resource type="Texture2D" uid="uid://bikao2catkk0y" path="res://assets/planets/sun/sun070.png" id="70_rvgiu"]
+[ext_resource type="Texture2D" uid="uid://dqo1f4jsmgqcf" path="res://assets/planets/sun/sun071.png" id="71_ofswj"]
+[ext_resource type="Texture2D" uid="uid://bjbe7mllh4whg" path="res://assets/planets/sun/sun072.png" id="72_cvrku"]
+[ext_resource type="Texture2D" uid="uid://dnxro5seehe2b" path="res://assets/planets/sun/sun073.png" id="73_fh0q6"]
+[ext_resource type="Texture2D" uid="uid://ch7knc8qpulfr" path="res://assets/planets/sun/sun074.png" id="74_pqq7a"]
+[ext_resource type="Texture2D" uid="uid://dcoaprk48vdlx" path="res://assets/planets/sun/sun075.png" id="75_2a0l4"]
+[ext_resource type="Texture2D" uid="uid://bt4kthpcyco3o" path="res://assets/planets/sun/sun076.png" id="76_dq38m"]
+[ext_resource type="Texture2D" uid="uid://dnumhufw4r8ky" path="res://assets/planets/sun/sun077.png" id="77_to46o"]
+[ext_resource type="Texture2D" uid="uid://be2055kvxr3qs" path="res://assets/planets/sun/sun078.png" id="78_xmtug"]
+[ext_resource type="Texture2D" uid="uid://ol1rsy0il53c" path="res://assets/planets/sun/sun079.png" id="79_ul8wd"]
+[ext_resource type="Texture2D" uid="uid://bk4564cmnc7hr" path="res://assets/planets/sun/sun080.png" id="80_33uo7"]
+[ext_resource type="Texture2D" uid="uid://hcjbqv81ovym" path="res://assets/planets/sun/sun081.png" id="81_rju2o"]
+[ext_resource type="Texture2D" uid="uid://d1i4pyknt3dk6" path="res://assets/planets/sun/sun082.png" id="82_07nay"]
+[ext_resource type="Texture2D" uid="uid://cyqc5cvui5utr" path="res://assets/planets/sun/sun083.png" id="83_v20wb"]
+[ext_resource type="Texture2D" uid="uid://bidfsxyumgdmp" path="res://assets/planets/sun/sun084.png" id="84_qmutg"]
+[ext_resource type="Texture2D" uid="uid://bnt2dggoa670c" path="res://assets/planets/sun/sun085.png" id="85_p3jnb"]
+[ext_resource type="Texture2D" uid="uid://c1tujkhnnhb7b" path="res://assets/planets/sun/sun086.png" id="86_0qycd"]
+[ext_resource type="Texture2D" uid="uid://b7tdg33x22ae7" path="res://assets/planets/sun/sun087.png" id="87_s3r3w"]
+[ext_resource type="Texture2D" uid="uid://cqa3dlexti6lc" path="res://assets/planets/sun/sun088.png" id="88_wmaov"]
+[ext_resource type="Texture2D" uid="uid://52cqu332yobx" path="res://assets/planets/sun/sun089.png" id="89_emqqy"]
+[ext_resource type="Texture2D" uid="uid://dv26d5leut0uu" path="res://assets/planets/sun/sun090.png" id="90_5bruv"]
+[ext_resource type="Texture2D" uid="uid://hpijfbju76oc" path="res://assets/planets/sun/sun091.png" id="91_jbdkp"]
+[ext_resource type="Texture2D" uid="uid://bow258b5j8kln" path="res://assets/planets/sun/sun092.png" id="92_o6ofr"]
+[ext_resource type="Texture2D" uid="uid://6lvtq52stn0w" path="res://assets/planets/sun/sun093.png" id="93_uc651"]
+[ext_resource type="Texture2D" uid="uid://bkraw27j7nxlp" path="res://assets/planets/sun/sun094.png" id="94_nh84c"]
+[ext_resource type="Texture2D" uid="uid://bcyt1md7jy104" path="res://assets/planets/sun/sun095.png" id="95_x2fp0"]
+[ext_resource type="Texture2D" uid="uid://b87ampqqt345c" path="res://assets/planets/sun/sun096.png" id="96_fkou5"]
+[ext_resource type="Texture2D" uid="uid://gu0loes20o5c" path="res://assets/planets/sun/sun097.png" id="97_7tcaj"]
+[ext_resource type="Texture2D" uid="uid://d0bhk8vyya1l2" path="res://assets/planets/sun/sun098.png" id="98_7kvpp"]
+[ext_resource type="Texture2D" uid="uid://kmug4whqwtrw" path="res://assets/planets/sun/sun099.png" id="99_0unop"]
+[ext_resource type="Texture2D" uid="uid://dd7u0lurv5sln" path="res://assets/planets/sun/sun100.png" id="100_puict"]
+[ext_resource type="Texture2D" uid="uid://db4ett337qlk5" path="res://assets/planets/sun/sun101.png" id="101_b2bti"]
+[ext_resource type="Texture2D" uid="uid://ratjdw1faby8" path="res://assets/planets/sun/sun102.png" id="102_mxu27"]
+[ext_resource type="Texture2D" uid="uid://ds4gqtueayd7p" path="res://assets/planets/sun/sun103.png" id="103_gp6cn"]
+[ext_resource type="Texture2D" uid="uid://baawk6y7i4a1a" path="res://assets/planets/sun/sun104.png" id="104_7q62h"]
+[ext_resource type="Texture2D" uid="uid://jnhphfifl5j" path="res://assets/planets/sun/sun105.png" id="105_xbn7h"]
+[ext_resource type="Texture2D" uid="uid://pasrrh7suluc" path="res://assets/planets/sun/sun106.png" id="106_4hwav"]
+[ext_resource type="Texture2D" uid="uid://cvpbbqjllppur" path="res://assets/planets/sun/sun107.png" id="107_o74v3"]
+[ext_resource type="Texture2D" uid="uid://bpudekiqunbwb" path="res://assets/planets/sun/sun108.png" id="108_k1dd7"]
+[ext_resource type="Texture2D" uid="uid://bo33nnoedmcn7" path="res://assets/planets/sun/sun109.png" id="109_vuhp8"]
+[ext_resource type="Texture2D" uid="uid://b42u3iaq6euur" path="res://assets/planets/sun/sun110.png" id="110_7n2uc"]
+[ext_resource type="Texture2D" uid="uid://ta5cytl66bdm" path="res://assets/planets/sun/sun111.png" id="111_q1xig"]
+[ext_resource type="Texture2D" uid="uid://b3mr05o24inip" path="res://assets/planets/sun/sun112.png" id="112_u0t8n"]
+[ext_resource type="Texture2D" uid="uid://c11tleu74o4sk" path="res://assets/planets/sun/sun113.png" id="113_0ol5k"]
+[ext_resource type="Texture2D" uid="uid://c5seqxlgymt5g" path="res://assets/planets/sun/sun114.png" id="114_ld3en"]
+[ext_resource type="Texture2D" uid="uid://bsc4x7p1v328f" path="res://assets/planets/sun/sun115.png" id="115_83cw2"]
+[ext_resource type="Texture2D" uid="uid://b76wxl5n5en6y" path="res://assets/planets/sun/sun116.png" id="116_76fam"]
+[ext_resource type="Texture2D" uid="uid://b5hydaose46u" path="res://assets/planets/sun/sun117.png" id="117_ns53s"]
+[ext_resource type="Texture2D" uid="uid://by4nff5dqkj40" path="res://assets/planets/sun/sun118.png" id="118_ywxgn"]
+[ext_resource type="Texture2D" uid="uid://cc6xpy6464okm" path="res://assets/planets/sun/sun119.png" id="119_pt88o"]
+[ext_resource type="Texture2D" uid="uid://cwpqajp1tx80p" path="res://assets/planets/sun/sun120.png" id="120_cwsnq"]
+[ext_resource type="Texture2D" uid="uid://binwm77kmo5fw" path="res://assets/planets/sun/sun121.png" id="121_k0jrf"]
+[ext_resource type="Texture2D" uid="uid://dfl0ijajfnmwd" path="res://assets/planets/sun/sun122.png" id="122_x5nv5"]
+[ext_resource type="Texture2D" uid="uid://cpkim4gb58715" path="res://assets/planets/sun/sun123.png" id="123_vqswc"]
+[ext_resource type="Texture2D" uid="uid://b720u6xdqlyu" path="res://assets/planets/sun/sun124.png" id="124_01b4d"]
+[ext_resource type="Texture2D" uid="uid://b2rdp3f4dpxb2" path="res://assets/planets/sun/sun125.png" id="125_7t0m2"]
+[ext_resource type="Texture2D" uid="uid://cjl2i27x8umc6" path="res://assets/planets/sun/sun126.png" id="126_x462r"]
+[ext_resource type="Texture2D" uid="uid://c41yjnsvv0tm8" path="res://assets/planets/sun/sun127.png" id="127_27eav"]
+[ext_resource type="Texture2D" uid="uid://cee5xunn0tr0w" path="res://assets/planets/sun/sun128.png" id="128_78fn0"]
+[ext_resource type="Texture2D" uid="uid://2soaboakxrg7" path="res://assets/planets/sun/sun129.png" id="129_h0ltk"]
+[ext_resource type="Texture2D" uid="uid://didqu3a270vyx" path="res://assets/planets/sun/sun130.png" id="130_a1l3j"]
+[ext_resource type="Texture2D" uid="uid://dkgmhu2g0h2ac" path="res://assets/planets/sun/sun131.png" id="131_bf14v"]
+[ext_resource type="Texture2D" uid="uid://dka5lhvcr2k7y" path="res://assets/planets/sun/sun132.png" id="132_sgt3v"]
+[ext_resource type="Texture2D" uid="uid://ddtrw4qslp20i" path="res://assets/planets/sun/sun133.png" id="133_xe4o6"]
+[ext_resource type="Texture2D" uid="uid://booirsfj1vr2l" path="res://assets/planets/sun/sun134.png" id="134_t6xb8"]
+[ext_resource type="Texture2D" uid="uid://c1x2rtr71mcak" path="res://assets/planets/sun/sun135.png" id="135_22qk8"]
+[ext_resource type="Texture2D" uid="uid://dprci65w7ntlc" path="res://assets/planets/sun/sun136.png" id="136_xe6h3"]
+[ext_resource type="Texture2D" uid="uid://dgmunocp8rmge" path="res://assets/planets/sun/sun137.png" id="137_jwuwn"]
+[ext_resource type="Texture2D" uid="uid://xkfbt5ibitc6" path="res://assets/planets/sun/sun138.png" id="138_r487v"]
+[ext_resource type="Texture2D" uid="uid://bk4mrji6e0xxp" path="res://assets/planets/sun/sun139.png" id="139_8fm88"]
+[ext_resource type="Texture2D" uid="uid://mo2edtie6c07" path="res://assets/planets/sun/sun140.png" id="140_kjhqq"]
+[ext_resource type="Texture2D" uid="uid://cp34yurhiijf5" path="res://assets/planets/sun/sun141.png" id="141_5xvba"]
+[ext_resource type="Texture2D" uid="uid://dpjjmhahe1pt0" path="res://assets/planets/sun/sun142.png" id="142_ukd83"]
+[ext_resource type="Texture2D" uid="uid://dbqxmrplo8ad" path="res://assets/planets/sun/sun143.png" id="143_6xqc0"]
+[ext_resource type="Texture2D" uid="uid://dy7uxegip4y20" path="res://assets/planets/sun/sun144.png" id="144_m6ryk"]
+[ext_resource type="Texture2D" uid="uid://87e5ejnipcaq" path="res://assets/planets/sun/sun145.png" id="145_uc7xp"]
+[ext_resource type="Texture2D" uid="uid://tdcgi7p0w1qv" path="res://assets/planets/sun/sun146.png" id="146_3kgb7"]
+[ext_resource type="Texture2D" uid="uid://g7e6yjytuycg" path="res://assets/planets/sun/sun147.png" id="147_dgys4"]
+[ext_resource type="Texture2D" uid="uid://d26h4vyhijsjv" path="res://assets/planets/sun/sun148.png" id="148_stm16"]
+[ext_resource type="Texture2D" uid="uid://ny5oobfdoiyr" path="res://assets/planets/sun/sun149.png" id="149_ar30i"]
+[ext_resource type="Texture2D" uid="uid://b6xnfo4v4f4j8" path="res://assets/planets/sun/sun150.png" id="150_kckcc"]
+[ext_resource type="Texture2D" uid="uid://dbhlkrp3flboq" path="res://assets/planets/sun/sun151.png" id="151_a667a"]
+[ext_resource type="Texture2D" uid="uid://dlbu38b4pfg2q" path="res://assets/planets/sun/sun152.png" id="152_ejpgp"]
+[ext_resource type="Texture2D" uid="uid://cbmvdr0i2mbyn" path="res://assets/planets/sun/sun153.png" id="153_0t2wx"]
+[ext_resource type="Texture2D" uid="uid://u1au2irv5fou" path="res://assets/planets/sun/sun154.png" id="154_5ajmc"]
+[ext_resource type="Texture2D" uid="uid://5svyjx42lgua" path="res://assets/planets/sun/sun155.png" id="155_tryno"]
+[ext_resource type="Texture2D" uid="uid://bc80lj721xsbl" path="res://assets/planets/sun/sun156.png" id="156_m2hpo"]
+[ext_resource type="Texture2D" uid="uid://cypyc33e76ndl" path="res://assets/planets/sun/sun157.png" id="157_ibkxo"]
+[ext_resource type="Texture2D" uid="uid://knqtj6c47axx" path="res://assets/planets/sun/sun158.png" id="158_pgrff"]
+[ext_resource type="Texture2D" uid="uid://du41bfybqj1mv" path="res://assets/planets/sun/sun159.png" id="159_85mh7"]
+[ext_resource type="Texture2D" uid="uid://bwoo1c548cbet" path="res://assets/planets/sun/sun160.png" id="160_cceip"]
+[ext_resource type="Texture2D" uid="uid://wsgitjd052d" path="res://assets/planets/sun/sun161.png" id="161_8ggd5"]
+[ext_resource type="Texture2D" uid="uid://bmm47h6utcm0s" path="res://assets/planets/sun/sun162.png" id="162_2r8bq"]
+[ext_resource type="Texture2D" uid="uid://50vgme84sp24" path="res://assets/planets/sun/sun163.png" id="163_1uhhg"]
+[ext_resource type="Texture2D" uid="uid://b2te7e2i72o5" path="res://assets/planets/sun/sun164.png" id="164_5sh7f"]
+[ext_resource type="Texture2D" uid="uid://cn26xs5frlbk8" path="res://assets/planets/sun/sun165.png" id="165_cn7lj"]
+[ext_resource type="Texture2D" uid="uid://s8wfcuqvvrfm" path="res://assets/planets/sun/sun166.png" id="166_n0rah"]
+[ext_resource type="Texture2D" uid="uid://clw4kdta6sude" path="res://assets/planets/sun/sun167.png" id="167_q1evh"]
+[ext_resource type="Texture2D" uid="uid://cta4tgucvqpge" path="res://assets/planets/sun/sun168.png" id="168_5edfi"]
+[ext_resource type="Texture2D" uid="uid://cuf661jpmt06d" path="res://assets/planets/sun/sun169.png" id="169_1vcro"]
+[ext_resource type="Texture2D" uid="uid://bmuu85t2dgrjj" path="res://assets/planets/sun/sun170.png" id="170_waf36"]
+[ext_resource type="Texture2D" uid="uid://deh8jay7xvqmb" path="res://assets/planets/sun/sun171.png" id="171_iy7dy"]
+[ext_resource type="Texture2D" uid="uid://cowfnbf0bhwxe" path="res://assets/planets/sun/sun172.png" id="172_y50wq"]
+[ext_resource type="Texture2D" uid="uid://b74eyx5516tys" path="res://assets/planets/sun/sun173.png" id="173_kdhly"]
+[ext_resource type="Texture2D" uid="uid://2ya5qjg1optb" path="res://assets/planets/sun/sun174.png" id="174_ejjue"]
+[ext_resource type="Texture2D" uid="uid://dbk3rdwf2h4tr" path="res://assets/planets/sun/sun175.png" id="175_48qiv"]
+[ext_resource type="Texture2D" uid="uid://b6cs7jnh37q8p" path="res://assets/planets/sun/sun176.png" id="176_k3i1k"]
+[ext_resource type="Texture2D" uid="uid://cwacnp7ylr8vf" path="res://assets/planets/sun/sun177.png" id="177_3woef"]
+[ext_resource type="Texture2D" uid="uid://ic234y4ttvaq" path="res://assets/planets/sun/sun178.png" id="178_vdrwc"]
+[ext_resource type="Texture2D" uid="uid://cpk0vl0ux46ih" path="res://assets/planets/sun/sun179.png" id="179_pdteu"]
+[ext_resource type="Texture2D" uid="uid://cjedkmjkp6lxr" path="res://assets/planets/sun/sun180.png" id="180_ddveb"]
+[ext_resource type="Texture2D" uid="uid://bttb8hi612qn8" path="res://assets/planets/sun/sun181.png" id="181_5y73x"]
+[ext_resource type="Texture2D" uid="uid://jyeuf6y4fvcd" path="res://assets/planets/sun/sun182.png" id="182_ok4s6"]
+[ext_resource type="Texture2D" uid="uid://d0ycbviyoyha" path="res://assets/planets/sun/sun183.png" id="183_cxxa7"]
+[ext_resource type="Texture2D" uid="uid://clroolxfu66c3" path="res://assets/planets/sun/sun184.png" id="184_2xnrt"]
+[ext_resource type="Texture2D" uid="uid://begeyp25jw2fp" path="res://assets/planets/sun/sun185.png" id="185_f2aj7"]
+[ext_resource type="Texture2D" uid="uid://1h74qdkx83es" path="res://assets/planets/sun/sun186.png" id="186_0qxj2"]
+[ext_resource type="Texture2D" uid="uid://df5lsgtqdgdff" path="res://assets/planets/sun/sun187.png" id="187_r7orp"]
+[ext_resource type="Texture2D" uid="uid://fkmgs77p6bmu" path="res://assets/planets/sun/sun188.png" id="188_xc6wu"]
+[ext_resource type="Texture2D" uid="uid://ww4eeq5rrd3e" path="res://assets/planets/sun/sun189.png" id="189_e5y87"]
+[ext_resource type="Texture2D" uid="uid://cga206q7uknor" path="res://assets/planets/sun/sun190.png" id="190_3ypjo"]
+[ext_resource type="Texture2D" uid="uid://bht4wosl0i8q1" path="res://assets/planets/sun/sun191.png" id="191_ng3rm"]
+[ext_resource type="Texture2D" uid="uid://c0nvv20ot0825" path="res://assets/planets/sun/sun192.png" id="192_icsln"]
+[ext_resource type="Texture2D" uid="uid://7f4hpx5l8r2c" path="res://assets/planets/sun/sun193.png" id="193_02nu2"]
+[ext_resource type="Texture2D" uid="uid://badl2dmru026t" path="res://assets/planets/sun/sun194.png" id="194_bffvl"]
+[ext_resource type="Texture2D" uid="uid://c7j5tc7yw32es" path="res://assets/planets/sun/sun195.png" id="195_i80gd"]
+[ext_resource type="Texture2D" uid="uid://d2acs43qorhy1" path="res://assets/planets/sun/sun196.png" id="196_cq1vx"]
+[ext_resource type="Texture2D" uid="uid://cr15ifcscia1b" path="res://assets/planets/sun/sun197.png" id="197_tnfa4"]
+[ext_resource type="Texture2D" uid="uid://cppv88ux6eyji" path="res://assets/planets/sun/sun198.png" id="198_c1cid"]
+[ext_resource type="Texture2D" uid="uid://chgjx854mavnp" path="res://assets/planets/sun/sun199.png" id="199_e3wre"]
+[ext_resource type="Texture2D" uid="uid://dfh4eug8n1pnn" path="res://assets/planets/sun/sun200.png" id="200_7rq6t"]
+[ext_resource type="Texture2D" uid="uid://bfw53k8s2oq07" path="res://assets/planets/sun/sun201.png" id="201_n3e5w"]
+[ext_resource type="Texture2D" uid="uid://bqrx0qcp4fn63" path="res://assets/planets/sun/sun202.png" id="202_syjix"]
+[ext_resource type="Texture2D" uid="uid://c4aeju6jqhxck" path="res://assets/planets/sun/sun203.png" id="203_ppgu6"]
+[ext_resource type="Texture2D" uid="uid://d2fd3faf23f1a" path="res://assets/planets/sun/sun204.png" id="204_1cffm"]
+[ext_resource type="Texture2D" uid="uid://dgqbmb6kbnfhg" path="res://assets/planets/sun/sun205.png" id="205_m8so0"]
+[ext_resource type="Texture2D" uid="uid://dxfk6vjnpt5ik" path="res://assets/planets/sun/sun206.png" id="206_2l1i0"]
+[ext_resource type="Texture2D" uid="uid://bgdwoek225knw" path="res://assets/planets/sun/sun207.png" id="207_e85kt"]
+[ext_resource type="Texture2D" uid="uid://cpwbwe84dc1qu" path="res://assets/planets/sun/sun208.png" id="208_eud34"]
+[ext_resource type="Texture2D" uid="uid://7sl7nnfrcqby" path="res://assets/planets/sun/sun209.png" id="209_4nkb4"]
+[ext_resource type="Texture2D" uid="uid://dr7pk2mytsv2u" path="res://assets/planets/sun/sun210.png" id="210_e6ve1"]
+[ext_resource type="Texture2D" uid="uid://dkuh0afk0shq7" path="res://assets/planets/sun/sun211.png" id="211_prkeo"]
+[ext_resource type="Texture2D" uid="uid://dra2lm2wform4" path="res://assets/planets/sun/sun212.png" id="212_onkuk"]
+[ext_resource type="Texture2D" uid="uid://uonvxsa4xabl" path="res://assets/planets/sun/sun213.png" id="213_10rg4"]
+[ext_resource type="Texture2D" uid="uid://dxhbabsgfhe2g" path="res://assets/planets/sun/sun214.png" id="214_5sr6s"]
+[ext_resource type="Texture2D" uid="uid://dau3ktg1iftx" path="res://assets/planets/sun/sun215.png" id="215_ikfk1"]
+[ext_resource type="Texture2D" uid="uid://dhttsqey01c1x" path="res://assets/planets/sun/sun216.png" id="216_8yqnc"]
+[ext_resource type="Texture2D" uid="uid://dlsh0q5jq53x3" path="res://assets/planets/sun/sun217.png" id="217_hd1lf"]
+[ext_resource type="Texture2D" uid="uid://bghlvatog4vr6" path="res://assets/planets/sun/sun218.png" id="218_7hj31"]
+[ext_resource type="Texture2D" uid="uid://bfc8troks7761" path="res://assets/planets/sun/sun219.png" id="219_jibr1"]
+[ext_resource type="Texture2D" uid="uid://bxncusy87bakf" path="res://assets/planets/sun/sun220.png" id="220_3u4i6"]
+[ext_resource type="Texture2D" uid="uid://c3tm2kk8bj7n1" path="res://assets/planets/sun/sun221.png" id="221_dclu7"]
+[ext_resource type="Texture2D" uid="uid://c7m283nyrtm10" path="res://assets/planets/sun/sun222.png" id="222_ykmut"]
+[ext_resource type="Texture2D" uid="uid://bhoe8jxnkrndc" path="res://assets/planets/sun/sun223.png" id="223_xmf8o"]
+[ext_resource type="Texture2D" uid="uid://dg5eusowhkcgl" path="res://assets/planets/sun/sun224.png" id="224_4o6qn"]
+[ext_resource type="Texture2D" uid="uid://ckvdxsvbg2fg6" path="res://assets/planets/sun/sun225.png" id="225_n5ngo"]
+[ext_resource type="Texture2D" uid="uid://1ap4xusdf0w0" path="res://assets/planets/sun/sun226.png" id="226_8h5q0"]
+[ext_resource type="Texture2D" uid="uid://mdi2ovevjna5" path="res://assets/planets/sun/sun227.png" id="227_6o17k"]
+[ext_resource type="Texture2D" uid="uid://cqe1vfcnph71j" path="res://assets/planets/sun/sun228.png" id="228_k3i1o"]
+[ext_resource type="Texture2D" uid="uid://bdfo0rgymqkea" path="res://assets/planets/sun/sun229.png" id="229_jhtao"]
+[ext_resource type="Texture2D" uid="uid://thp5df3q68eq" path="res://assets/planets/sun/sun230.png" id="230_inmmv"]
+[ext_resource type="Texture2D" uid="uid://dlrd8ltam2cgd" path="res://assets/planets/sun/sun231.png" id="231_sai1r"]
+[ext_resource type="Texture2D" uid="uid://bqjb4cvy6ov28" path="res://assets/planets/sun/sun232.png" id="232_uwlve"]
+[ext_resource type="Texture2D" uid="uid://7jivg0rbh2t5" path="res://assets/planets/sun/sun233.png" id="233_cftv0"]
+[ext_resource type="Texture2D" uid="uid://4kri0oeq6e7d" path="res://assets/planets/sun/sun234.png" id="234_qjgdg"]
+[ext_resource type="Texture2D" uid="uid://dkwjn7g3omfro" path="res://assets/planets/sun/sun235.png" id="235_bvyo7"]
+[ext_resource type="Texture2D" uid="uid://c0ja11b2e3q5m" path="res://assets/planets/sun/sun236.png" id="236_26dp7"]
+[ext_resource type="Texture2D" uid="uid://bx0gjw6glclnc" path="res://assets/planets/sun/sun237.png" id="237_dk78o"]
+[ext_resource type="Texture2D" uid="uid://cgat8ltvdk1jy" path="res://assets/planets/sun/sun238.png" id="238_ey2b0"]
+[ext_resource type="Texture2D" uid="uid://dwwnvnmhxc02o" path="res://assets/planets/sun/sun239.png" id="239_loxdo"]
+[ext_resource type="Texture2D" uid="uid://docquyjslgono" path="res://assets/planets/sun/sun240.png" id="240_qruwg"]
+[ext_resource type="Texture2D" uid="uid://civee3b7qeftt" path="res://assets/planets/sun/sun241.png" id="241_2p8vl"]
+[ext_resource type="Texture2D" uid="uid://cap8x7iffwhx2" path="res://assets/planets/sun/sun242.png" id="242_s32vl"]
+[ext_resource type="Texture2D" uid="uid://c2jwag0sf7ycy" path="res://assets/planets/sun/sun243.png" id="243_o3dif"]
+[ext_resource type="Texture2D" uid="uid://igl333tbcm13" path="res://assets/planets/sun/sun244.png" id="244_j6qag"]
+[ext_resource type="Texture2D" uid="uid://cir6egccr80ef" path="res://assets/planets/sun/sun245.png" id="245_emp1j"]
+[ext_resource type="Texture2D" uid="uid://ck65j4cro3ri2" path="res://assets/planets/sun/sun246.png" id="246_hfgg7"]
+[ext_resource type="Texture2D" uid="uid://dh3drp6ymvwc4" path="res://assets/planets/sun/sun247.png" id="247_1k65i"]
+[ext_resource type="Texture2D" uid="uid://d2nrsuj70wjvr" path="res://assets/planets/sun/sun248.png" id="248_nww6f"]
+[ext_resource type="Texture2D" uid="uid://dage12hfixq45" path="res://assets/planets/sun/sun249.png" id="249_rudhh"]
+[ext_resource type="Texture2D" uid="uid://cg7dldooj3rjh" path="res://assets/planets/sun/sun250.png" id="250_bva6f"]
+[ext_resource type="Texture2D" uid="uid://mr1egp1tl0nu" path="res://assets/planets/sun/sun251.png" id="251_chmyv"]
+[ext_resource type="Texture2D" uid="uid://5lf7dso10p8u" path="res://assets/planets/sun/sun252.png" id="252_kxjgg"]
+[ext_resource type="Texture2D" uid="uid://d2g38sckle4gk" path="res://assets/planets/sun/sun253.png" id="253_iurxb"]
+[ext_resource type="Texture2D" uid="uid://ch3r2ksovnaiq" path="res://assets/planets/sun/sun254.png" id="254_q45fj"]
+[ext_resource type="Texture2D" uid="uid://k362xretmofk" path="res://assets/planets/sun/sun255.png" id="255_xcdfi"]
+[ext_resource type="Texture2D" uid="uid://djct7hv3nrhxi" path="res://assets/planets/sun/sun256.png" id="256_wbq11"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p4kjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_171ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ohlry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jsacl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hxls5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oj8rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dinti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o6jhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wqlbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4wvv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yp6yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_biqja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7jpe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ajbop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4gxkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uiaqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jtyj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_sfl1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7hth2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1cqke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_5lt34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nwuds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lbqwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1bo1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_7lvkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_h6wxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_dheer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_galk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_r8783")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_5s3yl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_6tl4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_x54t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_xbhhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_u4n3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ace27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_yta5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ifm8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ra56o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_5fofk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_tijwm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_grnfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_lyyti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ah2ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_f640h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_u7f6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_pqv4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_uw5el")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_vg8sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_givpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wcaqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ysl1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_uuk7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_fsy8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_tx4pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_jii83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_n6ht0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_32d0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_oswgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_2cot4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_kveb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jtw4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_wvknl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_kvnci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_dvq56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_34i61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_i75wg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_u6fmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_anblh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_12qgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_rvgiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ofswj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_cvrku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_fh0q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_pqq7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_2a0l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_dq38m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_to46o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_xmtug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_ul8wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_33uo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_rju2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_07nay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_v20wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_qmutg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_p3jnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_0qycd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_s3r3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_wmaov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_emqqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_5bruv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_jbdkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_o6ofr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_uc651")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_nh84c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_x2fp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_fkou5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_7tcaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_7kvpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_0unop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_puict")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_b2bti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mxu27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_gp6cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_7q62h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_xbn7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_4hwav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_o74v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_k1dd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_vuhp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_7n2uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_q1xig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_u0t8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_0ol5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ld3en")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_83cw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_76fam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_ns53s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_ywxgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_pt88o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_cwsnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_k0jrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_x5nv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_vqswc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_01b4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_7t0m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_x462r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_27eav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_78fn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_h0ltk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_a1l3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_bf14v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_sgt3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_xe4o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_t6xb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_22qk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_xe6h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_jwuwn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_r487v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_8fm88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_kjhqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_5xvba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_ukd83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_6xqc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_m6ryk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_uc7xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_3kgb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_dgys4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_stm16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_ar30i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_kckcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_a667a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_ejpgp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_0t2wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_5ajmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_tryno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_m2hpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_ibkxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_pgrff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_85mh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_cceip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_8ggd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_2r8bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_1uhhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_5sh7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_cn7lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_n0rah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_q1evh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_5edfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_1vcro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_waf36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_iy7dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_y50wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_kdhly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_ejjue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_48qiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_k3i1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_3woef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_vdrwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_pdteu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_ddveb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_5y73x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_ok4s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_cxxa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_2xnrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_f2aj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_0qxj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_r7orp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_xc6wu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_e5y87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_3ypjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_ng3rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_icsln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_02nu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_bffvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_i80gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_cq1vx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_tnfa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_c1cid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_e3wre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_7rq6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_n3e5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_syjix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_ppgu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_1cffm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_m8so0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_2l1i0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_e85kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_eud34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_4nkb4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_e6ve1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_prkeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_onkuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_10rg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_5sr6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_ikfk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_8yqnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_hd1lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_7hj31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_jibr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_3u4i6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_dclu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_ykmut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_xmf8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_4o6qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_n5ngo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_8h5q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_6o17k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_k3i1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_jhtao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_inmmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_sai1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_uwlve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_cftv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_qjgdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_bvyo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_26dp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_dk78o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_ey2b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_loxdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_qruwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_2p8vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_s32vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_o3dif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_j6qag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_emp1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_hfgg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_1k65i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_nww6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_rudhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_bva6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_chmyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_kxjgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_iurxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_q45fj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_xcdfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_wbq11")
+}],
+"loop": true,
+"name": &"rotate",
+"speed": 10.0
+}]

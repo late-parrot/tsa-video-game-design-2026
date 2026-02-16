@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://chbma2ylsr3fh"]
+[gd_scene load_steps=19 format=3 uid="uid://chbma2ylsr3fh"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_qj07k"]
 [ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_bmkm8"]
@@ -29,6 +29,9 @@ region = Rect2(0, 40, 18, 18)
 [sub_resource type="AtlasTexture" id="AtlasTexture_okkcs"]
 atlas = ExtResource("2_bmkm8")
 region = Rect2(22, 22, 18, 18)
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0ll4"]
+font_size = 24
 
 [sub_resource type="InputEventAction" id="InputEventAction_ig447"]
 action = &"ui_cancel"
@@ -422,6 +425,7 @@ text = "3 Required (1 in inventory)"
 
 [node name="Button" type="Button" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeResearch"]
 layout_mode = 2
+size_flags_vertical = 10
 text = "Research"
 
 [node name="SnakeProgress" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
@@ -512,6 +516,7 @@ text = "3 Required (1 in inventory)"
 
 [node name="Button" type="Button" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugResearch"]
 layout_mode = 2
+size_flags_vertical = 10
 text = "Research"
 
 [node name="BugProgress" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
@@ -556,6 +561,57 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_vertical = 4
 texture = ExtResource("4_o8y8m")
+
+[node name="Cargo" type="MarginContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Cargo"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Cargo/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cargo"
+label_settings = SubResource("LabelSettings_g0ll4")
+uppercase = true
+
+[node name="Cargo" type="RichTextLabel" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Cargo/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/paragraph_separation = 4
+bbcode_enabled = true
+text = "Terrain Vehicle
+[ul]50 Iron[/ul]
+[ul]100 Titanium[/ul]
+[ul]8 Tungsten[/ul]
+[ul]52 Cobalt[/ul]
+
+Ship
+[ul]500 Iron[/ul]
+[ul]100 Titanium[/ul]
+[ul]20 Tungsten[/ul]
+[ul]5 Uranium[/ul]
+[ul]2 Plutonium[/ul]
+[ul]200 Cobalt[/ul]
+[ul]3 Mercury[/ul]
+
+Planet Surface
+[ul]5 Iron[/ul]
+[ul]3 Titanium[/ul]
+[ul]1 Plutonium[/ul]
+
+
+
+
+
+Scroll!"
+tab_size = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

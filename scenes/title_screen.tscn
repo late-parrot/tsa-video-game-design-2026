@@ -5,10 +5,8 @@
 [ext_resource type="Script" uid="uid://bh0641kvrwixh" path="res://scripts/title_screen.gd" id="2_dc4i4"]
 [ext_resource type="AudioStream" uid="uid://igv2t7iyr20r" path="res://assets/audio/theme3-v2.wav" id="3_mgrm8"]
 [ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="4_dc4i4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dc4i4"]
-atlas = ExtResource("1_fgkus")
-region = Rect2(384, 800, 7200, 1536)
+[ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="4_e54dn"]
+[ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_3yumr"]
 
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -40,10 +38,6 @@ gravity = Vector3(0, 0, 0)
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_0wfyh")
 color_ramp = SubResource("GradientTexture1D_sugp2")
-
-[sub_resource type="SphereMesh" id="SphereMesh_dc4i4"]
-radius = 500.0
-height = 1000.0
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -89,7 +83,7 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 6
-texture = SubResource("AtlasTexture_dc4i4")
+texture = ExtResource("1_fgkus")
 expand_mode = 5
 stretch_mode = 4
 
@@ -103,6 +97,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 32
 text = "Start"
+script = ExtResource("4_e54dn")
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
@@ -126,13 +121,18 @@ autoplay = true
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -1672.0
+offset_top = -696.0
+offset_right = -1160.0
+offset_bottom = -184.0
+scale = Vector2(4, 4)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="TextureRect2"]
-modulate = Color(0.87, 0.77865005, 0.3219, 1)
-position = Vector2(-88, 316)
-mesh = SubResource("SphereMesh_dc4i4")
+[node name="Sun" type="AnimatedSprite2D" parent="TextureRect2"]
+unique_name_in_owner = true
+z_index = -10
+position = Vector2(256, 256)
+animation = &""
+autoplay = "rotate"
 
 [node name="Ship" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -155,6 +155,11 @@ offset_top = 4.0
 offset_right = 96.0
 offset_bottom = 104.0
 texture = ExtResource("4_dc4i4")
+
+[node name="InputController" parent="." instance=ExtResource("7_3yumr")]
+layout_mode = 0
+MOVE = true
+SHOOT = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

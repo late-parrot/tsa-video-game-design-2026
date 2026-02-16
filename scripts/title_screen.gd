@@ -3,14 +3,16 @@ extends Control
 @onready var initial_ship_pos = %Ship.position
 @onready var initial_ship_rot = %Ship.rotation
 
+func _ready() -> void:
+	%Sun.sprite_frames = Game.cache["sun_SpriteFrames"]
+	%Sun.play()
+	_on_ship_moved()
+
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
-
-func _ready() -> void:
-	_on_ship_moved()
 	
 func _on_ship_moved() -> void:
 	await get_tree().create_timer(0.5).timeout

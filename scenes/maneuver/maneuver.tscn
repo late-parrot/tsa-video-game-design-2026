@@ -1,137 +1,16 @@
-[gd_scene load_steps=48 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=30 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
 [ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
 [ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
-[ext_resource type="Texture2D" uid="uid://c8thoqmekq0p7" path="res://assets/planets/sun.png" id="3_3ecl0"]
 [ext_resource type="PackedScene" uid="uid://chbma2ylsr3fh" path="res://scenes/disembark/planets/spaceport_menu.tscn" id="3_plvpl"]
 [ext_resource type="Texture2D" uid="uid://dhxkq7ir4y8d0" path="res://assets/spaceport/spaceport-main.png" id="4_0rdyn"]
 [ext_resource type="Texture2D" uid="uid://djiv8w62ovgbg" path="res://assets/spaceport/spaceport-top.png" id="5_2x3te"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="5_foey6"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3ecl0"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(0, 0, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gpp48"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(2000, 0, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o6glo"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(4000, 0, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hhhct"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(6000, 0, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qfnjy"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(0, 2000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7to8l"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(2000, 2000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ahqhl"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(4000, 2000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l0cws"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(6000, 2000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lkk7c"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(0, 4000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b26cs"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(2000, 4000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sy2cb"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(4000, 4000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6lgaq"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(6000, 4000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_txvli"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(0, 6000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q351v"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(2000, 6000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ujhr0"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(4000, 6000, 2000, 2000)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cnhuf"]
-atlas = ExtResource("3_3ecl0")
-region = Rect2(6000, 6000, 2000, 2000)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_v5mtt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3ecl0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gpp48")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o6glo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hhhct")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qfnjy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7to8l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ahqhl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l0cws")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lkk7c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_b26cs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sy2cb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6lgaq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_txvli")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q351v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ujhr0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cnhuf")
-}],
-"loop": true,
-"name": &"rotate",
-"speed": 5.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
-radius = 597.8043
+radius = 512.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_n7xhb"]
 radius = 512.0
@@ -143,6 +22,21 @@ radius = 190.0
 [sub_resource type="SphereMesh" id="SphereMesh_2x3te"]
 radius = 95.0
 height = 190.0
+
+[sub_resource type="Animation" id="Animation_gpp48"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_3ecl0"]
 resource_name = "turn"
@@ -159,21 +53,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [6.283185307179586, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_gpp48"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D2:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o6glo"]
@@ -247,19 +126,18 @@ spaceport = NodePath("Planets/Spaceport")
 script = ExtResource("1_n7xhb")
 landable = false
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1"]
+[node name="Sun" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1"]
+unique_name_in_owner = true
 scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_v5mtt")
 animation = &"rotate"
 autoplay = "rotate"
-frame_progress = 0.042357765
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1"]
 shape = SubResource("CircleShape2D_40ujs")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1"]
 visible = false
-modulate = Color(1, 0.97406006, 0.3359375, 1)
+modulate = Color(0.78450024, 0.9887045, 0.99999994, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
 [node name="Spaceport" type="Area2D" parent="Planets"]

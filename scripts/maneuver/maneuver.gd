@@ -9,6 +9,10 @@ var current_planet = null
 @onready var player = %ManeuverPlayer
 @onready var overlay = %ManeuverOverlay
 
+func _ready() -> void:
+	%Sun.sprite_frames = Game.cache["sun_SpriteFrames"]
+	%Sun.play()
+
 func enable_land() -> void:
 	overlay.enable_land()
 

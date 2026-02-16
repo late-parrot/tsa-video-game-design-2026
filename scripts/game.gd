@@ -1,5 +1,9 @@
 extends Node
 
+var cache = {
+	"sun_SpriteFrames": preload("res://resources/sun_SpriteFrames.tres")
+}
+
 var names = {
 	"debug": "Debug",
 	"snake": "Snake",
@@ -44,8 +48,8 @@ func _process(delta: float) -> void:
 		current_mission_set += 1
 		if current_mission_set >= len(mission_sets):
 			win()
-			return
-		missions = mission_sets[current_mission_set]
+		else:
+			missions = mission_sets[current_mission_set]
 		emit_signal("level_completed")
 	for id in research_times:
 		if research_times[id] > 0:
