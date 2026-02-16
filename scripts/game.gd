@@ -1,5 +1,7 @@
 extends Node
 
+var scene_transition
+
 var cache = {
 	"sun_SpriteFrames": preload("res://resources/sun_SpriteFrames.tres")
 }

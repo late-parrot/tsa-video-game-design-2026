@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3gh8l0hv0i6g"]
+[gd_scene load_steps=6 format=3 uid="uid://b3gh8l0hv0i6g"]
 
 [ext_resource type="Script" uid="uid://cvrov4tcobpve" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://cjv0qlm8ckfh5" path="res://scenes/global_overlay.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://igv2t7iyr20r" path="res://assets/audio/theme3-v2.wav" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bngbdvxnltawy" path="res://scenes/title_screen.tscn" id="4_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://cg15mwx3ihire" path="res://scenes/scene_transition.tscn" id="5_tefeu"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0wfyh")
@@ -13,6 +15,10 @@ layer = 2
 [node name="GlobalOverlay" parent="UI" instance=ExtResource("2_0wfyh")]
 unique_name_in_owner = true
 
+[node name="TitleScreen" parent="UI" instance=ExtResource("4_tbgi4")]
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_sugp2")
 autoplay = true
+
+[node name="SceneTransition" parent="." instance=ExtResource("5_tefeu")]

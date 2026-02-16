@@ -1,5 +1,6 @@
 extends Control
 
+@onready var main = $"../.."
 @onready var initial_ship_pos = %Ship.position
 @onready var initial_ship_rot = %Ship.rotation
 
@@ -9,7 +10,10 @@ func _ready() -> void:
 	_on_ship_moved()
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	Game.scene_transition.transition()
+	await Game.scene_transition.change_scene
+	queue_free()
+	main.start()
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()

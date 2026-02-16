@@ -27,9 +27,10 @@ bg_color = Color(0.60784316, 0.6509804, 0.6745098, 1)
 [sub_resource type="Theme" id="Theme_tklts"]
 default_font = ExtResource("1_3yumr")
 Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/font_hover_color = Color(1, 0.4392157, 0.023529412, 1)
-Button/colors/font_hover_pressed_color = Color(1, 0.4392157, 0.023529412, 1)
-Button/colors/font_pressed_color = Color(1, 0.4392157, 0.023529412, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.4627451, 0.8352941, 0.7529412, 1)
+Button/colors/font_hover_pressed_color = Color(0.4627451, 0.8352941, 0.7529412, 1)
+Button/colors/font_pressed_color = Color(0.4627451, 0.8352941, 0.7529412, 1)
 Button/styles/focus = SubResource("StyleBoxFlat_cs5ya")
 Button/styles/normal = SubResource("StyleBoxFlat_mykxm")
 
