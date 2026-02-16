@@ -26,6 +26,8 @@ func land(planet: Planet) -> void:
 			m.progress += 1
 	var main = get_parent()
 	var disembark = planet.create_disembark_scene()
+	Game.scene_transition.transition()
+	await Game.scene_transition.change_scene
 	main.add_child(disembark)
 	main.remove_child(self)
 

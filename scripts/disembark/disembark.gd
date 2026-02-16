@@ -34,6 +34,8 @@ func recharge() -> void:
 func launch() -> void:
 	Game.move_cargo()
 	var main = get_parent()
+	Game.scene_transition.transition()
+	await Game.scene_transition.change_scene
 	main.add_child(main.maneuver)
 	main.maneuver.overlay.reset()
 	queue_free()
