@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkebye5500nr1"
-path="res://.godot/imported/trappist-1.png-077dce0b67b2ea620baddf0be92d970c.ctex"
+uid="uid://jayhvf8y0cub"
+path="res://.godot/imported/b.png-4e59582359d17e3e868a491b2a86c98e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/planets/trappist-1.png"
-dest_files=["res://.godot/imported/trappist-1.png-077dce0b67b2ea620baddf0be92d970c.ctex"]
+source_file="res://assets/planets/b.png"
+dest_files=["res://.godot/imported/b.png-4e59582359d17e3e868a491b2a86c98e.ctex"]
 
 [params]
 
