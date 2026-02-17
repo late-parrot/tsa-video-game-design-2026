@@ -139,4 +139,4 @@ func _on_snake_research_button_pressed() -> void:
 
 func _on_bug_research_button_pressed() -> void:
 	Game.research_times["bug"] = 60
-	Game.ship_cargo["snake"] -= Game.research_reqs[Game.research_levels["bug"]]
+	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
