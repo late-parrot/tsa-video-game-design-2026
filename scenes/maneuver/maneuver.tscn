@@ -1,4 +1,4 @@
-[gd_scene load_steps=804 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=805 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://jayhvf8y0cub" path="res://assets/planets/b.png" id="6_3ecl0"]
 [ext_resource type="Texture2D" uid="uid://depepbqva5pje" path="res://assets/planets/c.png" id="7_o6glo"]
 [ext_resource type="Texture2D" uid="uid://cjwn4pi7uf4p4" path="res://assets/planets/d.png" id="8_hhhct"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o6glo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40ujs"]
 radius = 512.0
@@ -5521,7 +5523,7 @@ color_ramp = SubResource("GradientTexture1D_sugp2")
 
 [node name="Maneuver" type="Node2D" node_paths=PackedStringArray("spaceport")]
 script = ExtResource("1_ytq0j")
-spaceport = NodePath("Planets/Spaceport")
+spaceport = NodePath("Planets/Spaceport (Locked)")
 
 [node name="Planets" type="Node2D" parent="."]
 
@@ -5532,8 +5534,7 @@ landable = false
 [node name="Sun" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1"]
 unique_name_in_owner = true
 scale = Vector2(2, 2)
-animation = &""
-autoplay = "rotate"
+sprite_frames = SubResource("SpriteFrames_o6glo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1"]
 shape = SubResource("CircleShape2D_40ujs")
@@ -5543,38 +5544,39 @@ visible = false
 modulate = Color(0.78450024, 0.9887045, 0.99999994, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
-[node name="Spaceport" type="Area2D" parent="Planets"]
+[node name="Spaceport (Locked)" type="Area2D" parent="Planets"]
 position = Vector2(-568, 864)
 script = ExtResource("1_n7xhb")
+landable = false
 disembark_scene = ExtResource("3_plvpl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport (Locked)"]
 shape = SubResource("CircleShape2D_0rdyn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Planets/Spaceport"]
+[node name="Sprite2D" type="Sprite2D" parent="Planets/Spaceport (Locked)"]
 scale = Vector2(2, 2)
 texture = ExtResource("4_0rdyn")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Planets/Spaceport"]
+[node name="Sprite2D2" type="Sprite2D" parent="Planets/Spaceport (Locked)"]
 z_index = 4096
 scale = Vector2(2, 2)
 texture = ExtResource("5_2x3te")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Spaceport"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Spaceport (Locked)"]
 visible = false
 modulate = Color(0.38738912, 0.38738894, 0.38738897, 1)
 scale = Vector2(2, 2)
 mesh = SubResource("SphereMesh_2x3te")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Planets/Spaceport"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Planets/Spaceport (Locked)"]
 libraries = {
 &"": SubResource("AnimationLibrary_o6glo")
 }
 autoplay = "turn"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Planets/Spaceport"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Planets/Spaceport (Locked)"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport (Locked)/StaticBody2D"]
 shape = SubResource("CircleShape2D_hhhct")
 
 [node name="TRAPPIST-1b" type="Area2D" parent="Planets"]

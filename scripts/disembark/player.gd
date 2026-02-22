@@ -81,15 +81,15 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var pos = get_global_mouse_position()
 		%Turret.rotation = (pos-(position+Vector2(8,8))).angle()
+	if event.is_action_pressed("shoot"):
+		var pos = get_global_mouse_position()
+		shoot(pos-(position+Vector2(8,8)))
 
 func _process(_delta: float) -> void:
 	var dir = Input.get_vector(
 		"shoot_left", "shoot_right", "shoot_up", "shoot_down"
 	)
 	if dir: shoot(dir)
-	if Input.is_action_pressed("shoot"):
-		var pos = get_global_mouse_position()
-		shoot(pos-(position+Vector2(8,8)))
 
 func _on_collect_creatures_body_entered(body: Node2D) -> void:
 	if body is Creature:

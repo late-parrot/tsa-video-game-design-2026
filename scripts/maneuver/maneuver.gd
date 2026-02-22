@@ -1,6 +1,6 @@
 class_name Maneuver extends Node2D
 
-## The planet that the "Back to Spaceport" button will navigate to. Deprecated.
+## The planet that the "Back to Spaceport" button will navigate to.
 @export var spaceport: Planet
 
 var back_to_spaceport = false
@@ -30,6 +30,11 @@ func land(planet: Planet) -> void:
 	await Game.scene_transition.change_scene
 	main.add_child(disembark)
 	main.remove_child(self)
+	if main.tutorial.step == 4:
+		main.tutorial.next()
+		spaceport.unlock()
+	if main.tutorial.step == 15 and planet == spaceport:
+		main.tutorial.next()
 
 func _process(_delta: float) -> void:
 	overlay.set_xy(player.position.x/64, -player.position.y/64)

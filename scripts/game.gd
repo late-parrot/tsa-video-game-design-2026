@@ -15,13 +15,13 @@ var ship_cargo = {}
 var vehicle_cargo = {}
 var mission_sets := [
 	[
-		Mission.new("Land on a planet", Mission.MissionType.LAND, 1, 5),
-		Mission.new("Capture 3 creatures", Mission.MissionType.COLLECT, 3, 5, {
+		Mission.new(0, "Land on a planet", Mission.MissionType.LAND, 1, 5),
+		Mission.new(1, "Capture 3 creatures", Mission.MissionType.COLLECT, 3, 5, {
 			"type": preload("res://scripts/disembark/creature.gd")
 		})
 	],
 	[
-		Mission.new("Capture 5 creatures", Mission.MissionType.COLLECT, 5, 10, {
+		Mission.new(2, "Capture 5 creatures", Mission.MissionType.COLLECT, 5, 10, {
 			"type": preload("res://scripts/disembark/creature.gd")
 		})
 	]

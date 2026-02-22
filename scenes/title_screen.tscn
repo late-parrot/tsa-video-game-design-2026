@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bngbdvxnltawy"]
+[gd_scene load_steps=19 format=3 uid="uid://bngbdvxnltawy"]
 
 [ext_resource type="FontFile" uid="uid://ds0ykayo4mldk" path="res://assets/PublicPixel.ttf" id="1_3yumr"]
 [ext_resource type="Texture2D" uid="uid://b40y1nkjvjg2x" path="res://assets/title.png" id="1_fgkus"]
@@ -64,6 +64,8 @@ gravity = Vector3(0, 0, 0)
 scale_max = 2.0
 scale_curve = SubResource("CurveTexture_0wfyh")
 color_ramp = SubResource("GradientTexture1D_sugp2")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yumr"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -158,8 +160,7 @@ scale = Vector2(4, 4)
 unique_name_in_owner = true
 z_index = -10
 position = Vector2(256, 256)
-animation = &""
-autoplay = "rotate"
+sprite_frames = SubResource("SpriteFrames_3yumr")
 
 [node name="Ship" type="TextureRect" parent="."]
 unique_name_in_owner = true

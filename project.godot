@@ -24,6 +24,7 @@ Game="*res://scripts/game.gd"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://cbojmlclt1yca"
 
 [editor_plugins]
 

@@ -1,6 +1,7 @@
 class_name Main extends Node2D
 
 @onready var overlay = %GlobalOverlay
+@onready var tutorial = %Tutorial
 
 var maneuver = preload("res://scenes/maneuver/maneuver.tscn").instantiate()
 
@@ -13,6 +14,9 @@ func start() -> void:
 	for s in Game.mission_sets:
 		for m in s:
 			m.connect("complete", overlay.show_mission_completed)
+			if m.id == 1:
+				m.connect("complete", tutorial.next)
+	tutorial.next()
 
 func transition():
 	$SceneTransition.transition()

@@ -39,11 +39,14 @@ func reset() -> void:
 	%Land.grab_focus()
 	%BackToSpaceport.button_pressed = false
 
+func disable_back_to_spaceport() -> void:
+	%BackToSpaceport.button_pressed = false
+
 func _on_land_pressed() -> void:
 	maneuver.land(maneuver.current_planet)
 
 func _on_back_to_spaceport_toggled(toggled_on: bool) -> void:
 	maneuver.back_to_spaceport = toggled_on
 	if toggled_on and maneuver.player in \
-			maneuver.spaceport.get_overlapping_bodies():
+			maneuver.spaceport.get_overlapping_bodies() and maneuver.spaceport.landable:
 		maneuver.land(maneuver.spaceport)

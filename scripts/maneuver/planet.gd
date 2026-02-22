@@ -14,10 +14,20 @@ class_name Planet extends Area2D
 func _ready() -> void:
 	connect("body_entered", _on_body_entered)
 	connect("body_exited", _on_body_exited)
-	
+
 func create_disembark_scene() -> Node2D:
 	return disembark_scene.instantiate()
-	
+
+func lock() -> void:
+	if not name.contains("(Locked)"):
+		name += " (Locked)"
+	landable = false
+
+func unlock() -> void:
+	if name.contains("(Locked)"):
+		name = name.replace(" (Locked)", "")
+	landable = true
+
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		if landable:
@@ -26,6 +36,8 @@ func _on_body_entered(body: Node2D) -> void:
 				await get_tree().create_timer(0.2).timeout
 				maneuver.land(self)
 			maneuver.enable_land()
+		if self == maneuver.spaceport:
+			maneuver.overlay.disable_back_to_spaceport()
 		maneuver.overlay.show_name(name)
 
 func _on_body_exited(body: Node2D) -> void:

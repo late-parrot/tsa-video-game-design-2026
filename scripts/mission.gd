@@ -4,6 +4,7 @@ enum MissionType {
 	LAND, COLLECT
 }
 
+@export var id: int = 0
 @export var name: String = "Mission"
 @export var type: MissionType = MissionType.LAND
 @export var required: int = 1
@@ -18,7 +19,8 @@ var progress = 0:
 		if v >= required:
 			_complete()
 
-func _init(n: String, t: MissionType, r: int, rw: int, c: Dictionary[String, Variant] = {}) -> void:
+func _init(i: int, n: String, t: MissionType, r: int, rw: int, c: Dictionary[String, Variant] = {}) -> void:
+	id = i
 	name = n
 	type = t
 	required = r
