@@ -2,6 +2,7 @@ class_name Disembark extends Node2D
 
 @onready var player = %DisembarkPlayer
 @onready var overlay = %DisembarkOverlay
+@onready var camera = %Camera
 
 var energy = Game.max_energy:
 	set(value):
@@ -36,8 +37,8 @@ func launch() -> void:
 	var main = get_parent()
 	Game.scene_transition.transition()
 	await Game.scene_transition.change_scene
-	main.add_child(main.maneuver)
 	main.maneuver.overlay.reset()
+	main.add_child(main.maneuver)
+	queue_free()
 	if main.tutorial.step == 14:
 		main.tutorial.next()
-	queue_free()

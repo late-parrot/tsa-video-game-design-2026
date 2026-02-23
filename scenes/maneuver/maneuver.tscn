@@ -1,4 +1,4 @@
-[gd_scene load_steps=805 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=807 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://jayhvf8y0cub" path="res://assets/planets/b.png" id="6_3ecl0"]
 [ext_resource type="Texture2D" uid="uid://depepbqva5pje" path="res://assets/planets/c.png" id="7_o6glo"]
 [ext_resource type="Texture2D" uid="uid://cjwn4pi7uf4p4" path="res://assets/planets/d.png" id="8_hhhct"]
+[ext_resource type="Script" uid="uid://bbmycytgc1t2a" path="res://scripts/camera.gd" id="10_hhhct"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o6glo"]
 
@@ -5490,6 +5491,9 @@ animations = [{
 radius = 64.0
 height = 128.0
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hhhct"]
+noise_type = 3
+
 [sub_resource type="Gradient" id="Gradient_o5qli"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
 
@@ -5640,6 +5644,8 @@ unique_name_in_owner = true
 
 [node name="Camera" type="Camera2D" parent="ManeuverPlayer"]
 position_smoothing_enabled = true
+script = ExtResource("10_hhhct")
+noise = SubResource("FastNoiseLite_hhhct")
 
 [node name="Background" type="CanvasLayer" parent="ManeuverPlayer"]
 layer = -1

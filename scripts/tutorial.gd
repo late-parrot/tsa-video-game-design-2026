@@ -5,11 +5,13 @@ var previous_focus = null
 
 @export var step: int:
 	set(v):
+		print(v, previous_focus)
 		step = v
 		for c in get_children():
 			c.visible = false
 		if previous_focus != null:
 			previous_focus.grab_focus()
+		mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_DISABLED
 		if v >= 0 and v < get_child_count():
 			var node = get_child(v)
 			node.visible = true
@@ -21,8 +23,6 @@ var previous_focus = null
 				if node.block_input:
 					mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_ENABLED
 					previous_focus.release_focus()
-				else:
-					mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_DISABLED
 				if node.has_node("Timer"):
 					node.get_node("Timer").start()
 
