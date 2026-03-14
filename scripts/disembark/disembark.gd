@@ -37,8 +37,8 @@ func launch() -> void:
 	var main = get_parent()
 	Game.scene_transition.transition()
 	await Game.scene_transition.change_scene
-	main.maneuver.overlay.reset()
 	main.add_child(main.maneuver)
+	main.maneuver.overlay.reset()
 	queue_free()
 	if main.tutorial.step == 14:
 		main.tutorial.next()

@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_7n6eb"]
 [ext_resource type="Script" uid="uid://tj0uam7euwb0" path="res://scripts/tutorial.gd" id="2_ph3nu"]
 [ext_resource type="Script" uid="uid://c4yhstodncir0" path="res://scripts/tutorial_step.gd" id="3_6yjpi"]
-[ext_resource type="Texture2D" uid="uid://ba3nwsi7gwhad" path="res://assets/icon.svg" id="3_ph3nu"]
 [ext_resource type="Script" uid="uid://chcbg3w2evu5d" path="res://addons/ActionIcon/ActionIcon.gd" id="4_4kmhl"]
+[ext_resource type="Texture2D" uid="uid://sisavh60wplt" path="res://assets/captain.png" id="4_6yjpi"]
 [ext_resource type="Texture2D" uid="uid://n1rp7yvfwneq" path="res://assets/arrow.png" id="5_cq4me"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kmhl"]
@@ -111,7 +111,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step0/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step0/Panel/Margin/HBox/VBox"]
@@ -182,7 +182,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step1/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step1/Panel/Margin/HBox/VBox"]
@@ -253,7 +253,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step2/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step2/Panel/Margin/HBox/VBox"]
@@ -330,7 +330,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step3/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step3/Panel/Margin/HBox/VBox"]
@@ -402,7 +402,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step4/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step4/Panel/Margin/HBox/VBox"]
@@ -482,7 +482,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step5/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step5/Panel/Margin/HBox/VBox"]
@@ -553,7 +553,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step6/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step6/Panel/Margin/HBox/VBox"]
@@ -624,7 +624,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step7/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step7/Panel/Margin/HBox/VBox"]
@@ -695,7 +695,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step8/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step8/Panel/Margin/HBox/VBox"]
@@ -772,7 +772,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step9/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step9/Panel/Margin/HBox/VBox"]
@@ -844,7 +844,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step10/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step10/Panel/Margin/HBox/VBox"]
@@ -922,7 +922,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step11/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step11/Panel/Margin/HBox/VBox"]
@@ -994,7 +994,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step12/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step12/Panel/Margin/HBox/VBox"]
@@ -1062,7 +1062,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step13/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step13/Panel/Margin/HBox/VBox"]
@@ -1143,7 +1143,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step14/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step14/Panel/Margin/HBox/VBox"]
@@ -1211,7 +1211,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step15/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step15/Panel/Margin/HBox/VBox"]
@@ -1288,7 +1288,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step16/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step16/Panel/Margin/HBox/VBox"]
@@ -1359,7 +1359,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step17/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step17/Panel/Margin/HBox/VBox"]
@@ -1430,7 +1430,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step18/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step18/Panel/Margin/HBox/VBox"]
@@ -1500,7 +1500,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
 [node name="TextureRect" type="TextureRect" parent="Step19/Panel/Margin/HBox/VBox/PanelContainer"]
 custom_minimum_size = Vector2(64, 0)
 layout_mode = 2
-texture = ExtResource("3_ph3nu")
+texture = ExtResource("4_6yjpi")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="Step19/Panel/Margin/HBox/VBox"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://chbma2ylsr3fh"]
+[gd_scene load_steps=20 format=3 uid="uid://chbma2ylsr3fh"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_qj07k"]
 [ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_bmkm8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="4_ig447"]
 [ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="4_o8y8m"]
 [ext_resource type="Script" uid="uid://chcbg3w2evu5d" path="res://addons/ActionIcon/ActionIcon.gd" id="6_eejpf"]
+[ext_resource type="PackedScene" uid="uid://003jsb38xnwf" path="res://scenes/journal.tscn" id="7_d76h7"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="8_g0ll4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1r0gq"]
@@ -612,6 +613,12 @@ Planet Surface
 
 Scroll!"
 tab_size = 1
+
+[node name="Journal" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer" instance=ExtResource("7_d76h7")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

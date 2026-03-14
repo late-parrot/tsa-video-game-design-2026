@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://btvfnyc10o6u7"]
+[gd_scene load_steps=16 format=3 uid="uid://003jsb38xnwf"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_mf1i3"]
 [ext_resource type="Script" uid="uid://dutdqgcwalb2a" path="res://scripts/highlight_control.gd" id="2_ih0ao"]
+[ext_resource type="Script" uid="uid://ds8shxqu1lfty" path="res://scripts/journal.gd" id="2_l4kfj"]
 [ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_ll4rq"]
 [ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="2_pelrk"]
 
@@ -27,9 +28,6 @@ font_size = 24
 atlas = ExtResource("2_ll4rq")
 region = Rect2(21, 21, 19, 19)
 
-[sub_resource type="LabelSettings" id="LabelSettings_hlfw0"]
-font_size = 24
-
 [sub_resource type="LabelSettings" id="LabelSettings_ih0ao"]
 font_size = 32
 
@@ -37,40 +35,34 @@ font_size = 32
 atlas = ExtResource("2_pelrk")
 region = Rect2(0, 41, 17, 17)
 
-[node name="Journal" type="Control"]
-layout_mode = 3
+[sub_resource type="SystemFont" id="SystemFont_ih0ao"]
+font_names = PackedStringArray("Sans-Serif")
+
+[sub_resource type="SystemFont" id="SystemFont_l4kfj"]
+font_names = PackedStringArray("Sans-Serif")
+font_italic = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4kfj"]
+atlas = ExtResource("2_ll4rq")
+region = Rect2(21, 21, 19, 19)
+
+[node name="Journal" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_mf1i3")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
+script = ExtResource("2_l4kfj")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -78,7 +70,7 @@ follow_focus = true
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -87,94 +79,160 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/ScrollContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 24
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="SnakeEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_l4kfj")
 script = ExtResource("2_ih0ao")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry"]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry/MarginContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture = SubResource("AtlasTexture_ll4rq")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Snake"
 label_settings = SubResource("LabelSettings_l4kfj")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+[node name="BugEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4kfj")
+script = ExtResource("2_ih0ao")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 texture = SubResource("AtlasTexture_ih0ao")
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Bug"
-label_settings = SubResource("LabelSettings_hlfw0")
+label_settings = SubResource("LabelSettings_l4kfj")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer"]
+[node name="SnakeDescription" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
 theme_override_constants/separation = 16
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
 text = "Snake"
 label_settings = SubResource("LabelSettings_ih0ao")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
 theme_override_constants/margin_left = 24
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/SnakeDescription/HBoxContainer"]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_vertical = 0
 texture = SubResource("AtlasTexture_mf1i3")
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/HBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer/SnakeDescription/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = SubResource("SystemFont_ih0ao")
+theme_override_fonts/italics_font = SubResource("SystemFont_l4kfj")
+bbcode_enabled = true
+text = "[b]Observations:[/b]
+
+A genus derived from anacondas from Earth, with a few distinctive characteristics. It diverged from Earth snakes in response to the starkly different foreign environments of the planets of TRAPPIST-2. It has swelled to multiple times the size of its ancestors because of resource abundance and a lack of predators that limited the growth of “normal” snakes. The defining physical features used to identify the genus are the plate of bright aquamarine scales along its underbelly and its size. Multiple variants exist on different planets in the TRAPPIST-2 star system, but the aforementioned characteristics are present among all of them. They are extremely aggressive and territorial in nature because of competition with other [genus name].
+
+[b]Observed impact on environment:[/b]
+
+It's suspected that the genus spread throughout TRAPPIST-2 after hitching a ride in the cargo compartment of a spacecraft during the early years of space exploration. Populations of the genus have been found on most planets in the star system. With no apparent natural predators in TRAPPIST-2, the genus has thrived and consequentially led the populations of native species that it predates to dwindle. Biodiversity on [planet 1] and [planet 2] have decreased noticeably following its introduction, which could make these ecosystems more susceptible to trophic cascades.
+
+[i]Inspired by the introduction of Burmese pythons as an invasive species in Florida[/i]"
+fit_content = true
+
+[node name="BugDescription" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/BugDescription"]
+layout_mode = 2
+text = "Bug"
+label_settings = SubResource("LabelSettings_ih0ao")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/BugDescription"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/BugDescription"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/BugDescription/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_l4kfj")
+stretch_mode = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer/BugDescription/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/line_separation = 4
 bbcode_enabled = true
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec faucibus velit. Nam varius vestibulum est a dictum. Etiam a hendrerit arcu, a auctor massa. Etiam facilisis iaculis eros, sit amet bibendum ante hendrerit quis. Cras maximus auctor arcu at iaculis. Duis eget libero eu ligula euismod fringilla. Vestibulum laoreet pharetra dolor, id molestie elit molestie in. Etiam blandit feugiat velit sit amet molestie. Curabitur in condimentum lorem. Fusce vel consequat eros.
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec faucibus velit. Nam varius vestibulum est a dictum. Etiam a hendrerit arcu, a auctor massa. Etiam facilisis iaculis eros, sit amet bibendum ante hendrerit quis. Cras maximus auctor arcu at iaculis. Duis eget libero eu ligula euismod fringilla.
 
-Nulla vitae vestibulum mi. Mauris in nisl leo. Integer gravida molestie ante nec egestas. Vivamus venenatis euismod aliquet. Nullam suscipit eget ligula sed tempus. Curabitur ac velit at sapien interdum dignissim. Nam feugiat orci eros. Suspendisse quis magna ultrices, rhoncus quam eu, fermentum quam. Nunc pellentesque leo mauris, at sollicitudin ex laoreet a."
+Nulla vitae vestibulum mi. Mauris in nisl leo. Integer gravida molestie ante nec egestas. Vivamus venenatis euismod aliquet. Nullam suscipit eget ligula sed tempus. Curabitur ac velit at sapien interdum dignissim."
 fit_content = true
+
+[connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry" to="." method="_on_snake_entry_focus_entered"]
+[connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry" to="." method="_on_bug_entry_focus_entered"]

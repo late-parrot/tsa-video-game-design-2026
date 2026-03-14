@@ -97,7 +97,11 @@ func _process(_delta: float) -> void:
 		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
 
 func _on_tab_container_tab_changed(tab: int) -> void:
-	[%NetDistance, %SnakeResearch/Button, %TabContainer][tab].grab_focus()
+	if tab == 2: return
+	[
+		%NetDistance, %SnakeResearch/Button,
+		%TabContainer, %Journal.get_node("%SnakeEntry")
+	][tab].grab_focus()
 
 func _on_close_pressed() -> void:
 	var main = get_node("../..")
