@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bg0knfvwm3ul2"]
+[gd_scene load_steps=8 format=3 uid="uid://bg0knfvwm3ul2"]
 
 [ext_resource type="Script" uid="uid://w6p18ne7l5a2" path="res://scripts/disembark/creature.gd" id="1_4aysl"]
+[ext_resource type="FontFile" uid="uid://ds0ykayo4mldk" path="res://assets/PublicPixel.ttf" id="2_vhkro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v8ac5"]
 size = Vector2(14, 14)
@@ -12,6 +13,10 @@ radius = 50.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4aysl"]
 size = Vector2(14, 14)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cx3r3"]
+font = ExtResource("2_vhkro")
+font_color = Color(0, 0, 0, 1)
 
 [node name="Creature" type="CharacterBody2D"]
 collision_layer = 8
@@ -49,6 +54,19 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("RectangleShape2D_4aysl")
+
+[node name="HitMiss" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+top_level = true
+offset_left = -8.0
+offset_top = -3.0
+offset_right = 56.0
+offset_bottom = 20.0
+scale = Vector2(0.25, 0.25)
+text = "Hit"
+label_settings = SubResource("LabelSettings_cx3r3")
+horizontal_alignment = 1
 
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
 [connection signal="body_entered" from="StartRunning" to="." method="_on_start_running_body_entered"]

@@ -58,6 +58,18 @@ func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area is Laser:
 		if randf() <= CAPTURE_CHANCE/Game.net_accuracy:
 			capture()
+			#%HitMiss.position = position-Vector2(8, 3)
+			#%HitMiss.text = "Hit"
+			#%HitMiss.visible = true
+			#await get_tree().create_timer(1).timeout
+			#%HitMiss.visible = false
+		else:
+			_on_start_running_body_entered(disembark.player)
+			%HitMiss.position = position-Vector2(8, 3)
+			%HitMiss.text = "Miss"
+			%HitMiss.visible = true
+			await get_tree().create_timer(1).timeout
+			%HitMiss.visible = false
 
 func capture():
 	captured = true

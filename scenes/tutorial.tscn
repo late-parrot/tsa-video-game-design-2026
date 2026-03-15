@@ -1300,7 +1300,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Welcome to the spaceport! This is where you can do everything from [color=76d5c0]researching[/color] creatures to purchasing [color=76d5c0]upgrades[/color]."
+text = "Welcome to the Spaceport! This is where you can do everything from [color=76d5c0]researching[/color] creatures to purchasing [color=76d5c0]upgrades[/color]."
 fit_content = true
 scroll_active = false
 visible_characters = 0

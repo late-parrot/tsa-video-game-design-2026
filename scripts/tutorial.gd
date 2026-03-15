@@ -7,7 +7,6 @@ var previous_focus = null
 
 @export var step: int:
 	set(v):
-		print(v, previous_focus)
 		step = v
 		for c in get_children():
 			c.visible = false
