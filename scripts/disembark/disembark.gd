@@ -41,4 +41,5 @@ func launch() -> void:
 	main.maneuver.overlay.reset()
 	queue_free()
 	if main.tutorial.step == 14:
+		main.tutorial.previous_focus = main.maneuver.overlay.get_node("%BackToSpaceport")
 		main.tutorial.next()
