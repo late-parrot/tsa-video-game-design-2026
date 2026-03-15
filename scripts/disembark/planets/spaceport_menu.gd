@@ -84,6 +84,7 @@ func _process(_delta: float) -> void:
 	
 	update_research("snake")
 	update_research("bug")
+	update_research("rabbit")
 	
 	%Cargo.clear()
 	%Cargo.append_text("Terrain Vehicle\n")
@@ -146,6 +147,10 @@ func _on_snake_research_button_pressed() -> void:
 func _on_bug_research_button_pressed() -> void:
 	Game.research_times["bug"] = 60
 	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
+	
+func _on_rabbit_research_button_pressed() -> void:
+	Game.research_times["rabbit"] = 60
+	Game.ship_cargo["rabbit"] -= Game.research_reqs[Game.research_levels["rabbit"]]
 
 
 func _on_tutorial_step_finished(step):

@@ -9,7 +9,8 @@ var cache = {
 var names = {
 	"debug": "Debug",
 	"snake": "Snake",
-	"bug": "Bug"
+	"bug": "Bug",
+	"rabbit": "Rabbit"
 }
 var ship_cargo = {}
 var vehicle_cargo = {}
@@ -33,8 +34,8 @@ var upgrades = null
 var research_rewards = [5, 10, 15, 20, 25]
 var research_reqs = [3, 5, 8, 10, 15]
 var max_research = 5
-var research_levels = {"snake": 0, "bug": 0}
-var research_times = {"snake": 0, "bug": 0}
+var research_levels = {"snake": 0, "bug": 0, "rabbit": 0}
+var research_times = {"snake": 0, "bug": 0, "rabbit": 0}
 var money = 0
 
 var net_distance = 70 # 20 more than the enemie's run distance

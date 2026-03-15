@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cilu72bnt71bh"]
+
+[ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="1_b7c47"]
+
+[node name="Rabbit" instance=ExtResource("1_b7c47")]
+ID = "rabbit"

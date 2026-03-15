@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://btvfnyc10o6u7"]
+[gd_scene load_steps=20 format=3 uid="uid://btvfnyc10o6u7"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_mf1i3"]
 [ext_resource type="Script" uid="uid://dutdqgcwalb2a" path="res://scripts/highlight_control.gd" id="2_ih0ao"]
@@ -28,6 +28,13 @@ font_size = 24
 atlas = ExtResource("2_ll4rq")
 region = Rect2(21, 21, 19, 19)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ih0ao"]
+load_path = "res://.godot/imported/bug.png-f17b0712b96050841267b4f87afbe9b1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlfw0"]
+atlas = SubResource("CompressedTexture2D_ih0ao")
+region = Rect2(21, 21, 19, 19)
+
 [sub_resource type="LabelSettings" id="LabelSettings_ih0ao"]
 font_size = 32
 
@@ -46,6 +53,13 @@ subpixel_positioning = 0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4kfj"]
 atlas = ExtResource("2_ll4rq")
+region = Rect2(21, 21, 19, 19)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_84c5g"]
+load_path = "res://.godot/imported/bug.png-f17b0712b96050841267b4f87afbe9b1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1uw5"]
+atlas = SubResource("CompressedTexture2D_84c5g")
 region = Rect2(21, 21, 19, 19)
 
 [node name="Journal" type="MarginContainer"]
@@ -140,6 +154,33 @@ stretch_mode = 4
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
 text = "Bug"
+label_settings = SubResource("LabelSettings_l4kfj")
+
+[node name="RabbitEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4kfj")
+script = ExtResource("2_ih0ao")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hlfw0")
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Rabbit"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
@@ -246,5 +287,56 @@ It's suspected that the genus spread throughout TRAPPIST-2 after hitching a ride
 
 [i]Inspired by the introduction of Burmese pythons as an invasive species in Florida[/i]"
 
+[node name="RabbitDescription" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/RabbitDescription"]
+layout_mode = 2
+text = "Rabbit"
+label_settings = SubResource("LabelSettings_ih0ao")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/RabbitDescription"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/RabbitDescription"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/RabbitDescription/HBoxContainer"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_vertical = 0
+texture = SubResource("AtlasTexture_u1uw5")
+stretch_mode = 4
+
+[node name="RabbitText" type="RichTextLabel" parent="HBoxContainer/MarginContainer/RabbitDescription/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = SubResource("SystemFont_ih0ao")
+theme_override_fonts/italics_font = SubResource("SystemFont_l4kfj")
+bbcode_enabled = true
+text = "[b]Observations:[/b]
+
+A genus derived from anacondas from Earth, with a few distinctive characteristics. It diverged from Earth snakes in response to the starkly different foreign environments of the planets of TRAPPIST-2. It has swelled to multiple times the size of its ancestors because of resource abundance and a lack of predators that limited the growth of “normal” snakes. The defining physical features used to identify the genus are the plate of bright aquamarine scales along its underbelly and its size. Multiple variants exist on different planets in the TRAPPIST-2 star system, but the aforementioned characteristics are present among all of them. They are extremely aggressive and territorial in nature because of competition with other [genus name].
+
+[b]Observed impact on environment:[/b]
+
+It's suspected that the genus spread throughout TRAPPIST-2 after hitching a ride in the cargo compartment of a spacecraft during the early years of space exploration. Populations of the genus have been found on most planets in the star system. With no apparent natural predators in TRAPPIST-2, the genus has thrived and consequentially led the populations of native species that it predates to dwindle. Biodiversity on [planet 1] and [planet 2] have decreased noticeably following its introduction, which could make these ecosystems more susceptible to trophic cascades.
+
+[i]Inspired by the introduction of Burmese pythons as an invasive species in Florida[/i]"
+
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry" to="." method="_on_snake_entry_focus_entered"]
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry" to="." method="_on_bug_entry_focus_entered"]
+[connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry" to="." method="_on_bug_entry_focus_entered"]
