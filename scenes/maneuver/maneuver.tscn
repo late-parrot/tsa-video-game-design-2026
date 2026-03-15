@@ -5676,3 +5676,5 @@ unique_name_in_owner = true
 script = ExtResource("5_foey6")
 SHOOT = true
 metadata/_custom_type_script = "uid://dh4mcwl603for"
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

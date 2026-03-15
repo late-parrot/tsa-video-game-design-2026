@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://5qh3t3h241rk"]
+
+[ext_resource type="PackedScene" uid="uid://cxc0xvkwttx7e" path="res://scenes/disembark/disembark.tscn" id="1_ux2dm"]
+
+[node name="B" type="Node2D"]
+
+[node name="Disembark" parent="." instance=ExtResource("1_ux2dm")]
+
+[node name="TileMapLayer" parent="Disembark" index="0"]
+position = Vector2(0, -1)
+
+[editable path="Disembark"]

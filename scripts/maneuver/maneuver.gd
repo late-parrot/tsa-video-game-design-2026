@@ -12,6 +12,7 @@ var current_planet = null
 func _ready() -> void:
 	%Sun.sprite_frames = Game.cache["sun_SpriteFrames"]
 	%Sun.play()
+	overlay.reset()
 
 func enable_land() -> void:
 	overlay.enable_land()

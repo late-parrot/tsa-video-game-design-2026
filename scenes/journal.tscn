@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://003jsb38xnwf"]
+[gd_scene load_steps=16 format=3 uid="uid://btvfnyc10o6u7"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_mf1i3"]
 [ext_resource type="Script" uid="uid://dutdqgcwalb2a" path="res://scripts/highlight_control.gd" id="2_ih0ao"]
-[ext_resource type="Script" uid="uid://ds8shxqu1lfty" path="res://scripts/journal.gd" id="2_l4kfj"]
+[ext_resource type="Script" path="res://scripts/journal.gd" id="2_l4kfj"]
 [ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_ll4rq"]
 [ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="2_pelrk"]
 
@@ -37,10 +37,12 @@ region = Rect2(0, 41, 17, 17)
 
 [sub_resource type="SystemFont" id="SystemFont_ih0ao"]
 font_names = PackedStringArray("Sans-Serif")
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_l4kfj"]
 font_names = PackedStringArray("Sans-Serif")
 font_italic = true
+subpixel_positioning = 0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l4kfj"]
 atlas = ExtResource("2_ll4rq")
@@ -147,6 +149,7 @@ size_flags_stretch_ratio = 5.0
 
 [node name="SnakeDescription" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
@@ -166,6 +169,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 24
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/SnakeDescription/HBoxContainer"]
@@ -191,11 +195,9 @@ A genus derived from anacondas from Earth, with a few distinctive characteristic
 It's suspected that the genus spread throughout TRAPPIST-2 after hitching a ride in the cargo compartment of a spacecraft during the early years of space exploration. Populations of the genus have been found on most planets in the star system. With no apparent natural predators in TRAPPIST-2, the genus has thrived and consequentially led the populations of native species that it predates to dwindle. Biodiversity on [planet 1] and [planet 2] have decreased noticeably following its introduction, which could make these ecosystems more susceptible to trophic cascades.
 
 [i]Inspired by the introduction of Burmese pythons as an invasive species in Florida[/i]"
-fit_content = true
 
 [node name="BugDescription" type="VBoxContainer" parent="HBoxContainer/MarginContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 5.0
@@ -215,6 +217,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/MarginContainer/BugDescription"]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/separation = 24
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/MarginContainer/BugDescription/HBoxContainer"]
@@ -228,11 +231,11 @@ stretch_mode = 4
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/line_separation = 4
+theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec faucibus velit. Nam varius vestibulum est a dictum. Etiam a hendrerit arcu, a auctor massa. Etiam facilisis iaculis eros, sit amet bibendum ante hendrerit quis. Cras maximus auctor arcu at iaculis. Duis eget libero eu ligula euismod fringilla.
+text = "[font bt=4]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec faucibus velit. Nam varius vestibulum est a dictum. Etiam a hendrerit arcu, a auctor massa. Etiam facilisis iaculis eros, sit amet bibendum ante hendrerit quis. Cras maximus auctor arcu at iaculis. Duis eget libero eu ligula euismod fringilla.
 
-Nulla vitae vestibulum mi. Mauris in nisl leo. Integer gravida molestie ante nec egestas. Vivamus venenatis euismod aliquet. Nullam suscipit eget ligula sed tempus. Curabitur ac velit at sapien interdum dignissim."
-fit_content = true
+Nulla vitae vestibulum mi. Mauris in nisl leo. Integer gravida molestie ante nec egestas. Vivamus venenatis euismod aliquet. Nullam suscipit eget ligula sed tempus. Curabitur ac velit at sapien interdum dignissim.[/font]"
 
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry" to="." method="_on_snake_entry_focus_entered"]
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry" to="." method="_on_bug_entry_focus_entered"]
