@@ -1300,7 +1300,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "This is where you can research your creatures and purchase upgrades."
+text = "Welcome to the spaceport! This is where you can do everything from [color=76d5c0]researching[/color] creatures to purchasing [color=76d5c0]upgrades[/color]."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1442,7 +1442,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Explore the Spaceport a bit, then I'll leave you be to finish some more missions."
+text = "This is where you [color=76d5c0]research[/color] creatures to learn about them. I would come back here when you have enough."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1458,6 +1458,7 @@ libraries = {
 }
 
 [node name="Step19" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1512,7 +1513,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Good luck out there!"
+text = "Once you research some creatures, you can find notes about them here."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1523,6 +1524,218 @@ layout_mode = 2
 text = "Next"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step19"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckvwl")
+}
+
+[node name="Step20" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6yjpi")
+
+[node name="Panel" type="PanelContainer" parent="Step20"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -48.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Step20/Panel"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Step20/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBox" type="VBoxContainer" parent="Step20/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Step20/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
+
+[node name="TextureRect" type="TextureRect" parent="Step20/Panel/Margin/HBox/VBox/PanelContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_6yjpi")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="Step20/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+text = "Captain"
+label_settings = SubResource("LabelSettings_cq4me")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Step20/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "This lets you know what sort of cargo you're carrying around."
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="Step20/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Step20"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckvwl")
+}
+
+[node name="Step21" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6yjpi")
+
+[node name="Panel" type="PanelContainer" parent="Step21"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -48.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Step21/Panel"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Step21/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBox" type="VBoxContainer" parent="Step21/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Step21/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
+
+[node name="TextureRect" type="TextureRect" parent="Step21/Panel/Margin/HBox/VBox/PanelContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_6yjpi")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="Step21/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+text = "Captain"
+label_settings = SubResource("LabelSettings_cq4me")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Step21/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Explore the Spaceport a bit, then I'll leave you be to finish some more missions."
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="Step21/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Step21"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckvwl")
+}
+
+[node name="Step22" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6yjpi")
+
+[node name="Panel" type="PanelContainer" parent="Step22"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -48.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Step22/Panel"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Step22/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBox" type="VBoxContainer" parent="Step22/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Step22/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
+
+[node name="TextureRect" type="TextureRect" parent="Step22/Panel/Margin/HBox/VBox/PanelContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_6yjpi")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="Step22/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+text = "Captain"
+label_settings = SubResource("LabelSettings_cq4me")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Step22/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Good luck out there!"
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="Step22/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Step22"]
 libraries = {
 &"": SubResource("AnimationLibrary_ckvwl")
 }
@@ -1539,3 +1752,6 @@ libraries = {
 [connection signal="pressed" from="Step17/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step18/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step19/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step20/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step21/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step22/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]

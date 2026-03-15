@@ -1,6 +1,8 @@
 @tool
 class_name Tutorial extends Control
 
+signal step_finished(int)
+
 var previous_focus = null
 
 @export var step: int:
@@ -36,6 +38,7 @@ func _ready() -> void:
 		step = -1
 
 func next() -> void:
+	emit_signal("step_finished", step)
 	step += 1
 
 func go_to(s: int) -> void:

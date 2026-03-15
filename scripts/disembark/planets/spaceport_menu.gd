@@ -1,5 +1,7 @@
 extends Control
 
+@onready var main = $"../.."
+
 func _ready() -> void:
 	if Game.upgrades == null:
 		Game.upgrades = [
@@ -34,6 +36,7 @@ func _ready() -> void:
 				"required": -1
 			}
 		]
+	main.tutorial.connect("step_finished", _on_tutorial_step_finished)
 
 func update_research(id: String) -> void:
 	var level = get_node("%"+id.capitalize()+"Level")
@@ -97,10 +100,10 @@ func _process(_delta: float) -> void:
 		%Cargo.append_text("[ul]"+str(count)+" "+Game.names[item]+("s" if count!=1 else "")+"[/ul]")
 
 func _on_tab_container_tab_changed(tab: int) -> void:
-	if tab == 2: return
+	if tab == 3: return
 	[
 		%NetDistance, %SnakeResearch/Button,
-		%TabContainer, %Journal.get_node("%SnakeEntry")
+		%Journal.get_node("%SnakeEntry"), null
 	][tab].grab_focus()
 
 func _on_close_pressed() -> void:
@@ -144,3 +147,8 @@ func _on_snake_research_button_pressed() -> void:
 func _on_bug_research_button_pressed() -> void:
 	Game.research_times["bug"] = 60
 	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
+
+
+func _on_tutorial_step_finished(step):
+	if step == 17 or step == 18 or step == 19:
+		%TabContainer.current_tab += 1
