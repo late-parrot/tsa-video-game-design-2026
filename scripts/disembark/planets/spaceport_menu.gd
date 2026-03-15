@@ -107,7 +107,6 @@ func _on_tab_container_tab_changed(tab: int) -> void:
 	][tab].grab_focus()
 
 func _on_close_pressed() -> void:
-	var main = get_node("../..")
 	Game.scene_transition.transition()
 	await Game.scene_transition.change_scene
 	main.add_child(main.maneuver)

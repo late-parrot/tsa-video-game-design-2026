@@ -10,7 +10,7 @@ var previous_focus = null
 		step = v
 		for c in get_children():
 			c.visible = false
-		if previous_focus != null:
+		if previous_focus != null and previous_focus.is_inside_tree():
 			previous_focus.grab_focus()
 		mouse_behavior_recursive = Control.MOUSE_BEHAVIOR_DISABLED
 		if v >= 0 and v < get_child_count():
