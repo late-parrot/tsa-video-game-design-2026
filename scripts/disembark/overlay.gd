@@ -41,6 +41,8 @@ func _process(_delta: float) -> void:
 		node.get_node("HBox/Progress").set_text(str(m.progress)+"/"+str(m.required))
 		node.get_node("HBox/HBox/Reward").set_text(str(m.reward))
 		%Missions.add_child(node)
+		
+	%Money.text = str(Game.money)
 
 func set_xy(x: int, y: int) -> void:
 	%X.text = "X:"+str(x)
@@ -85,17 +87,21 @@ func _on_collect_pressed() -> void:
 		if c["node"] is not Creature or c["node"].captured:
 			col = c
 	if col == null: return
-	var n = col["id"]
-	if Game.vehicle_cargo.has(n):
-		Game.vehicle_cargo[n] += 1
+	if col["node"] is Wreck:
+		Game.money += col["node"].money
+		main.overlay.show_wreck_collected(col["node"].money)
 	else:
-		Game.vehicle_cargo[n] = 1
-	for m in Game.missions:
-		if m.type == Mission.MissionType.COLLECT and \
-			(not m.criteria.has("type") or col["node"].get_script() == m.criteria["type"]) and \
-			(not m.criteria.has("id") or col["id"] == m.criteria["id"]):
-				m.progress += 1
-	if col["node"] is Creature and main.tutorial.step == 12:
-		main.tutorial.next()
+		var n = col["id"]
+		if Game.vehicle_cargo.has(n):
+			Game.vehicle_cargo[n] += 1
+		else:
+			Game.vehicle_cargo[n] = 1
+		for m in Game.missions:
+			if m.type == Mission.MissionType.COLLECT and \
+				(not m.criteria.has("type") or col["node"].get_script() == m.criteria["type"]) and \
+				(not m.criteria.has("id") or col["id"] == m.criteria["id"]):
+					m.progress += 1
+		if col["node"] is Creature and main.tutorial.step == 12:
+			main.tutorial.next()
 	collectibles.erase(col)
 	col["node"].queue_free()

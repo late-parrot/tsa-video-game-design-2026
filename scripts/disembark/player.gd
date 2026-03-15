@@ -98,3 +98,11 @@ func _on_collect_creatures_body_entered(body: Node2D) -> void:
 func _on_collect_creatures_body_exited(body: Node2D) -> void:
 	if body is Creature:
 		disembark.overlay.remove_collectible(body)
+
+func _on_collect_creatures_area_entered(area: Area2D) -> void:
+	if area is Wreck:
+		disembark.overlay.add_collectible(area, "wreck")
+
+func _on_collect_creatures_area_exited(area: Area2D) -> void:
+	if area is Wreck:
+		disembark.overlay.remove_collectible(area)

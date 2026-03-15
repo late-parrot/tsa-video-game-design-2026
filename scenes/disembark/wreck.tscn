@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://dydg7my5ic357"]
+
+[ext_resource type="Texture2D" uid="uid://b11xh4jw08acr" path="res://assets/wrecks.png" id="1_a7kl4"]
+[ext_resource type="Script" uid="uid://cjeat54rjxrwj" path="res://scripts/disembark/wreck.gd" id="1_wdpgk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdpgk"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lvp1n"]
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sul8m"]
+atlas = ExtResource("1_a7kl4")
+region = Rect2(0, 0, 25, 25)
+
+[node name="Wreck" type="Area2D"]
+z_index = 1
+collision_layer = 8
+script = ExtResource("1_wdpgk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_wdpgk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+rotation = 1.5707964
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_lvp1n")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("AtlasTexture_sul8m")

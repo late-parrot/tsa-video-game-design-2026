@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="4_ig447"]
 [ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="4_o8y8m"]
 [ext_resource type="Script" uid="uid://chcbg3w2evu5d" path="res://addons/ActionIcon/ActionIcon.gd" id="6_eejpf"]
-[ext_resource type="PackedScene" uid="uid://003jsb38xnwf" path="res://scenes/journal.tscn" id="7_d76h7"]
+[ext_resource type="PackedScene" uid="uid://btvfnyc10o6u7" path="res://scenes/journal.tscn" id="7_d76h7"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="8_g0ll4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1r0gq"]

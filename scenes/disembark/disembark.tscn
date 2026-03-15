@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://cxc0xvkwttx7e"]
+[gd_scene load_steps=14 format=4 uid="uid://cxc0xvkwttx7e"]
 
 [ext_resource type="Script" uid="uid://gulysnox8go7" path="res://scripts/disembark/disembark.gd" id="1_5rhh4"]
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
@@ -9,9 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://4uv2rnxs0bes" path="res://scenes/disembark/creatures/snake.tscn" id="6_a48bc"]
 [ext_resource type="PackedScene" uid="uid://dk6owdsljkqko" path="res://scenes/disembark/creatures/bug.tscn" id="6_vw2og"]
 [ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_6c7xg"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw2og"]
-noise_type = 3
+[ext_resource type="PackedScene" uid="uid://dydg7my5ic357" path="res://scenes/disembark/wreck.tscn" id="8_2ifxl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rhh4"]
 radius = 31.0
@@ -20,6 +18,9 @@ height = 94.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py471"]
 radius = 13.000001
 height = 64.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_vw2og"]
+noise_type = 3
 
 [node name="Disembark" type="Node2D"]
 script = ExtResource("1_5rhh4")
@@ -30,21 +31,6 @@ tile_map_data = PackedByteArray("AAABAAEAAAADAAAAAAABAAIAAAADAAAAAAABAAMAAAADAAA
 tile_set = ExtResource("1_ouoik")
 
 [node name="Lasers" type="Node2D" parent="."]
-
-[node name="DisembarkPlayer" parent="." instance=ExtResource("2_o8x53")]
-unique_name_in_owner = true
-
-[node name="Camera" type="Camera2D" parent="DisembarkPlayer"]
-unique_name_in_owner = true
-offset = Vector2(8, 8)
-zoom = Vector2(3, 3)
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-editor_draw_drag_margin = true
-script = ExtResource("4_vw2og")
-max_offset = Vector2(10, 0.5)
-noise = SubResource("FastNoiseLite_vw2og")
 
 [node name="Ship" type="Area2D" parent="."]
 z_index = 1
@@ -78,6 +64,27 @@ position = Vector2(288, 240)
 
 [node name="Bug" parent="Creatures" instance=ExtResource("6_vw2og")]
 position = Vector2(-24, 232)
+
+[node name="Wrecks" type="Node2D" parent="."]
+
+[node name="Wreck" parent="Wrecks" instance=ExtResource("8_2ifxl")]
+position = Vector2(296, 24)
+money = 5
+
+[node name="DisembarkPlayer" parent="." instance=ExtResource("2_o8x53")]
+unique_name_in_owner = true
+
+[node name="Camera" type="Camera2D" parent="DisembarkPlayer"]
+unique_name_in_owner = true
+offset = Vector2(8, 8)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+editor_draw_drag_margin = true
+script = ExtResource("4_vw2og")
+max_offset = Vector2(10, 0.5)
+noise = SubResource("FastNoiseLite_vw2og")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

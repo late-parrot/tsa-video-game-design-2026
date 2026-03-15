@@ -41,14 +41,6 @@ func next() -> void:
 func go_to(s: int) -> void:
 	step = s
 
-# TODO: Remove
-func _unhandled_key_input(event: InputEvent) -> void:
-	if not Engine.is_editor_hint():
-		if event.is_action_pressed("ui_home"):
-			step -= 1
-		if event.is_action_pressed("ui_end"):
-			step += 1
-
 func _on_next_button_pressed() -> void:
 	next()
 	

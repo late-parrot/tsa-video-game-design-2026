@@ -17,6 +17,8 @@ func _process(_delta: float) -> void:
 		node.get_node("HBox/Progress").set_text(str(m.progress)+"/"+str(m.required))
 		node.get_node("HBox/HBox/Reward").set_text(str(m.reward))
 		%Missions.add_child(node)
+	
+	%Money.text = str(Game.money)
 
 func set_xy(x: int, y: int) -> void:
 	%X.text = "X:"+str(x)

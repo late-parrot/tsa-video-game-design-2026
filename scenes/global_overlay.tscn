@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjv0qlm8ckfh5"]
+[gd_scene load_steps=7 format=3 uid="uid://cjv0qlm8ckfh5"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_g8x2p"]
 [ext_resource type="Script" uid="uid://ch7otuavs2pr2" path="res://scripts/global_overlay.gd" id="1_lgtdy"]
+[ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="3_ppdvm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8x2p"]
 bg_color = Color(0, 0, 0, 1)
@@ -88,3 +89,33 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CargoMovedBanner/MarginContainer"]
 layout_mode = 2
 text = "Cargo Moved"
+
+[node name="WreckCollectedBanner" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.0
+offset_top = 8.0
+offset_right = 84.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ppdvm")
+
+[node name="MarginContainer" type="MarginContainer" parent="WreckCollectedBanner"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="WreckCollectedBanner/MarginContainer"]
+layout_mode = 2
+
+[node name="WreckCollectedLabel" type="Label" parent="WreckCollectedBanner/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Found"
+
+[node name="TextureRect" type="TextureRect" parent="WreckCollectedBanner/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("3_ppdvm")

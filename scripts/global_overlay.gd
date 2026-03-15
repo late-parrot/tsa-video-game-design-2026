@@ -14,3 +14,9 @@ func show_cargo_moved() -> void:
 	%CargoMovedBanner.visible = true
 	await get_tree().create_timer(2).timeout
 	%CargoMovedBanner.visible = false
+
+func show_wreck_collected(v) -> void:
+	%WreckCollectedLabel.text = "Found "+str(v)
+	%WreckCollectedBanner.visible = true
+	await get_tree().create_timer(2).timeout
+	%WreckCollectedBanner.visible = false
