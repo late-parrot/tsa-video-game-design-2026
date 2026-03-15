@@ -178,7 +178,8 @@ size_flags_vertical = 0
 texture = SubResource("AtlasTexture_mf1i3")
 stretch_mode = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/MarginContainer/SnakeDescription/HBoxContainer"]
+[node name="SnakeText" type="RichTextLabel" parent="HBoxContainer/MarginContainer/SnakeDescription/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/line_separation = 4
@@ -227,7 +228,8 @@ size_flags_vertical = 0
 texture = SubResource("AtlasTexture_l4kfj")
 stretch_mode = 4
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/MarginContainer/BugDescription/HBoxContainer"]
+[node name="BugText" type="RichTextLabel" parent="HBoxContainer/MarginContainer/BugDescription/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/line_separation = 4
