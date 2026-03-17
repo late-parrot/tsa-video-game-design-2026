@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buch8utojdcii"
-path="res://.godot/imported/sandtiling.png-9a88ea5f0a606b2c18f07b99b6e2b066.ctex"
+uid="uid://bcavg17o7ovjw"
+path="res://.godot/imported/groundlay (8).png-08a75af7a1a4be00a97f5806bdc96cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset/sandtiling.png"
-dest_files=["res://.godot/imported/sandtiling.png-9a88ea5f0a606b2c18f07b99b6e2b066.ctex"]
+source_file="res://assets/tileset/groundlay (8).png"
+dest_files=["res://.godot/imported/groundlay (8).png-08a75af7a1a4be00a97f5806bdc96cb9.ctex"]
 
 [params]
 

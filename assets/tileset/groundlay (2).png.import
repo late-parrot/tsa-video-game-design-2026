@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba3fvtjwj23p4"
-path="res://.godot/imported/watertiles.png-4a6d54d79609c2a12802a19c12244311.ctex"
+uid="uid://0u84arux4hxc"
+path="res://.godot/imported/groundlay (2).png-ac54d224343f774301f6685f4236e30d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tileset/watertiles.png"
-dest_files=["res://.godot/imported/watertiles.png-4a6d54d79609c2a12802a19c12244311.ctex"]
+source_file="res://assets/tileset/groundlay (2).png"
+dest_files=["res://.godot/imported/groundlay (2).png-ac54d224343f774301f6685f4236e30d.ctex"]
 
 [params]
 
