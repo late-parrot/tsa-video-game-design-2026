@@ -1,4 +1,4 @@
-[gd_scene load_steps=807 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=810 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
@@ -9,9 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://djiv8w62ovgbg" path="res://assets/spaceport/spaceport-top.png" id="5_2x3te"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="5_foey6"]
 [ext_resource type="Texture2D" uid="uid://jayhvf8y0cub" path="res://assets/planets/b.png" id="6_3ecl0"]
+[ext_resource type="PackedScene" uid="uid://5qh3t3h241rk" path="res://scenes/disembark/planets/b.tscn" id="6_qfnjy"]
 [ext_resource type="Texture2D" uid="uid://depepbqva5pje" path="res://assets/planets/c.png" id="7_o6glo"]
+[ext_resource type="PackedScene" uid="uid://48gxe8064l6j" path="res://scenes/disembark/planets/c.tscn" id="8_ahqhl"]
 [ext_resource type="Texture2D" uid="uid://cjwn4pi7uf4p4" path="res://assets/planets/d.png" id="8_hhhct"]
 [ext_resource type="Script" uid="uid://bbmycytgc1t2a" path="res://scripts/camera.gd" id="10_hhhct"]
+[ext_resource type="PackedScene" uid="uid://c00xau0jr4abm" path="res://scenes/disembark/planets/d.tscn" id="10_l0cws"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o6glo"]
 
@@ -5587,6 +5590,7 @@ shape = SubResource("CircleShape2D_hhhct")
 position = Vector2(1032, -960)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
+disembark_scene = ExtResource("6_qfnjy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1b"]
 shape = SubResource("CircleShape2D_foey6")
@@ -5606,6 +5610,7 @@ position = Vector2(1472, 1432)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
+disembark_scene = ExtResource("8_ahqhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1c (Locked)"]
 shape = SubResource("CircleShape2D_n7xhb")
@@ -5625,6 +5630,7 @@ position = Vector2(-2480, -672)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
+disembark_scene = ExtResource("10_l0cws")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1d (Locked)"]
 shape = SubResource("CircleShape2D_vm5k5")

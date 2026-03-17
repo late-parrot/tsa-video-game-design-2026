@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c00xau0jr4abm"]
+
+[ext_resource type="PackedScene" uid="uid://cxc0xvkwttx7e" path="res://scenes/disembark/disembark.tscn" id="1_qf21w"]
+
+[node name="D" instance=ExtResource("1_qf21w")]

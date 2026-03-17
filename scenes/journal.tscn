@@ -339,4 +339,4 @@ It's suspected that the genus spread throughout TRAPPIST-2 after hitching a ride
 
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry" to="." method="_on_snake_entry_focus_entered"]
 [connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry" to="." method="_on_bug_entry_focus_entered"]
-[connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry" to="." method="_on_bug_entry_focus_entered"]
+[connection signal="focus_entered" from="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry" to="." method="_on_rabbit_entry_focus_entered"]

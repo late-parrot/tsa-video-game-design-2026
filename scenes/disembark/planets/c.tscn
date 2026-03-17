@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://48gxe8064l6j"]
+
+[ext_resource type="PackedScene" uid="uid://cxc0xvkwttx7e" path="res://scenes/disembark/disembark.tscn" id="1_wpvhw"]
+
+[node name="C" instance=ExtResource("1_wpvhw")]
