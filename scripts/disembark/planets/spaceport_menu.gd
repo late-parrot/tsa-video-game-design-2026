@@ -141,15 +141,15 @@ func _on_reward_amount_pressed() -> void:
 
 
 func _on_snake_research_button_pressed() -> void:
-	Game.research_times["snake"] = 60
+	Game.research_times["snake"] = 10
 	Game.ship_cargo["snake"] -= Game.research_reqs[Game.research_levels["snake"]]
 
 func _on_bug_research_button_pressed() -> void:
-	Game.research_times["bug"] = 60
+	Game.research_times["bug"] = 10
 	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
 	
 func _on_rabbit_research_button_pressed() -> void:
-	Game.research_times["rabbit"] = 60
+	Game.research_times["rabbit"] = 10
 	Game.ship_cargo["rabbit"] -= Game.research_reqs[Game.research_levels["rabbit"]]
 
 
