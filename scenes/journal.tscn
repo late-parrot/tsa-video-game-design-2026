@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://btvfnyc10o6u7"]
+[gd_scene load_steps=19 format=3 uid="uid://btvfnyc10o6u7"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_mf1i3"]
 [ext_resource type="Script" uid="uid://dutdqgcwalb2a" path="res://scripts/highlight_control.gd" id="2_ih0ao"]
 [ext_resource type="Script" uid="uid://ds8shxqu1lfty" path="res://scripts/journal.gd" id="2_l4kfj"]
 [ext_resource type="Texture2D" uid="uid://b823m7lxnrnis" path="res://assets/creatures/bug.png" id="2_ll4rq"]
 [ext_resource type="Texture2D" uid="uid://d27voohse44q1" path="res://assets/creatures/snake.png" id="2_pelrk"]
+[ext_resource type="Texture2D" uid="uid://dlw8avtk4ksu0" path="res://assets/creatures/bunny.png" id="5_l4kfj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4kfj"]
 draw_center = false
@@ -28,12 +29,9 @@ font_size = 24
 atlas = ExtResource("2_ll4rq")
 region = Rect2(21, 21, 19, 19)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ih0ao"]
-load_path = "res://.godot/imported/bug.png-f17b0712b96050841267b4f87afbe9b1.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_hlfw0"]
-atlas = SubResource("CompressedTexture2D_ih0ao")
-region = Rect2(21, 21, 19, 19)
+atlas = ExtResource("5_l4kfj")
+region = Rect2(4, 3, 24, 24)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ih0ao"]
 font_size = 32
@@ -55,12 +53,9 @@ subpixel_positioning = 0
 atlas = ExtResource("2_ll4rq")
 region = Rect2(21, 21, 19, 19)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_84c5g"]
-load_path = "res://.godot/imported/bug.png-f17b0712b96050841267b4f87afbe9b1.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1uw5"]
-atlas = SubResource("CompressedTexture2D_84c5g")
-region = Rect2(21, 21, 19, 19)
+atlas = ExtResource("5_l4kfj")
+region = Rect2(4, 3, 24, 24)
 
 [node name="Journal" type="MarginContainer"]
 anchors_preset = 15
@@ -126,7 +121,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Snake"
+text = "Aquamarine
+Magnaconda"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="BugEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -153,7 +149,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Bug"
+text = "Ruby Reamer
+Beetle"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="RabbitEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -180,7 +177,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Rabbit"
+text = "Titian
+Rabbit"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
@@ -197,7 +195,7 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
-text = "Snake"
+text = "Aquamarine Magnaconda"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/SnakeDescription"]
@@ -247,7 +245,7 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/BugDescription"]
 layout_mode = 2
-text = "Bug"
+text = "Ruby Reamer Beetle"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/BugDescription"]
@@ -297,7 +295,8 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/RabbitDescription"]
 layout_mode = 2
-text = "Rabbit"
+text = "Titian Rabbit
+"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/RabbitDescription"]

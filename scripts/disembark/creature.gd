@@ -32,6 +32,8 @@ func _physics_process(_delta: float) -> void:
 	
 	if agent.is_navigation_finished():
 		avoiding = false
+		rotation = 0
+		%Sprite.flip_v = 0
 		%Sprite.play("idle")
 		return
 	

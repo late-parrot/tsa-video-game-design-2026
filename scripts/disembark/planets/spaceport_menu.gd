@@ -55,7 +55,7 @@ func update_research(id: String) -> void:
 		research.get_node("Button").disabled = time!=0 or lvl>=Game.max_research or \
 			Game.ship_cargo[id]<Game.research_reqs[lvl] if Game.ship_cargo.has(id) else true
 		progress.get_node("Label").text = "In progress: %d:%02d left" % [int(time/60), int(time)%60]
-		progress.get_node("ProgressBar").value = 60-time
+		progress.get_node("ProgressBar").value = 10-time
 		research.get_node("Label").visible = time==0
 		progress.visible = time!=0
 	else:
@@ -141,18 +141,18 @@ func _on_reward_amount_pressed() -> void:
 
 
 func _on_snake_research_button_pressed() -> void:
-	Game.research_times["snake"] = 60
+	Game.research_times["snake"] = 10
 	Game.ship_cargo["snake"] -= Game.research_reqs[Game.research_levels["snake"]]
 
 func _on_bug_research_button_pressed() -> void:
-	Game.research_times["bug"] = 60
+	Game.research_times["bug"] = 10
 	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
 	
 func _on_rabbit_research_button_pressed() -> void:
-	Game.research_times["rabbit"] = 60
+	Game.research_times["rabbit"] = 10
 	Game.ship_cargo["rabbit"] -= Game.research_reqs[Game.research_levels["rabbit"]]
 
 
 func _on_tutorial_step_finished(step):
-	if step == 17 or step == 18 or step == 19:
+	if step == 19 or step == 20 or step == 21:
 		%TabContainer.current_tab += 1

@@ -106,6 +106,7 @@ shape = SubResource("RectangleShape2D_iqlnv")
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_mabuj")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.40972978
 
 [node name="CollisionShape2D" parent="StartRunning" index="0"]

@@ -51,9 +51,9 @@ func _on_timer_timeout() -> void:
 
 func _input(event: InputEvent) -> void:
 	if (event.is_action("up") or event.is_action("down") or \
-		event.is_action("left") or event.is_action("right")) and (step == 2 or step == 8):
+		event.is_action("left") or event.is_action("right")) and (step == 4 or step == 10):
 		next()
 	if (event.is_action("shoot_up") or event.is_action("shoot_down") or \
 		event.is_action("shoot_left") or event.is_action("shoot_right") or \
-		event.is_action("shoot")) and step == 10:
+		event.is_action("shoot")) and step == 12:
 		next()

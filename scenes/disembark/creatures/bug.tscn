@@ -118,6 +118,7 @@ shape = SubResource("RectangleShape2D_sstjq")
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_nin8f")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.063262284
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]

@@ -101,7 +101,7 @@ func _on_collect_pressed() -> void:
 				(not m.criteria.has("type") or col["node"].get_script() == m.criteria["type"]) and \
 				(not m.criteria.has("id") or col["id"] == m.criteria["id"]):
 					m.progress += 1
-		if col["node"] is Creature and main.tutorial.step == 12:
+		if col["node"] is Creature and main.tutorial.step == 14:
 			main.tutorial.next()
 	collectibles.erase(col)
 	col["node"].queue_free()
