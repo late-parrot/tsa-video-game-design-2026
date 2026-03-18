@@ -401,7 +401,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Snake"
+text = "Aquamarine Magnaconda"
 label_settings = SubResource("LabelSettings_qj07k")
 
 [node name="SnakeLevel" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/VBoxContainer"]
@@ -492,7 +492,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Bug"
+text = "Ruby Reamer Beetle"
 label_settings = SubResource("LabelSettings_qj07k")
 
 [node name="BugLevel" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/VBoxContainer"]
@@ -584,7 +584,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Rabbit"
+text = "Titian Rabbit"
 label_settings = SubResource("LabelSettings_qj07k")
 
 [node name="RabbitLevel" type="Label" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer/VBoxContainer"]

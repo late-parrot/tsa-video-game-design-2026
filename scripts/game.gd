@@ -8,9 +8,9 @@ var cache = {
 
 var names = {
 	"debug": "Debug",
-	"snake": "Snake",
-	"bug": "Bug",
-	"rabbit": "Rabbit"
+	"snake": "Aquamarine Magnaconda",
+	"bug": "Ruby Reamer Beetle",
+	"rabbit": "Titian Rabbit"
 }
 var ship_cargo = {}
 var vehicle_cargo = {}

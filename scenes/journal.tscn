@@ -121,7 +121,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/SnakeEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Snake"
+text = "Aquamarine
+Magnaconda"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="BugEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -148,7 +149,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/BugEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Bug"
+text = "Ruby Reamer
+Beetle"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="RabbitEntry" type="PanelContainer" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer"]
@@ -175,7 +177,8 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer/RabbitEntry/MarginContainer/HBoxContainer"]
 layout_mode = 2
-text = "Rabbit"
+text = "Titian
+Rabbit"
 label_settings = SubResource("LabelSettings_l4kfj")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
@@ -192,7 +195,7 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/SnakeDescription"]
 layout_mode = 2
-text = "Snake"
+text = "Aquamarine Magnaconda"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/SnakeDescription"]
@@ -242,7 +245,7 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/BugDescription"]
 layout_mode = 2
-text = "Bug"
+text = "Ruby Reamer Beetle"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/BugDescription"]
@@ -292,7 +295,8 @@ theme_override_constants/separation = 16
 
 [node name="Label" type="Label" parent="HBoxContainer/MarginContainer/RabbitDescription"]
 layout_mode = 2
-text = "Rabbit"
+text = "Titian Rabbit
+"
 label_settings = SubResource("LabelSettings_ih0ao")
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/RabbitDescription"]
