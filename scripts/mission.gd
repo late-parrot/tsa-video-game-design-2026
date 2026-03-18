@@ -1,7 +1,7 @@
 class_name Mission extends Object
 
 enum MissionType {
-	LAND, COLLECT
+	LAND, COLLECT, RESEARCH, UPGRADE
 }
 
 @export var id: int = 0

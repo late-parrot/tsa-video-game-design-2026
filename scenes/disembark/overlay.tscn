@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwr2scwm7o16e"]
+[gd_scene load_steps=14 format=3 uid="uid://cwr2scwm7o16e"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_sw8x2"]
 [ext_resource type="Script" uid="uid://dr4t2l32qiteh" path="res://scripts/disembark/overlay.gd" id="2_3crnf"]
@@ -11,6 +11,13 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_3crnf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h2hsg"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_3mvk4"]
+action = &"space"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_uhruh"]
+events = [SubResource("InputEventAction_3mvk4")]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uhruh"]
 font_size = 18
@@ -80,6 +87,7 @@ text = "Y:100"
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
+shortcut = SubResource("Shortcut_uhruh")
 text = "Collect"
 script = ExtResource("2_p7tpy")
 

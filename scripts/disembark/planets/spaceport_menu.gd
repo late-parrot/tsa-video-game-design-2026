@@ -118,39 +118,63 @@ func _on_net_distance_pressed() -> void:
 	Game.upgrades[0]["acquired"] = true
 	Game.money -= Game.upgrades[0]["cost"]
 	Game.net_distance = 90
+	for m in Game.missions:
+		if m.type == Mission.MissionType.UPGRADE:
+			m.progress += 1
 
 func _on_net_accuracy_pressed() -> void:
 	Game.upgrades[1]["acquired"] = true
 	Game.money -= Game.upgrades[1]["cost"]
 	Game.net_accuracy = 1.5
+	for m in Game.missions:
+		if m.type == Mission.MissionType.UPGRADE:
+			m.progress += 1
 
 func _on_max_energy_pressed() -> void:
 	Game.upgrades[2]["acquired"] = true
 	Game.money -= Game.upgrades[2]["cost"]
 	Game.max_energy = 125
+	for m in Game.missions:
+		if m.type == Mission.MissionType.UPGRADE:
+			m.progress += 1
 
 func _on_move_speed_pressed() -> void:
 	Game.upgrades[3]["acquired"] = true
 	Game.money -= Game.upgrades[3]["cost"]
 	Game.move_speed = 1.5
+	for m in Game.missions:
+		if m.type == Mission.MissionType.UPGRADE:
+			m.progress += 1
 
 func _on_reward_amount_pressed() -> void:
 	Game.upgrades[4]["acquired"] = true
 	Game.money -= Game.upgrades[4]["cost"]
 	Game.reward_amount = 1.5
+	for m in Game.missions:
+		if m.type == Mission.MissionType.UPGRADE:
+			m.progress += 1
 
 
 func _on_snake_research_button_pressed() -> void:
 	Game.research_times["snake"] = 10
 	Game.ship_cargo["snake"] -= Game.research_reqs[Game.research_levels["snake"]]
+	for m in Game.missions:
+		if m.type == Mission.MissionType.RESEARCH:
+			m.progress += 1
 
 func _on_bug_research_button_pressed() -> void:
 	Game.research_times["bug"] = 10
 	Game.ship_cargo["bug"] -= Game.research_reqs[Game.research_levels["bug"]]
+	for m in Game.missions:
+		if m.type == Mission.MissionType.RESEARCH:
+			m.progress += 1
 	
 func _on_rabbit_research_button_pressed() -> void:
 	Game.research_times["rabbit"] = 10
 	Game.ship_cargo["rabbit"] -= Game.research_reqs[Game.research_levels["rabbit"]]
+	for m in Game.missions:
+		if m.type == Mission.MissionType.RESEARCH:
+			m.progress += 1
 
 
 func _on_tutorial_step_finished(step):
