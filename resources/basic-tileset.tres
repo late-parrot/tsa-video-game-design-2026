@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=51 format=3 uid="uid://de2seuuxgrqll"]
+[gd_resource type="TileSet" load_steps=66 format=3 uid="uid://de2seuuxgrqll"]
 
 [ext_resource type="Texture2D" uid="uid://bin2pmkooixp8" path="res://assets/tileset/MASTER ground tiles -6.png.png" id="1_spdl8"]
 [ext_resource type="Texture2D" uid="uid://bcavg17o7ovjw" path="res://assets/tileset/groundlay (8).png" id="2_x864t"]
@@ -20,8 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://bb7xjl3oih88b" path="res://assets/tileset/slateborders.png" id="11_bluws"]
 [ext_resource type="Texture2D" uid="uid://b4k2hsbr1cnx5" path="res://assets/tileset/Flowers Grass (1).png" id="11_uf41w"]
 [ext_resource type="Texture2D" uid="uid://djuuegqbyh5bi" path="res://assets/tileset/snowborders.png" id="12_54j35"]
+[ext_resource type="Texture2D" uid="uid://bqmmit1djilxp" path="res://assets/tileset/redtiles (1).png" id="13_c34ei"]
 [ext_resource type="Texture2D" uid="uid://dmo0sunvnv8x5" path="res://assets/tileset/Flowers Grass-2.png (2).png" id="13_p2ev4"]
 [ext_resource type="Texture2D" uid="uid://baoeuquairtb6" path="res://assets/tileset/Flowers Grass-2.png (3).png" id="14_bluws"]
+[ext_resource type="Texture2D" uid="uid://yi0ststqp8i8" path="res://assets/tileset/redplanetground-14.png.png" id="14_jlabm"]
+[ext_resource type="Texture2D" uid="uid://fy46j8gteok5" path="res://assets/tileset/1.png" id="15_ohvq0"]
+[ext_resource type="Texture2D" uid="uid://cbycx72sigvyq" path="res://assets/tileset/2.png" id="16_1vaiv"]
+[ext_resource type="Texture2D" uid="uid://srb5htkitjp4" path="res://assets/tileset/233.png" id="17_dxys8"]
+[ext_resource type="Texture2D" uid="uid://0kv4ilf80kb2" path="res://assets/tileset/2333.png" id="18_ese4c"]
+[ext_resource type="Texture2D" uid="uid://c3hqdiuon3vac" path="res://assets/tileset/New Piskel (7).png" id="19_vv5yf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uu1cs"]
 texture = ExtResource("1_spdl8")
@@ -98,6 +105,46 @@ texture = ExtResource("5_uu1cs")
 0:1/0 = 0
 1:1/0 = 0
 0:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fe2qv"]
+texture = ExtResource("13_c34ei")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3fyn"]
+texture = ExtResource("14_jlabm")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvhu4"]
+texture = ExtResource("15_ohvq0")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_us615"]
+texture = ExtResource("16_1vaiv")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2bxe"]
+texture = ExtResource("17_dxys8")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkyim"]
+texture = ExtResource("18_ese4c")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2wwk"]
+texture = ExtResource("19_vv5yf")
+0:0/0 = 0
+0:1/0 = 0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_p2ev4"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -236,3 +283,10 @@ sources/16 = SubResource("TileSetAtlasSource_vv5yf")
 sources/17 = SubResource("TileSetAtlasSource_frlq4")
 sources/18 = SubResource("TileSetAtlasSource_xmi82")
 sources/19 = SubResource("TileSetAtlasSource_sip44")
+sources/21 = SubResource("TileSetAtlasSource_fe2qv")
+sources/22 = SubResource("TileSetAtlasSource_m3fyn")
+sources/23 = SubResource("TileSetAtlasSource_gvhu4")
+sources/24 = SubResource("TileSetAtlasSource_us615")
+sources/25 = SubResource("TileSetAtlasSource_w2bxe")
+sources/26 = SubResource("TileSetAtlasSource_xkyim")
+sources/27 = SubResource("TileSetAtlasSource_f2wwk")

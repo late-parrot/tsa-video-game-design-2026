@@ -28,7 +28,7 @@ mouse_cursor/custom_image="uid://cbojmlclt1yca"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/ActionIcon/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/ActionIcon/plugin.cfg")
 
 [input]
 

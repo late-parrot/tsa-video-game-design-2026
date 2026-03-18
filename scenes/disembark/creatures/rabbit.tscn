@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cilu72bnt71bh"]
+[gd_scene load_steps=21 format=3 uid="uid://cilu72bnt71bh"]
 
 [ext_resource type="PackedScene" uid="uid://bg0knfvwm3ul2" path="res://scenes/disembark/creature.tscn" id="1_b7c47"]
 [ext_resource type="Texture2D" uid="uid://dlw8avtk4ksu0" path="res://assets/creatures/bunny.png" id="2_6uo3a"]
@@ -58,14 +58,6 @@ region = Rect2(0, 64, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8jlr"]
 atlas = ExtResource("2_6uo3a")
 region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0e2y7"]
-atlas = ExtResource("2_6uo3a")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ge1bt"]
-atlas = ExtResource("2_6uo3a")
-region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_djsfv"]
 atlas = ExtResource("2_6uo3a")
@@ -140,12 +132,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_u8jlr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0e2y7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ge1bt")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_djsfv")
 }, {
 "duration": 1.0,
@@ -156,14 +142,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 10.0
+"speed": 15.0
 }]
 
 [node name="Rabbit" instance=ExtResource("1_b7c47")]
+position = Vector2(0, -6)
 ID = "rabbit"
 CAPTURE_CHANCE = 0.5
 
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_iplef")
-animation = &"idle"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.37870166
