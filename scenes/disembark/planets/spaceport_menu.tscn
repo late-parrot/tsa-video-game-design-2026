@@ -449,7 +449,7 @@ text = "In Progress: 1:00 left"
 [node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer/SnakeProgress"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-max_value = 60.0
+max_value = 10.0
 value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer"]
@@ -541,7 +541,7 @@ text = "In Progress: 1:00 left"
 [node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer/BugProgress"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-max_value = 60.0
+max_value = 10.0
 value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer"]
@@ -633,7 +633,7 @@ text = "In Progress: 1:00 left"
 [node name="ProgressBar" type="ProgressBar" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer/RabbitProgress"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-max_value = 60.0
+max_value = 10.0
 value = 1.0
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="SpaceportMenu/PanelContainer/MarginContainer/VBoxContainer/TabContainer/Research/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer"]

@@ -55,7 +55,7 @@ func update_research(id: String) -> void:
 		research.get_node("Button").disabled = time!=0 or lvl>=Game.max_research or \
 			Game.ship_cargo[id]<Game.research_reqs[lvl] if Game.ship_cargo.has(id) else true
 		progress.get_node("Label").text = "In progress: %d:%02d left" % [int(time/60), int(time)%60]
-		progress.get_node("ProgressBar").value = 60-time
+		progress.get_node("ProgressBar").value = 10-time
 		research.get_node("Label").visible = time==0
 		progress.visible = time!=0
 	else:
