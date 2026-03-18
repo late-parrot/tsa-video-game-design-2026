@@ -16,15 +16,33 @@ var ship_cargo = {}
 var vehicle_cargo = {}
 var mission_sets := [
 	[
-		Mission.new(0, "Land on a planet", Mission.MissionType.LAND, 1, 5),
+		Mission.new(0, "Land on a planet", Mission.MissionType.LAND, 1, 5, {
+			"planet": "TRAPPIST-2b"
+		}),
 		Mission.new(1, "Capture 3 creatures", Mission.MissionType.COLLECT, 3, 5, {
 			"type": preload("res://scripts/disembark/creature.gd")
-		})
+		}),
+		Mission.new(2, "Research an invasive species", Mission.MissionType.RESEARCH, 1, 5)
 	],
 	[
-		Mission.new(2, "Capture 5 creatures", Mission.MissionType.COLLECT, 5, 10, {
+		Mission.new(3, "Land on TRAPPIST-2c", Mission.MissionType.LAND, 1, 5, {
+			"planet": "TRAPPIST-2c"
+		}),
+		Mission.new(4, "Capture 3 creatures", Mission.MissionType.COLLECT, 5, 10, {
 			"type": preload("res://scripts/disembark/creature.gd")
-		})
+		}),
+		Mission.new(5, "Aqcuire 3 upgrades", Mission.MissionType.UPGRADE, 3, 10)
+	],
+	[
+		Mission.new(3, "Land on TRAPPIST-2d", Mission.MissionType.LAND, 1, 5, {
+			"planet": "TRAPPIST-2d"
+		}),
+		Mission.new(4, "Capture 3 creatures", Mission.MissionType.COLLECT, 5, 10, {
+			"type": preload("res://scripts/disembark/creature.gd")
+		}),
+		Mission.new(3, "Land at the spaceport to finish your expedition", Mission.MissionType.LAND, 1, 5, {
+			"planet": "Spaceport"
+		}),
 	]
 ]
 var current_mission_set = 0

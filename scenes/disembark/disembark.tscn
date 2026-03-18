@@ -53,7 +53,7 @@ tile_set = ExtResource("1_ouoik")
 
 [node name="Ship" type="Area2D" parent="."]
 z_index = 1
-position = Vector2(48, 8)
+position = Vector2(0, 24)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ship"]

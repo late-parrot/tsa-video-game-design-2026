@@ -13,6 +13,7 @@ func _ready() -> void:
 func start() -> void:
 	add_child(maneuver)
 	Game.connect("level_completed", overlay.show_level_completed)
+	Game.connect("level_completed", _on_level_completed)
 	for s in Game.mission_sets:
 		for m in s:
 			m.connect("complete", overlay.show_mission_completed)
@@ -31,5 +32,11 @@ func credits() -> void:
 	await Game.scene_transition.get_node("%AnimationPlayer").animation_finished
 	node.scrolling = true
 
-func transition():
+func transition() -> void:
 	$SceneTransition.transition()
+
+func _on_level_completed() -> void:
+	if Game.current_mission_set == 1:
+		maneuver.get_node("Planets").get_child(3).unlock()
+	elif Game.current_mission_set == 2:
+		maneuver.get_node("Planets").get_child(4).unlock()

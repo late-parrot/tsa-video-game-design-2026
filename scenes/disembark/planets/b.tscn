@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=4 uid="uid://5qh3t3h241rk"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://5qh3t3h241rk"]
+>>>>>>> 015284916f58ac2ed5d7e9b48400afb7a0f5900a
 
 [ext_resource type="PackedScene" uid="uid://cxc0xvkwttx7e" path="res://scenes/disembark/disembark.tscn" id="1_ux2dm"]
 [ext_resource type="PackedScene" uid="uid://4uv2rnxs0bes" path="res://scenes/disembark/creatures/snake.tscn" id="2_qf86c"]
 [ext_resource type="PackedScene" uid="uid://dk6owdsljkqko" path="res://scenes/disembark/creatures/bug.tscn" id="3_sge1g"]
 [ext_resource type="PackedScene" uid="uid://cilu72bnt71bh" path="res://scenes/disembark/creatures/rabbit.tscn" id="4_kya4s"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://dydg7my5ic357" path="res://scenes/disembark/wreck.tscn" id="5_sge1g"]
 
 [node name="B" instance=ExtResource("1_ux2dm")]
@@ -107,3 +112,64 @@ zoom_speed = 1.0
 
 [node name="UI" parent="." index="6"]
 visible = false
+=======
+
+[node name="B" instance=ExtResource("1_ux2dm")]
+
+[node name="Snake3" parent="Creatures" index="2" instance=ExtResource("2_qf86c")]
+position = Vector2(-320, -200)
+
+[node name="Snake4" parent="Creatures" index="3" instance=ExtResource("2_qf86c")]
+position = Vector2(-216, -528)
+
+[node name="Snake5" parent="Creatures" index="4" instance=ExtResource("2_qf86c")]
+position = Vector2(432, -528)
+
+[node name="Snake6" parent="Creatures" index="5" instance=ExtResource("2_qf86c")]
+position = Vector2(712, -688)
+
+[node name="Snake7" parent="Creatures" index="6" instance=ExtResource("2_qf86c")]
+position = Vector2(712, -208)
+
+[node name="Snake8" parent="Creatures" index="7" instance=ExtResource("2_qf86c")]
+position = Vector2(712, 416)
+
+[node name="Snake9" parent="Creatures" index="8" instance=ExtResource("2_qf86c")]
+position = Vector2(-488, 680)
+
+[node name="Bug2" parent="Creatures" index="10" instance=ExtResource("3_sge1g")]
+position = Vector2(-136, 296)
+
+[node name="Bug3" parent="Creatures" index="11" instance=ExtResource("3_sge1g")]
+position = Vector2(8, 376)
+
+[node name="Bug4" parent="Creatures" index="12" instance=ExtResource("3_sge1g")]
+position = Vector2(-584, 48)
+
+[node name="Bug5" parent="Creatures" index="13" instance=ExtResource("3_sge1g")]
+position = Vector2(-696, 8)
+
+[node name="Bug6" parent="Creatures" index="14" instance=ExtResource("3_sge1g")]
+position = Vector2(-696, 120)
+
+[node name="Rabbit2" parent="Creatures" index="16" instance=ExtResource("4_kya4s")]
+position = Vector2(-56, -296)
+
+[node name="Rabbit3" parent="Creatures" index="17" instance=ExtResource("4_kya4s")]
+position = Vector2(32, -272)
+
+[node name="Rabbit4" parent="Creatures" index="18" instance=ExtResource("4_kya4s")]
+position = Vector2(32, -368)
+
+[node name="Rabbit5" parent="Creatures" index="19" instance=ExtResource("4_kya4s")]
+position = Vector2(-72, -384)
+
+[node name="Rabbit6" parent="Creatures" index="20" instance=ExtResource("4_kya4s")]
+position = Vector2(544, 56)
+
+[node name="Rabbit7" parent="Creatures" index="21" instance=ExtResource("4_kya4s")]
+position = Vector2(544, 152)
+
+[node name="Rabbit8" parent="Creatures" index="22" instance=ExtResource("4_kya4s")]
+position = Vector2(448, 96)
+>>>>>>> 015284916f58ac2ed5d7e9b48400afb7a0f5900a

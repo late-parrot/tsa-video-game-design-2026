@@ -5534,19 +5534,19 @@ spaceport = NodePath("Planets/Spaceport (Locked)")
 
 [node name="Planets" type="Node2D" parent="."]
 
-[node name="TRAPPIST-1" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-2" type="Area2D" parent="Planets"]
 script = ExtResource("1_n7xhb")
 landable = false
 
-[node name="Sun" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1"]
+[node name="Sun" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2"]
 unique_name_in_owner = true
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_o6glo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2"]
 shape = SubResource("CircleShape2D_40ujs")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-2"]
 visible = false
 modulate = Color(0.78450024, 0.9887045, 0.99999994, 1)
 mesh = SubResource("SphereMesh_n7xhb")
@@ -5586,61 +5586,61 @@ autoplay = "turn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/Spaceport (Locked)/StaticBody2D"]
 shape = SubResource("CircleShape2D_hhhct")
 
-[node name="TRAPPIST-1b" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-2b" type="Area2D" parent="Planets"]
 position = Vector2(1032, -960)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 disembark_scene = ExtResource("6_qfnjy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1b"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2b"]
 shape = SubResource("CircleShape2D_foey6")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1b"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2b"]
 sprite_frames = SubResource("SpriteFrames_5knk8")
 animation = &"rotate"
 autoplay = "rotate"
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1b"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-2b"]
 visible = false
 modulate = Color(0.2968, 0.56, 0.30557334, 1)
 mesh = SubResource("SphereMesh_plvpl")
 
-[node name="TRAPPIST-1c (Locked)" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-2c (Locked)" type="Area2D" parent="Planets"]
 position = Vector2(1472, 1432)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
 disembark_scene = ExtResource("8_ahqhl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1c (Locked)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2c (Locked)"]
 shape = SubResource("CircleShape2D_n7xhb")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1c (Locked)"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2c (Locked)"]
 sprite_frames = SubResource("SpriteFrames_fyhcw")
 animation = &"rotate"
 autoplay = "rotate"
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1c (Locked)"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-2c (Locked)"]
 visible = false
 modulate = Color(0.74509805, 0.28235295, 0.20784314, 1)
 mesh = SubResource("SphereMesh_ytq0j")
 
-[node name="TRAPPIST-1d (Locked)" type="Area2D" parent="Planets"]
+[node name="TRAPPIST-2d (Locked)" type="Area2D" parent="Planets"]
 position = Vector2(-2480, -672)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
 disembark_scene = ExtResource("10_l0cws")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-1d (Locked)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2d (Locked)"]
 shape = SubResource("CircleShape2D_vm5k5")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-1d (Locked)"]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2d (Locked)"]
 sprite_frames = SubResource("SpriteFrames_fji4a")
 animation = &"rotate"
 autoplay = "rotate"
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-1d (Locked)"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-2d (Locked)"]
 visible = false
 modulate = Color(0.92, 0.41890663, 0.22080001, 1)
 mesh = SubResource("SphereMesh_foey6")

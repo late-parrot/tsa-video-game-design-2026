@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c5h2bmcfooygk"]
+[gd_scene load_steps=13 format=3 uid="uid://c5h2bmcfooygk"]
 
 [ext_resource type="Theme" uid="uid://di0u5lyy4etar" path="res://resources/theme.tres" id="1_7gthf"]
 [ext_resource type="Script" uid="uid://6bcbl4gtihul" path="res://scripts/maneuver/overlay.gd" id="2_a61oy"]
@@ -10,6 +10,13 @@
 font_size = 24
 
 [sub_resource type="LabelSettings" id="LabelSettings_rn1gq"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_rv0fn"]
+action = &"space"
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_5e0if"]
+events = [SubResource("InputEventAction_rv0fn")]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qg02t"]
 font_size = 18
@@ -72,6 +79,7 @@ text = "Y:100"
 unique_name_in_owner = true
 layout_mode = 2
 disabled = true
+shortcut = SubResource("Shortcut_5e0if")
 text = "Land"
 script = ExtResource("2_rn1gq")
 
