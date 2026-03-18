@@ -44,13 +44,18 @@ var max_energy = 100
 var move_speed = 1
 var reward_amount = 1
 
+var won = false
+
 signal level_completed
+signal win
 
 func _process(delta: float) -> void:
+	if won: return
 	if missions.is_empty():
 		current_mission_set += 1
 		if current_mission_set >= len(mission_sets):
-			win()
+			emit_signal("win")
+			won = true
 		else:
 			missions = mission_sets[current_mission_set]
 		emit_signal("level_completed")
@@ -69,6 +74,3 @@ func move_cargo() -> void:
 		else:
 			ship_cargo[id] = vehicle_cargo[id]
 	vehicle_cargo.clear()
-
-func win() -> void:
-	pass

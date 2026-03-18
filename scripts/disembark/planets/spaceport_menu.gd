@@ -154,5 +154,5 @@ func _on_rabbit_research_button_pressed() -> void:
 
 
 func _on_tutorial_step_finished(step):
-	if step == 17 or step == 18 or step == 19:
+	if step == 19 or step == 20 or step == 21:
 		%TabContainer.current_tab += 1

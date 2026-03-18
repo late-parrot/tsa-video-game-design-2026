@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cxc0xvkwttx7e"]
+[gd_scene load_steps=16 format=4 uid="uid://cxc0xvkwttx7e"]
 
 [ext_resource type="Script" uid="uid://gulysnox8go7" path="res://scripts/disembark/disembark.gd" id="1_5rhh4"]
 [ext_resource type="TileSet" uid="uid://de2seuuxgrqll" path="res://resources/basic-tileset.tres" id="1_ouoik"]
@@ -21,6 +21,12 @@ height = 64.0
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_vw2og"]
 noise_type = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ifxl"]
+size = Vector2(1616, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oh8ux"]
+size = Vector2(16, 1648)
 
 [node name="Disembark" type="Node2D"]
 script = ExtResource("1_5rhh4")
@@ -104,6 +110,36 @@ noise = SubResource("FastNoiseLite_vw2og")
 unique_name_in_owner = true
 
 [node name="InputController" parent="." instance=ExtResource("7_6c7xg")]
+
+[node name="WorldBorders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D"]
+position = Vector2(8, -808)
+shape = SubResource("RectangleShape2D_2ifxl")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D2"]
+position = Vector2(8, 824)
+shape = SubResource("RectangleShape2D_2ifxl")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D3"]
+position = Vector2(-808, 8)
+shape = SubResource("RectangleShape2D_oh8ux")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D4"]
+position = Vector2(824, 8)
+shape = SubResource("RectangleShape2D_oh8ux")
 
 [connection signal="body_entered" from="Ship" to="." method="_on_ship_body_entered"]
 [connection signal="body_exited" from="Ship" to="." method="_on_ship_body_exited"]

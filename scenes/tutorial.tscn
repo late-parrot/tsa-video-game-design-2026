@@ -265,21 +265,17 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "You can move around with WASD.
+text = "At any point you can use [color=76d5c0]Tab[/color] and [color=76d5c0]Shift+Tab[/color]  to navigate UI.
 
-[color=aaa][font_size=12px]Left stick for controllers[/font_size][/color]"
+[color=aaa][font_size=12px]Bumpers (LB/RB) for controllers[/font_size][/color]"
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="ActionIcon" type="TextureRect" parent="Step2/Panel/Margin/HBox"]
-custom_minimum_size = Vector2(0, 64)
+[node name="NextButton" type="Button" parent="Step2/Panel/Margin/HBox"]
 layout_mode = 2
-size_flags_vertical = 4
-script = ExtResource("4_4kmhl")
-action_name = &"move"
-metadata/_custom_type_script = "uid://chcbg3w2evu5d"
+text = "Next"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step2"]
 libraries = {
@@ -342,7 +338,9 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Go ahead and explore a bit, then check on your [color=76d5c0]missions[/color]."
+text = "Press [color=76d5c0]Enter[/color] to click the selected button.
+
+[color=aaa][font_size=12px]Bottom button (A on XBox) for controllers[/font_size][/color]"
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -366,7 +364,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
-block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step4"]
 custom_minimum_size = Vector2(512, 0)
@@ -414,24 +411,21 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "This would be a good one to try first. Go ahead and get started on it."
+text = "You can move around with WASD.
+
+[color=aaa][font_size=12px]Left stick for controllers[/font_size][/color]"
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Arrow" type="TextureRect" parent="Step4"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -260.0
-offset_top = 224.0
-offset_right = -244.0
-offset_bottom = 240.0
-grow_horizontal = 0
-scale = Vector2(2, 2)
-texture = ExtResource("5_cq4me")
+[node name="ActionIcon" type="TextureRect" parent="Step4/Panel/Margin/HBox"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("4_4kmhl")
+action_name = &"move"
+metadata/_custom_type_script = "uid://chcbg3w2evu5d"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step4"]
 libraries = {
@@ -494,7 +488,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Congrats! You've landed on a planet and completed your first mission."
+text = "Go ahead and explore a bit, then check on your [color=76d5c0]missions[/color]."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -518,6 +512,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
+block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step6"]
 custom_minimum_size = Vector2(512, 0)
@@ -565,15 +560,24 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Your goal is to catch invasive species and research them to help this planet."
+text = "This would be a good one to try first. Go ahead and get started on it."
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="NextButton" type="Button" parent="Step6/Panel/Margin/HBox"]
-layout_mode = 2
-text = "Next"
+[node name="Arrow" type="TextureRect" parent="Step6"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_top = 224.0
+offset_right = -244.0
+offset_bottom = 240.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+texture = ExtResource("5_cq4me")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step6"]
 libraries = {
@@ -636,7 +640,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "This place is positively crawling with invasive animals hurting the ecosystem."
+text = "Congrats! You've landed on a planet and completed your first mission."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -707,21 +711,15 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "WASD again for moving around.
-
-[color=aaa][font_size=12px]Left stick for controllers[/font_size][/color]"
+text = "Your goal is to catch invasive species and research them to help this planet."
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="ActionIcon" type="TextureRect" parent="Step8/Panel/Margin/HBox"]
-custom_minimum_size = Vector2(0, 64)
+[node name="NextButton" type="Button" parent="Step8/Panel/Margin/HBox"]
 layout_mode = 2
-size_flags_vertical = 4
-script = ExtResource("4_4kmhl")
-action_name = &"move"
-metadata/_custom_type_script = "uid://chcbg3w2evu5d"
+text = "Next"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step8"]
 libraries = {
@@ -784,7 +782,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "I've taken the liberty of equipping you with a net launcher."
+text = "This place is positively crawling with invasive animals hurting the ecosystem."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -808,7 +806,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
-block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step10"]
 custom_minimum_size = Vector2(512, 0)
@@ -856,9 +853,9 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "You can shoot by clicking or with the arrow keys.
+text = "WASD again for moving around.
 
-[color=aaa][font_size=12px]Right stick for controllers[/font_size][/color]"
+[color=aaa][font_size=12px]Left stick for controllers[/font_size][/color]"
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -869,7 +866,7 @@ custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_vertical = 4
 script = ExtResource("4_4kmhl")
-action_name = &"shoot"
+action_name = &"move"
 metadata/_custom_type_script = "uid://chcbg3w2evu5d"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step10"]
@@ -886,7 +883,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
-block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step11"]
 custom_minimum_size = Vector2(512, 0)
@@ -934,20 +930,20 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Try and catch one of those invasive creatures. Be careful though--it could run away."
+text = "I've taken the liberty of equipping you with a net launcher."
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
+[node name="NextButton" type="Button" parent="Step11/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step11"]
 libraries = {
 &"": SubResource("AnimationLibrary_ckvwl")
 }
-
-[node name="Timer" type="Timer" parent="Step11"]
-wait_time = 4.0
-one_shot = true
 
 [node name="Step12" type="Control" parent="."]
 visible = false
@@ -1006,11 +1002,21 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "When you've got one, make sure to [color=76d5c0]collect[/color] it so it won't wriggle free."
+text = "You can shoot by clicking or with the arrow keys.
+
+[color=aaa][font_size=12px]Right stick for controllers[/font_size][/color]"
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="ActionIcon" type="TextureRect" parent="Step12/Panel/Margin/HBox"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("4_4kmhl")
+action_name = &"shoot"
+metadata/_custom_type_script = "uid://chcbg3w2evu5d"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step12"]
 libraries = {
@@ -1074,29 +1080,20 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Nice one! Go ahead and finish up this mission."
+text = "Try and catch one of those invasive creatures. Be careful though--it could run away."
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Arrow" type="TextureRect" parent="Step13"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -260.0
-offset_top = 424.0
-offset_right = -244.0
-offset_bottom = 440.0
-grow_horizontal = 0
-scale = Vector2(2, 2)
-texture = ExtResource("5_cq4me")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step13"]
 libraries = {
 &"": SubResource("AnimationLibrary_ckvwl")
 }
+
+[node name="Timer" type="Timer" parent="Step13"]
+wait_time = 4.0
+one_shot = true
 
 [node name="Step14" type="Control" parent="."]
 visible = false
@@ -1155,7 +1152,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Now that you've finished a few of your missions, why don't you get back to your ship and [color=76d5c0]launch[/color] so I can show you where to spend your rewards?"
+text = "When you've got one, make sure to [color=76d5c0]collect[/color] it so it won't wriggle free."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1223,7 +1220,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Make your way over to the [color=76d5c0]Spaceport[/color]. You can use this button to speed things up."
+text = "Nice one! Go ahead and finish up this mission."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1231,13 +1228,16 @@ visible_ratio = 0.0
 
 [node name="Arrow" type="TextureRect" parent="Step15"]
 layout_mode = 1
-offset_left = 226.0
-offset_top = 124.0
-offset_right = 242.0
-offset_bottom = 140.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -260.0
+offset_top = 424.0
+offset_right = -244.0
+offset_bottom = 440.0
+grow_horizontal = 0
 scale = Vector2(2, 2)
 texture = ExtResource("5_cq4me")
-flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step15"]
 libraries = {
@@ -1253,6 +1253,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
+block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step16"]
 custom_minimum_size = Vector2(512, 0)
@@ -1300,15 +1301,11 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Welcome to the Spaceport! This is where you can do everything from [color=76d5c0]researching[/color] creatures to purchasing [color=76d5c0]upgrades[/color]."
+text = "Now that you've finished a few of your missions, why don't you get back to your ship and [color=76d5c0]launch[/color] so I can show you where to spend your rewards?"
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
-
-[node name="NextButton" type="Button" parent="Step16/Panel/Margin/HBox"]
-layout_mode = 2
-text = "Next"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step16"]
 libraries = {
@@ -1324,6 +1321,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_6yjpi")
+block_input = false
 
 [node name="Panel" type="PanelContainer" parent="Step17"]
 custom_minimum_size = Vector2(512, 0)
@@ -1371,15 +1369,21 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "I'd recommend picking up upgrades whenever you have some spare cash."
+text = "Make your way over to the [color=76d5c0]Spaceport[/color]. You can use this button to speed things up."
 fit_content = true
 scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="NextButton" type="Button" parent="Step17/Panel/Margin/HBox"]
-layout_mode = 2
-text = "Next"
+[node name="Arrow" type="TextureRect" parent="Step17"]
+layout_mode = 1
+offset_left = 226.0
+offset_top = 124.0
+offset_right = 242.0
+offset_bottom = 140.0
+scale = Vector2(2, 2)
+texture = ExtResource("5_cq4me")
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Step17"]
 libraries = {
@@ -1442,7 +1446,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "This is where you [color=76d5c0]research[/color] creatures to learn about them. I would come back here when you have enough."
+text = "Welcome to the Spaceport! This is where you can do everything from [color=76d5c0]researching[/color] creatures to purchasing [color=76d5c0]upgrades[/color]."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1513,7 +1517,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Once you've researched creatures, you can find notes about them here."
+text = "I'd recommend picking up upgrades whenever you have some spare cash."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1529,6 +1533,7 @@ libraries = {
 }
 
 [node name="Step20" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1583,7 +1588,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "This lets you know what sort of cargo you're carrying around."
+text = "This is where you [color=76d5c0]research[/color] creatures to learn about them. I would come back here when you have enough."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1654,7 +1659,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Explore the Spaceport a bit, then I'll leave you be to finish some more missions."
+text = "Once you've researched creatures, you can find notes about them here."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1670,7 +1675,6 @@ libraries = {
 }
 
 [node name="Step22" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1725,7 +1729,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "Good luck out there!"
+text = "This lets you know what sort of cargo you're carrying around."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1740,18 +1744,162 @@ libraries = {
 &"": SubResource("AnimationLibrary_ckvwl")
 }
 
+[node name="Step23" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6yjpi")
+
+[node name="Panel" type="PanelContainer" parent="Step23"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -48.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Step23/Panel"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Step23/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBox" type="VBoxContainer" parent="Step23/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Step23/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
+
+[node name="TextureRect" type="TextureRect" parent="Step23/Panel/Margin/HBox/VBox/PanelContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_6yjpi")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="Step23/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+text = "Captain"
+label_settings = SubResource("LabelSettings_cq4me")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Step23/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Explore the Spaceport a bit, then I'll leave you be to finish some more missions."
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="Step23/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Step23"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckvwl")
+}
+
+[node name="Step24" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_6yjpi")
+
+[node name="Panel" type="PanelContainer" parent="Step24"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -48.0
+offset_right = 256.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Margin" type="MarginContainer" parent="Step24/Panel"]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="Step24/Panel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="VBox" type="VBoxContainer" parent="Step24/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Step24/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_4kmhl")
+
+[node name="TextureRect" type="TextureRect" parent="Step24/Panel/Margin/HBox/VBox/PanelContainer"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_6yjpi")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="Step24/Panel/Margin/HBox/VBox"]
+layout_mode = 2
+text = "Captain"
+label_settings = SubResource("LabelSettings_cq4me")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Step24/Panel/Margin/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Good luck out there!"
+fit_content = true
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="NextButton" type="Button" parent="Step24/Panel/Margin/HBox"]
+layout_mode = 2
+text = "Next"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Step24"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckvwl")
+}
+
 [connection signal="pressed" from="Step0/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step1/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step2/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step3/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step5/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="Step6/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step7/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step8/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step9/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="timeout" from="Step11/Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Step16/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
-[connection signal="pressed" from="Step17/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step11/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="timeout" from="Step13/Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Step18/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step19/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step20/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step21/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Step22/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step23/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Step24/Panel/Margin/HBox/NextButton" to="." method="_on_next_button_pressed"]
