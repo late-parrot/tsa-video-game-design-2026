@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://yexuyetr4cpq" path="res://assets/coin.png" id="4_o8y8m"]
 [ext_resource type="Script" uid="uid://chcbg3w2evu5d" path="res://addons/ActionIcon/ActionIcon.gd" id="6_eejpf"]
 [ext_resource type="PackedScene" uid="uid://btvfnyc10o6u7" path="res://scenes/journal.tscn" id="7_d76h7"]
+[ext_resource type="Texture2D" uid="uid://dlw8avtk4ksu0" path="res://assets/creatures/bunny.png" id="7_wm63y"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="8_g0ll4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1r0gq"]
@@ -31,12 +32,9 @@ region = Rect2(0, 40, 18, 18)
 atlas = ExtResource("2_bmkm8")
 region = Rect2(22, 22, 18, 18)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d76h7"]
-load_path = "res://.godot/imported/bug.png-f17b0712b96050841267b4f87afbe9b1.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wm63y"]
-atlas = SubResource("CompressedTexture2D_d76h7")
-region = Rect2(22, 22, 18, 18)
+atlas = ExtResource("7_wm63y")
+region = Rect2(4, 3, 24, 24)
 
 [sub_resource type="LabelSettings" id="LabelSettings_g0ll4"]
 font_size = 24
