@@ -118,6 +118,7 @@ func _on_net_distance_pressed() -> void:
 	Game.upgrades[0]["acquired"] = true
 	Game.money -= Game.upgrades[0]["cost"]
 	Game.net_distance = 90
+	Game.total_upgrades += 1
 	for m in Game.missions:
 		if m.type == Mission.MissionType.UPGRADE:
 			m.progress += 1
@@ -126,6 +127,7 @@ func _on_net_accuracy_pressed() -> void:
 	Game.upgrades[1]["acquired"] = true
 	Game.money -= Game.upgrades[1]["cost"]
 	Game.net_accuracy = 1.5
+	Game.total_upgrades += 1
 	for m in Game.missions:
 		if m.type == Mission.MissionType.UPGRADE:
 			m.progress += 1
@@ -134,6 +136,7 @@ func _on_max_energy_pressed() -> void:
 	Game.upgrades[2]["acquired"] = true
 	Game.money -= Game.upgrades[2]["cost"]
 	Game.max_energy = 125
+	Game.total_upgrades += 1
 	for m in Game.missions:
 		if m.type == Mission.MissionType.UPGRADE:
 			m.progress += 1
@@ -142,6 +145,7 @@ func _on_move_speed_pressed() -> void:
 	Game.upgrades[3]["acquired"] = true
 	Game.money -= Game.upgrades[3]["cost"]
 	Game.move_speed = 1.5
+	Game.total_upgrades += 1
 	for m in Game.missions:
 		if m.type == Mission.MissionType.UPGRADE:
 			m.progress += 1
@@ -150,6 +154,7 @@ func _on_reward_amount_pressed() -> void:
 	Game.upgrades[4]["acquired"] = true
 	Game.money -= Game.upgrades[4]["cost"]
 	Game.reward_amount = 1.5
+	Game.total_upgrades += 1
 	for m in Game.missions:
 		if m.type == Mission.MissionType.UPGRADE:
 			m.progress += 1
