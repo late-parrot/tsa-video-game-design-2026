@@ -504,6 +504,7 @@ libraries = {
 }
 
 [node name="Step6" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1095,7 +1096,6 @@ wait_time = 4.0
 one_shot = true
 
 [node name="Step14" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1151,7 +1151,7 @@ label_settings = SubResource("LabelSettings_cq4me")
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "When you've got one, make sure to [color=76d5c0]collect[/color] it so it won't wriggle free. Space to collect."
+text = "When you've got one, make sure to walk over and [color=76d5c0]collect[/color] it so it won't wriggle free. Space to collect."
 fit_content = true
 scroll_active = false
 visible_characters = 0
@@ -1682,6 +1682,7 @@ libraries = {
 }
 
 [node name="Step22" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

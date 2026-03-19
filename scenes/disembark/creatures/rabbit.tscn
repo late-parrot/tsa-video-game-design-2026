@@ -147,7 +147,7 @@ animations = [{
 
 [node name="Rabbit" instance=ExtResource("1_b7c47")]
 ID = "rabbit"
-CAPTURE_CHANCE = 0.5
+CAPTURE_CHANCE = 0.75
 
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_iplef")

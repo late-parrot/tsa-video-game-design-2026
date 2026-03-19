@@ -111,6 +111,7 @@ size = Vector2(14, 8)
 
 [node name="Bug" instance=ExtResource("1_sstjq")]
 ID = "bug"
+CAPTURE_CHANCE = 0.5
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("RectangleShape2D_sstjq")

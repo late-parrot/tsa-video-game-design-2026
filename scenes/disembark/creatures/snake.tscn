@@ -98,7 +98,7 @@ radius = 50.0
 
 [node name="Snake" instance=ExtResource("1_iqlnv")]
 ID = "snake"
-CAPTURE_CHANCE = 0.5
+CAPTURE_CHANCE = 0.75
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("RectangleShape2D_iqlnv")

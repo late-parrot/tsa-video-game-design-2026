@@ -58,7 +58,7 @@ func _on_start_running_body_entered(body: Node2D) -> void:
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area is Laser:
-		if randf() <= CAPTURE_CHANCE/Game.net_accuracy:
+		if randf() <= CAPTURE_CHANCE*Game.net_accuracy:
 			capture()
 			#%HitMiss.position = position-Vector2(8, 3)
 			#%HitMiss.text = "Hit"
