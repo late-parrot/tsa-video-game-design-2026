@@ -5610,7 +5610,7 @@ position = Vector2(1472, 1432)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
-disembark_scene = ExtResource("8_ahqhl")
+disembark_scene = ExtResource("10_l0cws")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2c (Locked)"]
 shape = SubResource("CircleShape2D_n7xhb")
@@ -5630,7 +5630,7 @@ position = Vector2(-2480, -672)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
-disembark_scene = ExtResource("10_l0cws")
+disembark_scene = ExtResource("8_ahqhl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planets/TRAPPIST-2d (Locked)"]
 shape = SubResource("CircleShape2D_vm5k5")
