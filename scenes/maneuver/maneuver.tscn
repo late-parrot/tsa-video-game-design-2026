@@ -5642,7 +5642,7 @@ autoplay = "rotate"
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/TRAPPIST-2d (Locked)"]
 visible = false
-modulate = Color(0.92, 0.41890663, 0.22080001, 1)
+modulate = Color(0.22080001, 0.64031994, 0.92, 1)
 mesh = SubResource("SphereMesh_foey6")
 
 [node name="ManeuverPlayer" parent="." instance=ExtResource("1_le8cj")]
