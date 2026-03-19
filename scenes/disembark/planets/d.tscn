@@ -66,9 +66,6 @@ money = 5
 position = Vector2(-234, 464)
 money = 5
 
-[node name="DisembarkPlayer" parent="." index="5"]
-position = Vector2(16, -10)
-
 [node name="CollisionShape2D" parent="WorldBorders/StaticBody2D" index="0"]
 position = Vector2(9, -504)
 
