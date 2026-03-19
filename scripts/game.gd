@@ -77,6 +77,9 @@ func _process(delta: float) -> void:
 			won = true
 		else:
 			missions = mission_sets[current_mission_set]
+			for m in missions:
+				if m.type == Mission.MissionType.UPGRADE:
+					m.progress = total_upgrades
 		emit_signal("level_completed")
 	for id in research_times:
 		if research_times[id] > 0:

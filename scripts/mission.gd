@@ -26,8 +26,6 @@ func _init(i: int, n: String, t: MissionType, r: int, rw: int, c: Dictionary[Str
 	required = r
 	reward = rw
 	criteria = c
-	if t == MissionType.UPGRADE:
-		progress = Game.total_upgrades
 
 func _complete() -> void:
 	Game.missions.erase(self)
