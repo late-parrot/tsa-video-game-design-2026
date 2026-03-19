@@ -111,7 +111,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rgupr")
 }],
-"loop": true,
+"loop": false,
 "name": &"release",
 "speed": 5.0
 }, {
@@ -146,12 +146,10 @@ animations = [{
 }]
 
 [node name="Rabbit" instance=ExtResource("1_b7c47")]
-position = Vector2(0, -6)
 ID = "rabbit"
 CAPTURE_CHANCE = 0.5
 
 [node name="Sprite" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_iplef")
-animation = &"run"
+animation = &"release"
 autoplay = "idle"
-frame_progress = 0.37870166
