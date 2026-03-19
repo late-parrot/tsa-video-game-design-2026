@@ -1,13 +1,13 @@
-[gd_scene load_steps=810 format=3 uid="uid://dwsidhkts8v1c"]
+[gd_scene load_steps=812 format=3 uid="uid://dwsidhkts8v1c"]
 
 [ext_resource type="PackedScene" uid="uid://c5h2bmcfooygk" path="res://scenes/maneuver/overlay.tscn" id="1_40ujs"]
 [ext_resource type="PackedScene" uid="uid://gvgpvaqcuuwx" path="res://scenes/maneuver/player.tscn" id="1_le8cj"]
 [ext_resource type="Script" uid="uid://bi7r77pycujcw" path="res://scripts/maneuver/planet.gd" id="1_n7xhb"]
 [ext_resource type="Script" uid="uid://bxii1evga2wvq" path="res://scripts/maneuver/maneuver.gd" id="1_ytq0j"]
 [ext_resource type="PackedScene" uid="uid://chbma2ylsr3fh" path="res://scenes/disembark/planets/spaceport_menu.tscn" id="3_plvpl"]
-[ext_resource type="Texture2D" uid="uid://dhxkq7ir4y8d0" path="res://assets/spaceport/spaceport-main.png" id="4_0rdyn"]
-[ext_resource type="Texture2D" uid="uid://djiv8w62ovgbg" path="res://assets/spaceport/spaceport-top.png" id="5_2x3te"]
+[ext_resource type="Texture2D" uid="uid://csmfheugl6ift" path="res://assets/Starport_v6.7.png" id="4_ahqhl"]
 [ext_resource type="Script" uid="uid://dh4mcwl603for" path="res://scripts/input_controller.gd" id="5_foey6"]
+[ext_resource type="Texture2D" uid="uid://du7kyqdrb3dwo" path="res://assets/Starport_v6.7-1.png (1) (1).png" id="5_l0cws"]
 [ext_resource type="Texture2D" uid="uid://jayhvf8y0cub" path="res://assets/planets/b.png" id="6_3ecl0"]
 [ext_resource type="PackedScene" uid="uid://5qh3t3h241rk" path="res://scenes/disembark/planets/b.tscn" id="6_qfnjy"]
 [ext_resource type="Texture2D" uid="uid://depepbqva5pje" path="res://assets/planets/c.png" id="7_o6glo"]
@@ -74,7 +74,7 @@ _data = {
 radius = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_foey6"]
-radius = 128.0
+radius = 133.5234
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpp48"]
 atlas = ExtResource("6_3ecl0")
@@ -1881,7 +1881,7 @@ radius = 128.0
 height = 256.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n7xhb"]
-radius = 128.0
+radius = 80.50156
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5knk8"]
 atlas = ExtResource("7_o6glo")
@@ -3688,7 +3688,7 @@ radius = 128.0
 height = 265.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vm5k5"]
-radius = 64.0
+radius = 100.04499
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q5fk8"]
 atlas = ExtResource("8_hhhct")
@@ -5528,6 +5528,12 @@ scale_max = 2.0
 scale_curve = SubResource("CurveTexture_0wfyh")
 color_ramp = SubResource("GradientTexture1D_sugp2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahqhl"]
+size = Vector2(13385, 2779)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0cws"]
+size = Vector2(2082, 11706.25)
+
 [node name="Maneuver" type="Node2D" node_paths=PackedStringArray("spaceport")]
 script = ExtResource("1_ytq0j")
 spaceport = NodePath("Planets/Spaceport (Locked)")
@@ -5552,7 +5558,7 @@ modulate = Color(0.78450024, 0.9887045, 0.99999994, 1)
 mesh = SubResource("SphereMesh_n7xhb")
 
 [node name="Spaceport (Locked)" type="Area2D" parent="Planets"]
-position = Vector2(-568, 864)
+position = Vector2(-1254, 1264)
 script = ExtResource("1_n7xhb")
 landable = false
 disembark_scene = ExtResource("3_plvpl")
@@ -5562,12 +5568,12 @@ shape = SubResource("CircleShape2D_0rdyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Planets/Spaceport (Locked)"]
 scale = Vector2(2, 2)
-texture = ExtResource("4_0rdyn")
+texture = ExtResource("4_ahqhl")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Planets/Spaceport (Locked)"]
 z_index = 4096
 scale = Vector2(2, 2)
-texture = ExtResource("5_2x3te")
+texture = ExtResource("5_l0cws")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Planets/Spaceport (Locked)"]
 visible = false
@@ -5587,7 +5593,7 @@ autoplay = "turn"
 shape = SubResource("CircleShape2D_hhhct")
 
 [node name="TRAPPIST-2b" type="Area2D" parent="Planets"]
-position = Vector2(1032, -960)
+position = Vector2(1438, 1752)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 disembark_scene = ExtResource("6_qfnjy")
@@ -5606,7 +5612,7 @@ modulate = Color(0.2968, 0.56, 0.30557334, 1)
 mesh = SubResource("SphereMesh_plvpl")
 
 [node name="TRAPPIST-2c (Locked)" type="Area2D" parent="Planets"]
-position = Vector2(1472, 1432)
+position = Vector2(988, -1012)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
@@ -5616,6 +5622,7 @@ disembark_scene = ExtResource("10_l0cws")
 shape = SubResource("CircleShape2D_n7xhb")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2c (Locked)"]
+scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_fyhcw")
 animation = &"rotate"
 autoplay = "rotate"
@@ -5626,7 +5633,7 @@ modulate = Color(0.74509805, 0.28235295, 0.20784314, 1)
 mesh = SubResource("SphereMesh_ytq0j")
 
 [node name="TRAPPIST-2d (Locked)" type="Area2D" parent="Planets"]
-position = Vector2(-2480, -672)
+position = Vector2(-2911, -1167)
 scale = Vector2(2, 2)
 script = ExtResource("1_n7xhb")
 landable = false
@@ -5636,6 +5643,7 @@ disembark_scene = ExtResource("8_ahqhl")
 shape = SubResource("CircleShape2D_vm5k5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Planets/TRAPPIST-2d (Locked)"]
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_fji4a")
 animation = &"rotate"
 autoplay = "rotate"
@@ -5682,5 +5690,39 @@ unique_name_in_owner = true
 script = ExtResource("5_foey6")
 SHOOT = true
 metadata/_custom_type_script = "uid://dh4mcwl603for"
+
+[node name="WorldBorders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D"]
+z_index = 16
+position = Vector2(-428, -5681)
+shape = SubResource("RectangleShape2D_ahqhl")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D2"]
+z_index = 16
+position = Vector2(261, 5750)
+shape = SubResource("RectangleShape2D_ahqhl")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D3"]
+z_index = 16
+position = Vector2(-5334, 137)
+shape = SubResource("RectangleShape2D_l0cws")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="WorldBorders"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorders/StaticBody2D4"]
+z_index = 16
+position = Vector2(4651, 637)
+shape = SubResource("RectangleShape2D_l0cws")
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

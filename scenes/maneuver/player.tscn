@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://gvgpvaqcuuwx"]
 
 [ext_resource type="Script" uid="uid://cae360pe30tai" path="res://scripts/maneuver/player.gd" id="1_xetyd"]
-[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="2_ufdv0"]
+[ext_resource type="Texture2D" uid="uid://dw1iyirbu0jiw" path="res://assets/spaceshipv3-3.png (1).png" id="2_ufdv0"]
 
 [sub_resource type="Gradient" id="Gradient_xetyd"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -70,6 +70,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_xetyd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.5, 1)
 texture = ExtResource("2_ufdv0")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Sprite2D"]

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b40y1nkjvjg2x" path="res://assets/title.png" id="1_fgkus"]
 [ext_resource type="Script" uid="uid://bh0641kvrwixh" path="res://scripts/title_screen.gd" id="2_dc4i4"]
 [ext_resource type="AudioStream" uid="uid://igv2t7iyr20r" path="res://assets/audio/theme3-v2.wav" id="3_mgrm8"]
-[ext_resource type="Texture2D" uid="uid://c0qwlcrpshoom" path="res://assets/spaceship.png" id="4_dc4i4"]
 [ext_resource type="Script" uid="uid://dirf1x85aa1hf" path="res://scripts/start_with_focus.gd" id="4_e54dn"]
+[ext_resource type="Texture2D" uid="uid://becwhgod7sk2" path="res://assets/spaceshipv3-2.png (1).png" id="6_3yumr"]
 [ext_resource type="PackedScene" uid="uid://dsunlve1lve3" path="res://scenes/input_controller.tscn" id="7_3yumr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cs5ya"]
@@ -171,7 +171,7 @@ offset_right = 30.999992
 offset_bottom = 560.00006
 rotation = -1.2217305
 scale = Vector2(4, 4)
-texture = ExtResource("4_dc4i4")
+texture = ExtResource("6_3yumr")
 
 [node name="Ship2" type="TextureRect" parent="Ship"]
 unique_name_in_owner = true
@@ -182,7 +182,7 @@ offset_left = -4.0
 offset_top = 4.0
 offset_right = 96.0
 offset_bottom = 104.0
-texture = ExtResource("4_dc4i4")
+texture = ExtResource("6_3yumr")
 
 [node name="InputController" parent="." instance=ExtResource("7_3yumr")]
 layout_mode = 0

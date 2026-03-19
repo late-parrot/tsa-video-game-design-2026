@@ -97,7 +97,8 @@ process_material = SubResource("ParticleProcessMaterial_efpyd")
 unique_name_in_owner = true
 position = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_om2jt")
-animation = &"idle"
+animation = &"drive"
+frame_progress = 0.64330894
 
 [node name="Turret" type="Sprite2D" parent="."]
 unique_name_in_owner = true

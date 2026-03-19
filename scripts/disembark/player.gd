@@ -22,9 +22,9 @@ var laser_scene = preload("res://scenes/disembark/laser.tscn")
 		#velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 	#move_and_slide()
 
-#####################
-##  GRID MOVEMENT  ##
-#####################
+
+##  GRID MOVEMENT  
+
 
 const TILE_SIZE = 16
 const ROTATION_SPEED = 8.0
