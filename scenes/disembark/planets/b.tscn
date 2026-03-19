@@ -127,8 +127,5 @@ money = 5
 position = Vector2(-119, -598)
 money = 5
 
-[node name="DisembarkPlayer" parent="." index="5"]
-position = Vector2(2, -22)
-
 [node name="Camera" parent="DisembarkPlayer" index="5"]
 zoom_speed = 1.0
